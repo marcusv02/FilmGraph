@@ -1,0 +1,166 @@
+@prefix : <http://filmgraph.pro/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://filmgraph.pro/ontology/> .
+
+<http://filmgraph.pro/ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://filmgraph.pro/ontology/actedIn
+:actedIn rdf:type owl:ObjectProperty ;
+         owl:inverseOf :hasActor ;
+         rdfs:domain :Actor ;
+         rdfs:range :Film ;
+         rdfs:comment "Joins actors to films." ;
+         rdfs:label "Acted In" .
+
+
+###  http://filmgraph.pro/ontology/coDirectedWith
+:coDirectedWith rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :workedWith ;
+                rdf:type owl:SymmetricProperty ;
+                rdfs:domain :Director ;
+                rdfs:range :Director ;
+                owl:propertyChainAxiom ( :directed
+                                         :directedBy
+                                       ) ;
+                rdfs:comment "Joins directors who have worked together on a film." ;
+                rdfs:label "Co-Directed With" .
+
+
+###  http://filmgraph.pro/ontology/coStarredWith
+:coStarredWith rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :workedWith ;
+               rdf:type owl:SymmetricProperty ;
+               rdfs:domain :Actor ;
+               rdfs:range :Actor ;
+               owl:propertyChainAxiom ( :actedIn
+                                        :hasActor
+                                      ) ;
+               rdfs:comment "Joins actors who have worked together on a film." ;
+               rdfs:label "Co-Starred With" .
+
+
+###  http://filmgraph.pro/ontology/directed
+:directed rdf:type owl:ObjectProperty ;
+          owl:inverseOf :directedBy ;
+          rdfs:domain :Director ;
+          rdfs:range :Film ;
+          rdfs:comment "Joins directors to films." ;
+          rdfs:label "Directed" .
+
+
+###  http://filmgraph.pro/ontology/directedBy
+:directedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasPerson ;
+            rdfs:domain :Film ;
+            rdfs:range :Director ;
+            rdfs:comment "Joins films to directors." ;
+            rdfs:label "Directed By" .
+
+
+###  http://filmgraph.pro/ontology/hasActor
+:hasActor rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasPerson ;
+          rdfs:domain :Film ;
+          rdfs:range :Actor ;
+          rdfs:comment "Joins films to actors." ;
+          rdfs:label "Has Actor" .
+
+
+###  http://filmgraph.pro/ontology/hasGenre
+:hasGenre rdf:type owl:ObjectProperty ;
+          rdfs:domain :Film ;
+          rdfs:range :Genre ;
+          rdfs:comment "Joins films to genres." ;
+          rdfs:label "Has Genre" .
+
+
+###  http://filmgraph.pro/ontology/hasPerson
+:hasPerson rdf:type owl:ObjectProperty ;
+           rdfs:domain :Film ;
+           rdfs:range :Person ;
+           rdfs:comment "Joins films to people." ;
+           rdfs:label "Has Person" .
+
+
+###  http://filmgraph.pro/ontology/workedWith
+:workedWith rdf:type owl:ObjectProperty ,
+                     owl:SymmetricProperty ;
+            rdfs:domain :Person ;
+            rdfs:range :Person ;
+            owl:propertyChainAxiom ( :directed
+                                     :hasActor
+                                   ) ;
+            rdfs:comment "Joins people who have worked together on a film." ;
+            rdfs:label "Worked With" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://filmgraph.pro/ontology/avg_vote
+:avg_vote rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Film ;
+          rdfs:comment "The average numerical value a film received on a scale from 1 - 10, according to IMDb users." ;
+          rdfs:label "Average Vote" .
+
+
+###  http://filmgraph.pro/ontology/duration
+:duration rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Film ;
+          rdfs:comment "The length of a film in minutes." ;
+          rdfs:label "Duration" .
+
+
+###  http://filmgraph.pro/ontology/year
+:year rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Film ;
+      rdfs:comment "The year a film released in." ;
+      rdfs:label "Year" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://filmgraph.pro/ontology/Actor
+:Actor rdf:type owl:Class ;
+       rdfs:subClassOf :Person ;
+       rdfs:comment "An individual who performs a role in a film." ;
+       rdfs:label "Actor" .
+
+
+###  http://filmgraph.pro/ontology/Director
+:Director rdf:type owl:Class ;
+          rdfs:subClassOf :Person ;
+          rdfs:comment "A person who directed a film." ;
+          rdfs:label "Director" .
+
+
+###  http://filmgraph.pro/ontology/Film
+:Film rdf:type owl:Class ;
+      rdfs:comment "A film from the dataset which contains the top 100 films of all time, according to IMDb." ;
+      rdfs:label "Film" .
+
+
+###  http://filmgraph.pro/ontology/Genre
+:Genre rdf:type owl:Class ;
+       rdfs:comment "A descriptor that signifies the type of story a film might have. Films can have multiple genres." ;
+       rdfs:label "Genre" .
+
+
+###  http://filmgraph.pro/ontology/Person
+:Person rdf:type owl:Class ;
+        rdfs:comment "A superclass for all actors and directors involved in a film." ;
+        rdfs:label "Person" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
