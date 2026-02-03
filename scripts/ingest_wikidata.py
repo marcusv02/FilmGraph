@@ -71,7 +71,7 @@ def build_graph(csv_path):
         g.add((m_uri, RDFS.label, Literal(movie_label)))
         g.add((m_uri, CINE.imdbId, Literal(imdb_id)))
 
-        # SKEPTICISM APPLIED: Only the earliest year (The 'Original' Release)
+        # Only the earliest year (The Original Release)
         if years:
             g.add((m_uri, CINE.releaseYear, Literal(min(years), datatype=XSD.integer)))
 
@@ -86,8 +86,76 @@ def build_graph(csv_path):
     
     return g
 
+def expand_by_directors(session, g):
+    print("\nStarting Phase 2: Semantic Expansion...")
+    directors = list(g.subjects(RDF.type, CINE.Person))
+    
+    for d_uri in directors:
+        d_name = str(g.value(d_uri, RDFS.label))
+        print(f"Expanding: {d_name}")
+
+        query = f"""
+        SELECT ?movie ?movieLabel ?year ?imdbId WHERE {{
+          ?movie wdt:P57 ?dir .
+          ?dir rdfs:label "{d_name}"@en .
+          ?movie wdt:P345 ?imdbId .
+          ?movie wdt:P31 wd:Q11424 . # Filter for FILMS only
+          OPTIONAL {{ ?movie wdt:P577 ?date. BIND(YEAR(?date) AS ?year) }}
+          SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+        }}
+        """
+        try:
+            response = session.get(WD_ENDPOINT, params={'query': query, 'format': 'json'}, headers=get_stealth_headers())
+            data = response.json()
+            
+            # Temporary storage to deduplicate years for THIS director's movies
+            movie_cache = {} # movie_uri -> {label, imdb, years_set}
+
+            for res in data['results']['bindings']:
+                m_label = res['movieLabel']['value']
+                m_uri = URIRef(CINE[m_label.replace(" ", "_").replace("'", "").replace(".", "")])
+                
+                if m_uri not in movie_cache:
+                    movie_cache[m_uri] = {
+                        'label': m_label,
+                        'imdb': res.get('imdbId', {}).get('value'),
+                        'years': set()
+                    }
+                
+                if 'year' in res:
+                    movie_cache[m_uri]['years'].add(int(res['year']['value']))
+
+            # Now add the "Cleaned" records to the actual graph
+            for m_uri, info in movie_cache.items():
+                g.add((m_uri, RDF.type, CINE.Film))
+                g.add((m_uri, RDFS.label, Literal(info['label'])))
+                g.add((m_uri, CINE.directedBy, d_uri))
+                
+                if info['imdb']:
+                    g.add((m_uri, CINE.imdbId, Literal(info['imdb'])))
+                
+                if info['years']:
+                    # SKEPTICISM: Take only the earliest year found
+                    earliest_year = min(info['years'])
+                    g.add((m_uri, CINE.releaseYear, Literal(earliest_year, datatype=XSD.integer)))
+
+            time.sleep(0.8) 
+        except Exception as e:
+            print(f" ❌ Failed to expand {d_name}: {e}")
+
+    return g
+
 if __name__ == "__main__":
-    print("🚀 Starting Smart Ingestion...")
-    clean_graph = build_graph("imdb_100.csv")
-    clean_graph.serialize(destination="ontology/output_graph.ttl", format="turtle")
-    print("\n✅ Success! File saved to: ontology/output_graph.ttl")
+    print("Phase 1: Ingesting 100 Seed Movies...")
+    session = requests.Session()
+    first_graph = build_graph("imdb_100.csv")
+    
+    # NEW: Phase 2 Expansion
+    print(f"\n✅ Phase 1 Complete. Graph has {len(first_graph)} triples.")
+    final_graph = expand_by_directors(session, first_graph)
+    
+    print(f"\n✅ Phase 2 Complete. Final Graph has {len(final_graph)} triples.")
+    
+    # Save the giant graph
+    final_graph.serialize(destination="ontology/output_graph.ttl", format="turtle")
+    print("Everything saved to ontology/output_graph.ttl")

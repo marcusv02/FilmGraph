@@ -48,11 +48,11 @@ def run_pipeline():
         print("✅ Validation Success: Data is clean and consistent.")
     else:
         print("❌ Validation Errors Found:")
-        print(results_text) # This will tell you EXACTLY what's wrong with your data
+        print(results_text)
 
     # 5. Save the Enriched Graph
     data_graph.serialize(destination=str(OUTPUT_FILE), format="turtle")
-    print(f"🚀 Success! Enriched graph saved to: {OUTPUT_FILE}")
+    print(f"Success! Enriched graph saved to: {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     run_pipeline()
