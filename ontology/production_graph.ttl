@@ -9,55 +9,246 @@
 cine:12_Angry_Men a cine:Film ;
     rdfs:label "12 Angry Men" ;
     cine:directedBy cine:Sidney_Lumet ;
+    cine:hasActor cine:Billy_Nelson,
+        cine:Ed_Begley,
+        cine:Henry_Fonda,
+        cine:Jack_Klugman,
+        cine:John_Fiedler,
+        cine:Joseph_Sweeney,
+        cine:Lee_J._Cobb,
+        cine:Martin_Balsam,
+        cine:Robert_Webber,
+        cine:Walter_Stocker ;
+    cine:hasGenre cine:drama_film,
+        cine:huis-clos_film,
+        cine:trial_film ;
     cine:imdbId "tt0050083" ;
     cine:releaseYear 1957 .
 
 <http://filmgraph.pro/ontology/2001:_A_Space_Odyssey> a cine:Film ;
     rdfs:label "2001: A Space Odyssey" ;
     cine:directedBy cine:Stanley_Kubrick ;
+    cine:hasActor cine:Ann_Gillis,
+        cine:Arthur_C._Clarke,
+        cine:Douglas_Rain,
+        cine:Ed_Bishop,
+        cine:Gary_Lockwood,
+        cine:Leonard_Rossiter,
+        cine:Margaret_Tyzack,
+        cine:Robert_Beatty,
+        cine:Vivian_Kubrick,
+        cine:William_Sylvester ;
+    cine:hasGenre cine:arthouse_science_fiction_film,
+        cine:epic_film,
+        cine:mystery_film,
+        cine:space_adventure_film ;
     cine:imdbId "tt0062622" ;
     cine:releaseYear 1968 .
 
 cine:3_Idiots a cine:Film ;
     rdfs:label "3 Idiots" ;
     cine:directedBy cine:Rajkumar_Hirani ;
+    cine:hasActor cine:Aamir_Khan,
+        cine:Boman_Irani,
+        cine:Javed_Jaffrey,
+        cine:Kareena_Kapoor_Khan,
+        cine:Mona_Singh,
+        cine:Omi_Vaidya,
+        cine:Parikshit_Sahni,
+        cine:R._Madhavan,
+        cine:Sharman_Joshi ;
+    cine:hasGenre cine:buddy_film,
+        cine:comedy_drama,
+        cine:comedy_film,
+        cine:drama_film,
+        cine:musical_film,
+        cine:romance_film ;
     cine:imdbId "tt1187043" ;
-    cine:releaseYear 2009 .
+    cine:releaseYear 2009,
+        2013 .
 
 cine:A_Clockwork_Orange a cine:Film ;
     rdfs:label "A Clockwork Orange" ;
     cine:directedBy cine:Stanley_Kubrick ;
+    cine:hasActor cine:Adrienne_Corri,
+        cine:Anthony_Sharp,
+        cine:David_Prowse,
+        cine:Katya_Wyeth,
+        cine:Malcolm_McDowell,
+        cine:Margaret_Tyzack,
+        cine:Miriam_Karlin,
+        cine:Pat_Roach,
+        cine:Steven_Berkoff,
+        cine:Warren_Clarke ;
+    cine:hasGenre cine:action_film,
+        cine:arthouse_science_fiction_film,
+        cine:black_comedy_film,
+        cine:comedy_drama,
+        cine:crime_comedy_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:dystopian_film,
+        cine:exploitation_film,
+        cine:film_based_on_a_novel,
+        cine:mystery_film,
+        cine:prison_film,
+        cine:satirical_film_or_television_program,
+        cine:science_fiction_film,
+        cine:speculative_fiction_film,
+        cine:thriller_film ;
     cine:imdbId "tt0066921" ;
-    cine:releaseYear 1971 .
+    cine:releaseYear 1971,
+        1972 .
 
 cine:Alien a cine:Film ;
     rdfs:label "Alien" ;
     cine:directedBy cine:Ridley_Scott ;
+    cine:hasActor cine:Bolaji_Badejo,
+        cine:Eddie_Powell,
+        cine:Harry_Dean_Stanton,
+        cine:Ian_Holm,
+        cine:John_Hurt,
+        cine:Sigourney_Weaver,
+        cine:Tom_Skerritt,
+        cine:Veronica_Cartwright,
+        cine:Yaphet_Kotto ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:body_horror_film,
+        cine:fantasy_film,
+        cine:girls_with_guns,
+        cine:horror_film,
+        cine:monster_film,
+        cine:mystery_film,
+        cine:science_fiction_action_film,
+        cine:science_fiction_film,
+        cine:science_fiction_horror_film,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0078748" ;
     cine:releaseYear 1979 .
 
 cine:Amadeus a cine:Film ;
     rdfs:label "Amadeus" ;
     cine:directedBy cine:Miloš_Forman ;
+    cine:hasActor cine:Christine_Ebersole,
+        cine:Cynthia_Nixon,
+        cine:Dana_Vávrová,
+        cine:Elizabeth_Berridge,
+        cine:F._Murray_Abraham,
+        cine:Jeffrey_Jones,
+        cine:Kenneth_McMillan,
+        cine:Roy_Dotrice,
+        cine:Tom_Hulce,
+        cine:Vincent_Schiavelli ;
+    cine:hasGenre cine:biographical_film,
+        cine:drama_film,
+        cine:flashback_film,
+        cine:musical_film,
+        cine:period_drama_film ;
     cine:imdbId "tt0086879" ;
-    cine:releaseYear 1984 .
+    cine:releaseYear 1984,
+        2013 .
 
 cine:American_History_X a cine:Film ;
     rdfs:label "American History X" ;
     cine:directedBy cine:Tony_Kaye ;
+    cine:hasActor cine:Avery_Brooks,
+        cine:Beverly_DAngelo,
+        cine:Edward_Furlong,
+        cine:Edward_Norton,
+        cine:Elliott_Gould,
+        cine:Ethan_Suplee,
+        cine:Fairuza_Balk,
+        cine:Jennifer_Lien,
+        cine:Keram_Malicki-Sánchez,
+        cine:Stacy_Keach ;
+    cine:hasGenre cine:crime_film,
+        cine:drama_film,
+        cine:independent_film,
+        cine:prison_film ;
     cine:imdbId "tt0120586" ;
-    cine:releaseYear 1998 .
+    cine:releaseYear 1998,
+        1999 .
 
 cine:Apocalypse_Now a cine:Film ;
     rdfs:label "Apocalypse Now" ;
     cine:directedBy cine:Francis_Ford_Coppola ;
+    cine:hasActor cine:Aurore_Clément,
+        cine:Charlie_Sheen,
+        cine:Dennis_Hopper,
+        cine:Francis_Ford_Coppola,
+        cine:Gian-Carlo_Coppola,
+        cine:Harrison_Ford,
+        cine:Marlon_Brando,
+        cine:Martin_Sheen,
+        cine:Robert_Duvall,
+        cine:Scott_Glenn ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:film_based_on_book,
+        cine:horror_film,
+        cine:psychological_drama_film,
+        cine:psychological_horror_film,
+        cine:psychological_thriller_film,
+        cine:satirical_film_or_television_program,
+        cine:thriller_film,
+        cine:war_drama,
+        cine:war_film ;
     cine:imdbId "tt0078788" ;
-    cine:releaseYear 1979 .
+    cine:releaseYear 1979,
+        2019 .
+
+cine:Apocalypse_Now_Redux a cine:Film ;
+    rdfs:label "Apocalypse Now Redux" ;
+    cine:directedBy cine:Francis_Ford_Coppola ;
+    cine:hasActor cine:Aurore_Clément,
+        cine:Colleen_Camp,
+        cine:Dennis_Hopper,
+        cine:Francis_Ford_Coppola,
+        cine:Harrison_Ford,
+        cine:Laurence_Fishburne,
+        cine:Marlon_Brando,
+        cine:Martin_Sheen,
+        cine:Robert_Duvall,
+        cine:Scott_Glenn ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:film_based_on_literature,
+        cine:horror_film,
+        cine:psychological_drama_film,
+        cine:psychological_horror_film,
+        cine:psychological_thriller_film,
+        cine:thriller_film,
+        cine:war_drama,
+        cine:war_film ;
+    cine:imdbId "tt0078788" ;
+    cine:releaseYear 2001 .
 
 <http://filmgraph.pro/ontology/Avengers:_Endgame> a cine:Film ;
     rdfs:label "Avengers: Endgame" ;
     cine:directedBy cine:Anthony_Russo,
         cine:Joe_Russo ;
+    cine:hasActor cine:Brie_Larson,
+        cine:Chris_Hemsworth,
+        cine:Dave_Bautista,
+        cine:Gwyneth_Paltrow,
+        cine:Jeremy_Renner,
+        cine:Josh_Brolin,
+        cine:Mark_Ruffalo,
+        cine:Natalie_Portman,
+        cine:Scarlett_Johansson,
+        cine:William_Hurt ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:speculative_fiction_film,
+        cine:superhero_film ;
     cine:imdbId "tt4154796" ;
     cine:releaseYear 2019 .
 
@@ -65,48 +256,154 @@ cine:Apocalypse_Now a cine:Film ;
     rdfs:label "Avengers: Infinity War" ;
     cine:directedBy cine:Anthony_Russo,
         cine:Joe_Russo ;
+    cine:hasActor cine:Chris_Evans,
+        cine:Chris_Hemsworth,
+        cine:Dave_Bautista,
+        cine:Gwyneth_Paltrow,
+        cine:Josh_Brolin,
+        cine:Mark_Ruffalo,
+        <http://filmgraph.pro/ontology/Robert_Downey_Jr.>,
+        cine:Samuel_L._Jackson,
+        cine:Scarlett_Johansson,
+        cine:William_Hurt ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:science_fiction_film,
+        cine:superhero_film ;
     cine:imdbId "tt4154756" ;
     cine:releaseYear 2018 .
 
 cine:Back_to_the_Future a cine:Film ;
     rdfs:label "Back to the Future" ;
     cine:directedBy cine:Robert_Zemeckis ;
+    cine:hasActor cine:Billy_Zane,
+        cine:Christopher_Lloyd,
+        cine:Claudia_Wells,
+        cine:Crispin_Glover,
+        cine:Frances_Lee_McCain,
+        cine:George_Buck_Flower,
+        cine:George_DiCenzo,
+        cine:Lea_Thompson,
+        cine:Michael_J._Fox,
+        cine:Thomas_F._Wilson ;
+    cine:hasGenre cine:adventure_film,
+        cine:comedy_film,
+        cine:science_fiction_film,
+        cine:speculative_fiction_film,
+        cine:teen_film,
+        cine:time-travel_film ;
     cine:imdbId "tt0088763" ;
     cine:releaseYear 1985 .
 
 cine:Bicycle_Thieves a cine:Film ;
     rdfs:label "Bicycle Thieves" ;
     cine:directedBy cine:Vittorio_De_Sica ;
+    cine:hasActor cine:Carlo_Jachino,
+        cine:Checco_Rissone,
+        cine:Elena_Altieri,
+        cine:Enzo_Staiola,
+        cine:Eolo_Capritti,
+        cine:Fausto_Guerzoni,
+        cine:Lamberto_Maggiorani,
+        cine:Memmo_Carotenuto,
+        cine:Sergio_Leone,
+        cine:Umberto_Spadaro ;
+    cine:hasGenre cine:art_film,
+        cine:drama_film ;
     cine:imdbId "tt0040522" ;
-    cine:releaseYear 1948 .
+    cine:releaseYear 1948,
+        1949 .
 
 cine:Capernaum a cine:Film ;
     rdfs:label "Capernaum" ;
     cine:directedBy cine:Nadine_Labaki ;
+    cine:hasActor cine:Nadine_Labaki,
+        cine:Yordanos_Shiferaw,
+        cine:Zain_Al_Rafeea ;
+    cine:hasGenre cine:drama_film ;
     cine:imdbId "tt8267604" ;
     cine:releaseYear 2018 .
 
 cine:Casablanca a cine:Film ;
     rdfs:label "Casablanca" ;
     cine:directedBy cine:Michael_Curtiz ;
+    cine:hasActor cine:Conrad_Veidt,
+        cine:Curt_Bois,
+        cine:Hans_Heinrich_von_Twardowski,
+        cine:Humphrey_Bogart,
+        cine:Ilka_Grüning,
+        cine:Ingrid_Bergman,
+        cine:Ludwig_Stössel,
+        cine:Paul_Henreid,
+        cine:Paul_Panzer,
+        cine:Peter_Lorre ;
+    cine:hasGenre cine:drama_film,
+        cine:film_noir,
+        cine:flashback_film,
+        cine:romance_film,
+        cine:war_film ;
     cine:imdbId "tt0034583" ;
-    cine:releaseYear 1942 .
+    cine:releaseYear 1942,
+        1943 .
 
 cine:Cinema_Paradiso a cine:Film ;
     rdfs:label "Cinema Paradiso" ;
     cine:directedBy cine:Giuseppe_Tornatore ;
+    cine:hasActor cine:Agnese_Nano,
+        cine:Antonella_Attili,
+        cine:Brigitte_Fossey,
+        cine:Enzo_Cannavale,
+        cine:Isa_Danieli,
+        cine:Leopoldo_Trieste,
+        cine:Mimmo_Mignemi,
+        cine:Philippe_Noiret,
+        cine:Pupella_Maggio,
+        cine:Salvatore_Cascio ;
+    cine:hasGenre cine:coming-of-age_film,
+        cine:drama_film ;
     cine:imdbId "tt0095765" ;
-    cine:releaseYear 1988 .
+    cine:releaseYear 1988,
+        1989,
+        2019 .
 
 cine:Citizen_Kane a cine:Film ;
     rdfs:label "Citizen Kane" ;
     cine:directedBy cine:Orson_Welles ;
+    cine:hasActor cine:Agnes_Moorehead,
+        cine:Alan_Ladd,
+        cine:Dorothy_Comingore,
+        cine:Everett_Sloane,
+        cine:Gregg_Toland,
+        cine:Gus_Schilling,
+        cine:Joseph_Cotten,
+        cine:Orson_Welles,
+        cine:Paul_Stewart,
+        cine:Ruth_Warrick ;
+    cine:hasGenre cine:biographical_film,
+        cine:drama_film,
+        cine:fiction_film,
+        cine:flashback_film,
+        cine:mystery_film ;
     cine:imdbId "tt0033467" ;
-    cine:releaseYear 1941 .
+    cine:releaseYear 1941,
+        1946 .
 
 cine:City_Lights a cine:Film ;
     rdfs:label "City Lights" ;
     cine:directedBy cine:Charlie_Chaplin ;
+    cine:hasActor cine:Al_Ernest_Garcia,
+        cine:Charlie_Chaplin,
+        cine:Eddie_Baker,
+        cine:Florence_Lee,
+        cine:Granville_Redmond,
+        cine:Hank_Mann,
+        cine:Henry_Bergman,
+        cine:Jean_Harlow,
+        cine:Robert_Parrish,
+        cine:Virginia_Cherrill ;
+    cine:hasGenre cine:comedy_drama,
+        cine:romantic_comedy,
+        cine:tragicomedy ;
     cine:imdbId "tt0021749" ;
     cine:releaseYear 1931 .
 
@@ -114,304 +411,1111 @@ cine:City_of_God a cine:Film ;
     rdfs:label "City of God" ;
     cine:directedBy cine:Fernando_Meirelles,
         cine:Kátia_Lund ;
+    cine:hasActor cine:Alexandre_Rodrigues,
+        cine:Alice_Braga,
+        cine:Darlan_Cunha,
+        cine:Douglas_Silva,
+        cine:Graziella_Moretto,
+        cine:Leandro_Firmino,
+        cine:Matheus_Nachtergaele,
+        cine:Paulo_Lins,
+        cine:Seu_Jorge,
+        cine:Sérgio_Chapelin ;
+    cine:hasGenre cine:coming-of-age_film,
+        cine:crime_film,
+        cine:drama_film,
+        cine:hood_film ;
     cine:imdbId "tt0317248" ;
-    cine:releaseYear 2002 .
+    cine:releaseYear 2002,
+        2003,
+        2024 .
 
 cine:Coco a cine:Film ;
     rdfs:label "Coco" ;
     cine:directedBy cine:Adrian_Molina,
         cine:Lee_Unkrich ;
+    cine:hasGenre cine:adventure_film,
+        cine:comedy_film,
+        cine:detective_film,
+        cine:drama_film,
+        cine:family_film,
+        cine:fantasy_film,
+        cine:ghost_film,
+        cine:melodrama,
+        cine:musical_film ;
     cine:imdbId "tt2380307" ;
-    cine:releaseYear 2017 .
+    cine:releaseYear 2017,
+        2018 .
 
 cine:Dangal a cine:Film ;
     rdfs:label "Dangal" ;
     cine:directedBy cine:Nitesh_Tiwari ;
+    cine:hasActor cine:Aamir_Khan,
+        cine:Fatima_Sana_Shaikh,
+        cine:Girish_Kulkarni,
+        cine:Sakshi_Tanwar,
+        cine:Sanya_Malhotra,
+        cine:Suhani_Bhatnagar,
+        cine:Vivan_Bhatena,
+        cine:Zaira_Wasim ;
+    cine:hasGenre cine:drama_film,
+        cine:sport_film ;
     cine:imdbId "tt5074352" ;
-    cine:releaseYear 2016 .
+    cine:releaseYear 2016,
+        2017 .
 
 cine:Das_Boot a cine:Film ;
     rdfs:label "Das Boot" ;
     cine:directedBy cine:Wolfgang_Petersen ;
+    cine:hasActor cine:Bernd_Tauber,
+        cine:Claude-Oliver_Rudolph,
+        cine:Erwin_Leder,
+        cine:Günter_Lamprecht,
+        cine:Jan_Fedder,
+        cine:Jürgen_Prochnow,
+        cine:Klaus_Wennemann,
+        cine:Otto_Sander,
+        cine:Ralf_Richter,
+        cine:Sky_du_Mont ;
+    cine:hasGenre cine:drama_film,
+        cine:historical_film,
+        cine:submarine_film,
+        cine:war_film ;
     cine:imdbId "tt0082096" ;
-    cine:releaseYear 1981 .
+    cine:releaseYear 1981,
+        1982 .
 
 cine:Dil_Bechara a cine:Film ;
     rdfs:label "Dil Bechara" ;
     cine:directedBy cine:Mukesh_Chhabra ;
+    cine:hasActor cine:Sanjana_Sanghi,
+        cine:Saswata_Chatterjee,
+        cine:Sushant_Singh_Rajput,
+        cine:Swastika_Mukherjee ;
+    cine:hasGenre cine:comedy_drama,
+        cine:coming-of-age_film,
+        cine:romance_film,
+        cine:romantic_drama,
+        cine:tragicomedy ;
     cine:imdbId "tt8110330" ;
     cine:releaseYear 2020 .
 
 cine:Django_Unchained a cine:Film ;
     rdfs:label "Django Unchained" ;
     cine:directedBy cine:Quentin_Tarantino ;
+    cine:hasActor cine:Amber_Tamblyn,
+        cine:Christoph_Waltz,
+        cine:Don_Johnson,
+        cine:Jamie_Foxx,
+        cine:Kerry_Washington,
+        cine:Leonardo_DiCaprio,
+        cine:Quentin_Tarantino,
+        cine:Samuel_L._Jackson,
+        cine:Tom_Savini,
+        cine:Zoë_Bell ;
+    cine:hasGenre cine:Revisionist_Western,
+        cine:Western_film,
+        cine:action_film,
+        cine:blaxploitation_film,
+        cine:comedy_drama,
+        cine:drama_film,
+        cine:historical_drama_film,
+        cine:historical_film ;
     cine:imdbId "tt1853728" ;
-    cine:releaseYear 2012 .
+    cine:releaseYear 2012,
+        2013 .
 
 cine:Double_Indemnity a cine:Film ;
     rdfs:label "Double Indemnity" ;
     cine:directedBy cine:Billy_Wilder ;
+    cine:hasActor cine:Barbara_Stanwyck,
+        cine:Bess_Flowers,
+        cine:Douglas_Spencer,
+        cine:Edward_G._Robinson,
+        cine:Fred_MacMurray,
+        cine:Gig_Young,
+        cine:Jean_Heather,
+        cine:John_Berry,
+        cine:Raymond_Chandler,
+        cine:Tom_Powers ;
+    cine:hasGenre cine:crime_film,
+        cine:drama_film,
+        cine:film_based_on_a_novel,
+        cine:film_noir,
+        cine:flashback_film ;
     cine:imdbId "tt0036775" ;
-    cine:releaseYear 1944 .
+    cine:releaseYear 1944,
+        1950 .
 
 cine:Dr_Strangelove a cine:Film ;
     rdfs:label "Dr. Strangelove" ;
     cine:directedBy cine:Stanley_Kubrick ;
+    cine:hasActor cine:George_C._Scott,
+        cine:Jack_Creley,
+        cine:James_Earl_Jones,
+        cine:Keenan_Wynn,
+        cine:Peter_Bull,
+        cine:Peter_Sellers,
+        cine:Shane_Rimmer,
+        cine:Slim_Pickens,
+        cine:Sterling_Hayden,
+        cine:Tracy_Reed ;
+    cine:hasGenre cine:black_comedy_film,
+        cine:comedy_film,
+        cine:film_based_on_a_novel,
+        cine:satirical_film_or_television_program,
+        cine:war_film ;
     cine:imdbId "tt0057012" ;
     cine:releaseYear 1964 .
 
 cine:Fight_Club a cine:Film ;
     rdfs:label "Fight Club" ;
     cine:directedBy cine:David_Fincher ;
+    cine:hasActor cine:Bob_Stephenson,
+        cine:Brad_Pitt,
+        cine:David_Andrews,
+        cine:David_Lee_Smith,
+        cine:Edward_Norton,
+        cine:Helena_Bonham_Carter,
+        cine:Jared_Leto,
+        cine:Matt_Winston,
+        cine:Meat_Loaf,
+        cine:Zach_Grenier ;
+    cine:hasGenre cine:drama_film,
+        cine:film_based_on_a_novel,
+        cine:flashback_film,
+        cine:psychological_thriller,
+        cine:thriller_film ;
     cine:imdbId "tt0137523" ;
     cine:releaseYear 1999 .
 
 cine:For_a_Few_Dollars_More a cine:Film ;
     rdfs:label "For a Few Dollars More" ;
     cine:directedBy cine:Sergio_Leone ;
+    cine:hasActor cine:Antonio_Molino_Rojo,
+        cine:Carlo_Simi,
+        cine:Clint_Eastwood,
+        cine:Gian_Maria_Volonté,
+        cine:Klaus_Kinski,
+        cine:Lee_Van_Cleef,
+        cine:Peter_Lee_Lawrence,
+        cine:Sergio_Leone,
+        cine:Tomás_Blanco,
+        cine:Werner_Abrolat ;
+    cine:hasGenre cine:Spaghetti_Western,
+        cine:Western_film,
+        cine:action_film ;
     cine:imdbId "tt0059578" ;
-    cine:releaseYear 1965 .
+    cine:releaseYear 1965,
+        1967 .
 
 cine:Forrest_Gump a cine:Film ;
     rdfs:label "Forrest Gump" ;
     cine:directedBy cine:Robert_Zemeckis ;
+    cine:hasActor cine:Aloysius_Gigl,
+        cine:Hanna_R._Hall,
+        cine:Jack_Bowden,
+        cine:John_Lennon,
+        cine:Kurt_Russell,
+        cine:Lazarus_Jackson,
+        cine:Marla_Sucharetza,
+        cine:Paul_Raczkowski,
+        cine:Tiffany_Salerno,
+        cine:Valentine ;
+    cine:hasGenre cine:American_football_film,
+        cine:comedy_film,
+        cine:coming-of-age_film,
+        cine:drama_film,
+        cine:flashback_film,
+        cine:historical_drama,
+        cine:romantic_comedy,
+        cine:tragicomedy ;
     cine:imdbId "tt0109830" ;
     cine:releaseYear 1994 .
 
 cine:Gladiator a cine:Film ;
     rdfs:label "Gladiator" ;
     cine:directedBy cine:Ridley_Scott ;
+    cine:hasActor cine:Connie_Nielsen,
+        cine:David_Hemmings,
+        cine:Derek_Jacobi,
+        cine:Djimon_Hounsou,
+        cine:Joaquin_Phoenix,
+        cine:Oliver_Reed,
+        cine:Ralf_Moeller,
+        cine:Richard_Harris,
+        cine:Russell_Crowe,
+        cine:Tommy_Flanagan ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:historical_drama_film,
+        cine:historical_film,
+        cine:melodrama,
+        cine:sword-and-sandal_film ;
     cine:imdbId "tt0172495" ;
-    cine:releaseYear 2000 .
+    cine:releaseYear 2000,
+        2023 .
 
 cine:Goodfellas a cine:Film ;
     rdfs:label "Goodfellas" ;
     cine:directedBy cine:Martin_Scorsese ;
+    cine:hasActor cine:Debi_Mazar,
+        cine:Illeana_Douglas,
+        cine:Joe_Pesci,
+        cine:Lorraine_Bracco,
+        cine:Michael_Imperioli,
+        cine:Peter_Onorati,
+        cine:Ray_Liotta,
+        cine:Robert_De_Niro,
+        cine:Samuel_L._Jackson,
+        cine:Tobin_Bell ;
+    cine:hasGenre cine:biographical_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:film_based_on_book,
+        cine:gangster_film,
+        cine:historical_drama_film,
+        cine:historical_film,
+        cine:period_drama_film,
+        cine:police_procedural_film,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0099685" ;
     cine:releaseYear 1990 .
 
 cine:Grave_of_the_Fireflies a cine:Film ;
     rdfs:label "Grave of the Fireflies" ;
     cine:directedBy cine:Isao_Takahata ;
+    cine:hasGenre cine:anti-war_film,
+        cine:coming-of-age_film,
+        cine:drama_anime_and_manga,
+        cine:drama_film,
+        cine:flashback_film,
+        cine:ghost_film ;
     cine:imdbId "tt0095327" ;
     cine:releaseYear 1988 .
 
 cine:Ikiru a cine:Film ;
     rdfs:label "Ikiru" ;
     cine:directedBy cine:Akira_Kurosawa ;
+    cine:hasActor cine:Bokuzen_Hidari,
+        cine:Kamatari_Fujiwara,
+        cine:Kin_Sugai,
+        cine:Makoto_Kobori,
+        cine:Minoru_Chiaki,
+        cine:Nobuo_Kaneko,
+        cine:Nobuo_Nakamura,
+        cine:Seiji_Miyaguchi,
+        cine:Shinichi_Himori,
+        cine:Takashi_Shimura ;
+    cine:hasGenre cine:drama_film ;
     cine:imdbId "tt0044741" ;
-    cine:releaseYear 1952 .
+    cine:releaseYear 1952,
+        1956 .
 
 cine:Inception a cine:Film ;
     rdfs:label "Inception" ;
     cine:directedBy cine:Christopher_Nolan ;
+    cine:hasActor cine:Cillian_Murphy,
+        cine:Elliot_Page,
+        cine:Joseph_Gordon-Levitt,
+        cine:Ken_Watanabe,
+        cine:Leonardo_DiCaprio,
+        cine:Marion_Cotillard,
+        cine:Michael_Caine,
+        cine:Pete_Postlethwaite,
+        cine:Talulah_Riley,
+        cine:Tom_Hardy ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:drama_film,
+        cine:heist_film,
+        cine:mystery_film,
+        cine:science_fiction_action_film,
+        cine:science_fiction_film,
+        cine:thriller_film ;
     cine:imdbId "tt1375666" ;
     cine:releaseYear 2010 .
 
 cine:Interstellar a cine:Film ;
     rdfs:label "Interstellar" ;
     cine:directedBy cine:Christopher_Nolan ;
+    cine:hasActor cine:Anne_Hathaway,
+        cine:David_Oyelowo,
+        cine:Elyes_Gabel,
+        cine:Francis_X._McCarthy,
+        cine:Josh_Stewart,
+        cine:Mackenzie_Foy,
+        cine:Matt_Damon,
+        cine:Matthew_McConaughey,
+        cine:Michael_Caine,
+        cine:Timothée_Chalamet ;
+    cine:hasGenre cine:adventure_film,
+        cine:drama_film,
+        cine:dystopian_film,
+        cine:hard_science_fiction,
+        cine:science_fiction_film,
+        cine:thriller_film,
+        cine:time-travel_film ;
     cine:imdbId "tt0816692" ;
-    cine:releaseYear 2014 .
+    cine:releaseYear 2014,
+        2025 .
 
 cine:Its_a_Wonderful_Life a cine:Film ;
     rdfs:label "It's a Wonderful Life" ;
     cine:directedBy cine:Frank_Capra ;
+    cine:hasActor cine:Adriana_Caselotti,
+        cine:Beulah_Bondi,
+        cine:Donna_Reed,
+        cine:Ellen_Corby,
+        cine:Frank_Faylen,
+        cine:Gloria_Grahame,
+        cine:James_Stewart,
+        cine:Jean_Acker,
+        cine:Lionel_Barrymore,
+        cine:Thomas_Mitchell ;
+    cine:hasGenre cine:Christmas_film,
+        cine:comedy_film,
+        cine:drama_film,
+        cine:fantasy_film,
+        cine:film_based_on_literature,
+        cine:flashback_film,
+        cine:romantic_comedy ;
     cine:imdbId "tt0038650" ;
-    cine:releaseYear 1946 .
+    cine:releaseYear 1946,
+        1947 .
 
 cine:Joker a cine:Film ;
     rdfs:label "Joker" ;
     cine:directedBy cine:Todd_Phillips ;
+    cine:hasActor cine:Bill_Camp,
+        cine:Brett_Cullen,
+        cine:Bryan_Callen,
+        cine:Frances_Conroy,
+        cine:Joaquin_Phoenix,
+        cine:Josh_Pais,
+        cine:Justin_Theroux,
+        cine:Marc_Maron,
+        cine:Robert_De_Niro,
+        cine:Shea_Whigham ;
+    cine:hasGenre cine:crime_film,
+        cine:drama_film,
+        cine:psychological_thriller_film,
+        cine:thriller_film ;
     cine:imdbId "tt7286456" ;
     cine:releaseYear 2019 .
 
 cine:Lawrence_of_Arabia a cine:Film ;
     rdfs:label "Lawrence of Arabia" ;
     cine:directedBy cine:David_Lean ;
+    cine:hasActor cine:Alec_Guinness,
+        cine:Anthony_Quinn,
+        cine:David_Lean,
+        cine:Harry_Fowler,
+        cine:Jack_Hawkins,
+        cine:José_Ferrer,
+        cine:Michel_de_Carvalho,
+        cine:Omar_Sharif,
+        cine:Peter_OToole,
+        cine:Robert_Bolt ;
+    cine:hasGenre cine:adventure_film,
+        cine:biographical_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:film_based_on_book,
+        cine:flashback_film,
+        cine:war_film ;
     cine:imdbId "tt0056172" ;
-    cine:releaseYear 1962 .
+    cine:releaseYear 1962,
+        1963 .
 
 cine:Life_is_Beautiful a cine:Film ;
     rdfs:label "Life is Beautiful" ;
     cine:directedBy cine:Roberto_Benigni ;
+    cine:hasActor cine:Giorgio_Cantarini,
+        cine:Giuliana_Lojodice,
+        cine:Giustino_Durano,
+        cine:Horst_Buchholz,
+        cine:Lydia_Alfonsi,
+        cine:Marisa_Paredes,
+        cine:Nicoletta_Braschi,
+        cine:Omero_Antonutti,
+        cine:Richard_Sammel,
+        cine:Roberto_Benigni ;
+    cine:hasGenre cine:comedy_film,
+        cine:drama_film ;
     cine:imdbId "tt0118799" ;
-    cine:releaseYear 1997 .
+    cine:releaseYear 1997,
+        1998,
+        1999 .
 
 <http://filmgraph.pro/ontology/Léon:_The_Professional> a cine:Film ;
     rdfs:label "Léon: The Professional" ;
     cine:directedBy cine:Luc_Besson ;
+    cine:hasActor cine:Danny_Aiello,
+        cine:Ellen_Greene,
+        cine:Gary_Oldman,
+        cine:Jean-Hugues_Anglade,
+        cine:Jean_Reno,
+        cine:Kent_Broadhurst,
+        cine:Michael_Badalucco,
+        cine:Natalie_Portman,
+        cine:Robert_LaSardo,
+        cine:Samy_Naceri ;
+    cine:hasGenre cine:action_film,
+        cine:buddy_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:gangster_film,
+        cine:mystery_film ;
     cine:imdbId "tt0110413" ;
     cine:releaseYear 1994 .
 
 cine:M a cine:Film ;
     rdfs:label "M" ;
     cine:directedBy cine:Fritz_Lang ;
+    cine:hasActor cine:Carl_Balhaus,
+        cine:Elisabeth_Neumann-Viertel,
+        cine:Erwin_Faber,
+        cine:Hanna_Maron,
+        cine:Hertha_von_Walther,
+        cine:Klaus_Pohl,
+        cine:Leonard_Steckel,
+        cine:Paul_Kemp,
+        cine:Peter_Lorre,
+        cine:Rolf_Wanka ;
+    cine:hasGenre cine:drama_film,
+        cine:film_noir,
+        cine:thriller_film ;
     cine:imdbId "tt0022100" ;
-    cine:releaseYear 1931 .
+    cine:releaseYear 1931,
+        1933 .
 
 cine:Metropolis a cine:Film ;
     rdfs:label "Metropolis" ;
     cine:directedBy cine:Fritz_Lang ;
+    cine:hasActor cine:Alfred_Abel,
+        cine:Brigitte_Helm,
+        cine:Curt_Siodmak,
+        cine:Fritz_Rasp,
+        cine:Georg_John,
+        cine:Grete_Berger,
+        cine:Heinrich_George,
+        cine:Helene_Weigel,
+        cine:Rolf_von_Goth,
+        cine:Theodor_Loos ;
+    cine:hasGenre cine:arthouse_science_fiction_film,
+        cine:drama_film,
+        cine:dystopian_film,
+        cine:science_fiction_film,
+        cine:silent_film ;
     cine:imdbId "tt0017136" ;
     cine:releaseYear 1927 .
 
 cine:Modern_Times a cine:Film ;
     rdfs:label "Modern Times" ;
     cine:directedBy cine:Charlie_Chaplin ;
+    cine:hasActor cine:Al_Ernest_Garcia,
+        cine:Charlie_Chaplin,
+        cine:Chester_Conklin,
+        cine:Edward_LeSaint,
+        cine:Gloria_DeHaven,
+        cine:Hank_Mann,
+        cine:Henry_Bergman,
+        cine:Paulette_Goddard,
+        cine:Tiny_Sandford,
+        cine:Wilfred_Lucas ;
+    cine:hasGenre cine:comedy_drama,
+        cine:romantic_comedy,
+        cine:silent_film,
+        cine:tragicomedy ;
     cine:imdbId "tt0027977" ;
     cine:releaseYear 1936 .
 
 cine:North_by_Northwest a cine:Film ;
     rdfs:label "North by Northwest" ;
     cine:directedBy cine:Alfred_Hitchcock ;
+    cine:hasActor cine:Alfred_Hitchcock,
+        cine:Bess_Flowers,
+        cine:Cary_Grant,
+        cine:Edward_Binns,
+        cine:Eva_Marie_Saint,
+        cine:James_Mason,
+        cine:Jessie_Royce_Landis,
+        cine:Lawrence_Dobkin,
+        cine:Martin_Landau,
+        cine:Ned_Glass ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:mystery_film,
+        cine:spy_film,
+        cine:thriller_film ;
     cine:imdbId "tt0053125" ;
     cine:releaseYear 1959 .
 
 cine:Oldboy a cine:Film ;
     rdfs:label "Oldboy" ;
     cine:directedBy cine:Park_Chan-wook ;
+    cine:hasActor cine:Choi_Min-sik,
+        cine:Kang_Hye-jung,
+        cine:Lee_Dae-yeon,
+        cine:Lee_Mi-mi,
+        cine:Oh_Kwang-rok,
+        cine:Oh_Tae-kyung,
+        cine:Park_Jae-woong,
+        cine:Song_Sokze,
+        cine:Yoon_Jin-seo,
+        cine:Yu_Ji-tae ;
+    cine:hasGenre cine:action_film,
+        cine:drama_film,
+        cine:mystery_film,
+        cine:thriller_film ;
     cine:imdbId "tt0364569" ;
-    cine:releaseYear 2003 .
+    cine:releaseYear 2003,
+        2004,
+        2005 .
 
 cine:Once_Upon_a_Time_in_America a cine:Film ;
     rdfs:label "Once Upon a Time in America" ;
     cine:directedBy cine:Sergio_Leone ;
+    cine:hasActor cine:Danny_Aiello,
+        cine:Elizabeth_McGovern,
+        cine:James_Woods,
+        cine:Jennifer_Connelly,
+        cine:Joe_Pesci,
+        cine:Louise_Fletcher,
+        cine:Robert_De_Niro,
+        cine:Sergio_Leone,
+        cine:Treat_Williams,
+        cine:William_Forsythe ;
+    cine:hasGenre cine:Western_film,
+        cine:action_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:documentary_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:film_based_on_a_novel,
+        cine:flashback_film,
+        cine:gangster_film,
+        cine:historical_drama_film,
+        cine:historical_film,
+        cine:period_drama_film,
+        cine:thriller_film ;
     cine:imdbId "tt0087843" ;
     cine:releaseYear 1984 .
 
 cine:Once_Upon_a_Time_in_the_West a cine:Film ;
     rdfs:label "Once Upon a Time in the West" ;
     cine:directedBy cine:Sergio_Leone ;
+    cine:hasActor cine:Antonio_Molino_Rojo,
+        cine:Charles_Bronson,
+        cine:Claudia_Cardinale,
+        cine:Conrado_San_Martín,
+        cine:Gabriele_Ferzetti,
+        cine:Henry_Fonda,
+        cine:Jason_Robards,
+        cine:Lionel_Stander,
+        cine:Lorenzo_Robledo,
+        cine:Sergio_Leone ;
+    cine:hasGenre cine:Spaghetti_Western,
+        cine:Western_film,
+        cine:action_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:flashback_film,
+        cine:melodrama ;
     cine:imdbId "tt0064116" ;
-    cine:releaseYear 1968 .
+    cine:releaseYear 1968,
+        1969 .
 
 cine:One_Flew_Over_the_Cuckoos_Nest a cine:Film ;
     rdfs:label "One Flew Over the Cuckoo's Nest" ;
     cine:directedBy cine:Miloš_Forman ;
+    cine:hasActor cine:Anjelica_Huston,
+        cine:Audrey_Landers,
+        cine:Brad_Dourif,
+        cine:Christopher_Lloyd,
+        cine:Danny_DeVito,
+        cine:Jack_Nicholson,
+        cine:Louise_Fletcher,
+        cine:Scatman_Crothers,
+        cine:Vincent_Schiavelli,
+        cine:Will_Sampson ;
+    cine:hasGenre cine:comedy_film,
+        cine:film_based_on_a_novel,
+        cine:medical_drama,
+        cine:prison_film ;
     cine:imdbId "tt0073486" ;
-    cine:releaseYear 1975 .
+    cine:releaseYear 1975,
+        1976 .
 
 cine:Parasite a cine:Film ;
     rdfs:label "Parasite" ;
     cine:directedBy cine:Bong_Joon-ho ;
+    cine:hasActor cine:Cho_Yeo-jeong,
+        cine:Choi_Woo-shik,
+        cine:Jang_Hye-jin,
+        cine:Jung_Ziso,
+        cine:Lee_Jung-eun,
+        cine:Lee_Sun-kyun,
+        cine:Park_Myung-hoon,
+        cine:Park_Seo-joon,
+        cine:Park_So-dam,
+        cine:Song_Kang-ho ;
+    cine:hasGenre cine:black_comedy,
+        cine:comedy_drama,
+        cine:thriller_film ;
     cine:imdbId "tt6751668" ;
     cine:releaseYear 2019 .
 
 cine:Paths_of_Glory a cine:Film ;
     rdfs:label "Paths of Glory" ;
     cine:directedBy cine:Stanley_Kubrick ;
+    cine:hasActor cine:Adolphe_Menjou,
+        cine:Bert_Freed,
+        cine:Christiane_Kubrick,
+        cine:George_Macready,
+        cine:Jerry_Hausner,
+        cine:Jock_Stein,
+        cine:Kirk_Douglas,
+        cine:Peter_Capell,
+        cine:Rolf_Kralovitz,
+        cine:Timothy_Carey,
+        cine:Wayne_Morris ;
+    cine:hasGenre cine:anti-war_film,
+        cine:film_based_on_literature,
+        cine:trial_film,
+        cine:war_film ;
     cine:imdbId "tt0050825" ;
-    cine:releaseYear 1957 .
+    cine:releaseYear 1957,
+        1958,
+        1959 .
 
 cine:Princess_Mononoke a cine:Film ;
     rdfs:label "Princess Mononoke" ;
     cine:directedBy cine:Hayao_Miyazaki ;
+    cine:hasGenre cine:action_film,
+        cine:anime_film,
+        cine:anti-war_film,
+        cine:coming-of-age_film,
+        cine:drama_film,
+        cine:fantasy_anime,
+        cine:fantasy_film ;
     cine:imdbId "tt0119698" ;
-    cine:releaseYear 1997 .
+    cine:releaseYear 1997,
+        2001 .
 
 cine:Psycho a cine:Film ;
     rdfs:label "Psycho" ;
     cine:directedBy cine:Alfred_Hitchcock ;
+    cine:hasActor cine:Alfred_Hitchcock,
+        cine:Anthony_Perkins,
+        cine:Frank_Albertson,
+        cine:Janet_Leigh,
+        cine:John_Gavin,
+        cine:John_McIntire,
+        cine:Lurene_Tuttle,
+        cine:Pat_Hitchcock,
+        cine:Simon_Oakland,
+        cine:Vera_Miles ;
+    cine:hasGenre cine:LGBT-related_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:film_based_on_a_novel,
+        cine:film_noir,
+        cine:horror_film,
+        cine:independent_film,
+        cine:mystery_film,
+        cine:psychological_drama_film,
+        cine:psychological_horror_film,
+        cine:psychological_thriller_film,
+        cine:slasher_film,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0054215" ;
     cine:releaseYear 1960 .
 
 cine:Pulp_Fiction a cine:Film ;
     rdfs:label "Pulp Fiction" ;
     cine:directedBy cine:Quentin_Tarantino ;
+    cine:hasActor cine:Bruce_Willis,
+        cine:Frank_Whaley,
+        cine:Harvey_Keitel,
+        cine:John_Travolta,
+        cine:Peter_Greene,
+        cine:Quentin_Tarantino,
+        cine:Rosanna_Arquette,
+        cine:Samuel_L._Jackson,
+        cine:Steve_Buscemi,
+        cine:Uma_Thurman ;
+    cine:hasGenre cine:action_film,
+        cine:action_thriller,
+        cine:black_comedy_film,
+        cine:comedy_drama,
+        cine:comedy_film,
+        cine:crime_comedy_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:gangster_film,
+        cine:independent_film,
+        cine:neo-noir,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0110912" ;
     cine:releaseYear 1994 .
 
 cine:Q190525 a cine:Film ;
     rdfs:label "Q190525" ;
     cine:directedBy cine:Christopher_Nolan ;
+    cine:hasActor cine:Carrie-Anne_Moss,
+        cine:Guy_Pearce,
+        cine:Harriet_Sansom_Harris,
+        cine:Joe_Pantoliano,
+        cine:Jorja_Fox,
+        cine:Larry_Holden,
+        cine:Marianne_Muellerleile,
+        cine:Mark_Boone_Junior,
+        cine:Stephen_Tobolowsky,
+        cine:Thomas_Lennon ;
+    cine:hasGenre cine:crime_film,
+        cine:drama_film,
+        cine:film_based_on_literature,
+        cine:film_noir,
+        cine:flashback_film,
+        cine:horror_film,
+        cine:mystery_film,
+        cine:neo-noir,
+        cine:thriller_film ;
     cine:imdbId "tt0209144" ;
-    cine:releaseYear 2000 .
+    cine:releaseYear 2000,
+        2001 .
 
 cine:Raiders_of_the_Lost_Ark a cine:Film ;
     rdfs:label "Raiders of the Lost Ark" ;
     cine:directedBy cine:Steven_Spielberg ;
+    cine:hasActor cine:Alfred_Molina,
+        cine:Anthony_Higgins,
+        cine:Denholm_Elliott,
+        cine:Frank_Marshall,
+        cine:Harrison_Ford,
+        cine:John_Rhys-Davies,
+        cine:Karen_Allen,
+        cine:Pat_Roach,
+        cine:Tutte_Lemkow,
+        cine:Wolf_Kahler ;
+    cine:hasGenre cine:action_film,
+        cine:treasure_hunt_film ;
     cine:imdbId "tt0082971" ;
     cine:releaseYear 1981 .
 
 cine:Rear_Window a cine:Film ;
     rdfs:label "Rear Window" ;
     cine:directedBy cine:Alfred_Hitchcock ;
+    cine:hasActor cine:Alfred_Hitchcock,
+        cine:Bess_Flowers,
+        cine:Frank_Cady,
+        cine:Gig_Young,
+        cine:Grace_Kelly,
+        cine:James_Stewart,
+        cine:Kathryn_Crosby,
+        cine:Raymond_Burr,
+        cine:Thelma_Ritter,
+        cine:Wendell_Corey ;
+    cine:hasGenre cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:detective_film,
+        cine:drama_film,
+        cine:film_based_on_literature,
+        cine:mystery_film,
+        cine:psychological_drama_film,
+        cine:psychological_thriller_film,
+        cine:thriller_film ;
     cine:imdbId "tt0047396" ;
-    cine:releaseYear 1954 .
+    cine:releaseYear 1954,
+        1955,
+        1995 .
 
 cine:Saving_Private_Ryan a cine:Film ;
     rdfs:label "Saving Private Ryan" ;
     cine:directedBy cine:Steven_Spielberg ;
+    cine:hasActor cine:Adam_Goldberg,
+        cine:Bryan_Cranston,
+        cine:Dale_Dye,
+        cine:Giovanni_Ribisi,
+        cine:Jeremy_Davies,
+        cine:Joerg_Stadler,
+        cine:Matt_Damon,
+        cine:Paul_Giamatti,
+        cine:Tom_Hanks,
+        cine:Vin_Diesel ;
+    cine:hasGenre cine:action_film,
+        cine:drama_film,
+        cine:war_film ;
     cine:imdbId "tt0120815" ;
     cine:releaseYear 1998 .
 
 cine:Scarface a cine:Film ;
     rdfs:label "Scarface" ;
     cine:directedBy cine:Brian_De_Palma ;
+    cine:hasActor cine:Al_Pacino,
+        cine:Brett_Ratner,
+        cine:Charles_Durning,
+        cine:Dennis_Franz,
+        cine:F._Murray_Abraham,
+        cine:Lana_Clarkson,
+        cine:Mary_Elizabeth_Mastrantonio,
+        cine:Michelle_Pfeiffer,
+        cine:Míriam_Colón,
+        cine:Robert_Loggia ;
+    cine:hasGenre cine:action_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:gangster_film,
+        cine:neo-noir,
+        cine:police_procedural_film,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0086250" ;
-    cine:releaseYear 1983 .
+    cine:releaseYear 1983,
+        1984 .
 
 cine:Schindlers_List a cine:Film ;
     rdfs:label "Schindler's List" ;
     cine:directedBy cine:Steven_Spielberg ;
+    cine:hasActor cine:Alexander_Held,
+        cine:August_Schmölzer,
+        cine:Erwin_Leder,
+        cine:Götz_Otto,
+        cine:Liam_Neeson,
+        cine:Ludger_Pistor,
+        cine:Maciej_Kozłowski,
+        cine:Martin_Semmelrogge,
+        cine:Ralph_Fiennes,
+        cine:Thomas_Morris ;
+    cine:hasGenre cine:anti-war_film,
+        cine:biographical_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:film_based_on_a_novel,
+        cine:historical_drama_film,
+        cine:historical_film,
+        cine:psychological_drama_film,
+        cine:war_drama,
+        cine:war_film ;
     cine:imdbId "tt0108052" ;
-    cine:releaseYear 1993 .
+    cine:releaseYear 1993,
+        1994 .
 
 cine:Seven a cine:Film ;
     rdfs:label "Seven" ;
     cine:directedBy cine:David_Fincher ;
+    cine:hasActor cine:Brad_Pitt,
+        cine:Endre_Hules,
+        cine:Gwyneth_Paltrow,
+        cine:Haris_Savides,
+        cine:John_C._McGinley,
+        cine:Kevin_Spacey,
+        cine:Mark_Boone_Junior,
+        cine:Morgan_Freeman,
+        cine:R._Lee_Ermey,
+        cine:Richard_Roundtree ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:buddy_cop_film,
+        cine:chase_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:detective_film,
+        cine:drama_film,
+        cine:horror_film,
+        cine:independent_film,
+        cine:mystery_film,
+        cine:police_procedural_film,
+        cine:psychological_drama_film,
+        cine:psychological_horror_film,
+        cine:psychological_thriller_film,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0114369" ;
     cine:releaseYear 1995 .
 
 cine:Seven_Samurai a cine:Film ;
     rdfs:label "Seven Samurai" ;
     cine:directedBy cine:Akira_Kurosawa ;
+    cine:hasActor cine:Daisuke_Katō,
+        cine:Haruo_Nakajima,
+        cine:Isao_Kimura,
+        cine:Keiko_Tsushima,
+        cine:Minoru_Chiaki,
+        cine:Noriko_Sengoku,
+        cine:Seiji_Miyaguchi,
+        cine:Takashi_Shimura,
+        cine:Tatsuya_Nakadai,
+        cine:Yoshio_Tsuchiya ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:historical_drama,
+        cine:samurai_cinema ;
     cine:imdbId "tt0047478" ;
-    cine:releaseYear 1954 .
+    cine:releaseYear 1954,
+        1956,
+        1965 .
 
 cine:Singin_in_the_Rain a cine:Film ;
     rdfs:label "Singin' in the Rain" ;
     cine:directedBy cine:Gene_Kelly,
         cine:Stanley_Donen ;
+    cine:hasActor cine:Cyd_Charisse,
+        cine:Dawn_Addams,
+        cine:Debbie_Reynolds,
+        cine:Donald_OConnor,
+        cine:Elaine_Stewart,
+        cine:Gene_Kelly,
+        cine:Jean_Hagen,
+        cine:Kathleen_Freeman,
+        cine:Mae_Clarke,
+        cine:Rita_Moreno ;
+    cine:hasGenre cine:comedy_film,
+        cine:melodrama,
+        cine:musical_film,
+        cine:romantic_comedy ;
     cine:imdbId "tt0045152" ;
-    cine:releaseYear 1952 .
+    cine:releaseYear 1952,
+        1953 .
 
 <http://filmgraph.pro/ontology/Spider-Man:_Into_the_Spider-Verse> a cine:Film ;
     rdfs:label "Spider-Man: Into the Spider-Verse" ;
     cine:directedBy cine:Bob_Persichetti,
         cine:Peter_Ramsey,
         cine:Rodney_Rothman ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:comedy_film,
+        cine:drama_film,
+        cine:science_fiction_film,
+        cine:speculative_fiction_film,
+        cine:superhero_film ;
     cine:imdbId "tt4633694" ;
-    cine:releaseYear 2018 .
+    cine:releaseYear 2018,
+        2019 .
 
 cine:Spirited_Away a cine:Film ;
     rdfs:label "Spirited Away" ;
     cine:directedBy cine:Hayao_Miyazaki ;
+    cine:hasGenre <http://filmgraph.pro/ontology/children's_film>,
+        cine:coming-of-age_film,
+        cine:drama_film,
+        cine:fantasy_anime_and_manga,
+        cine:fantasy_film,
+        cine:isekai,
+        cine:supernatural_anime ;
     cine:imdbId "tt0245429" ;
-    cine:releaseYear 2001 .
+    cine:releaseYear 2001,
+        2002,
+        2003,
+        2024 .
 
 <http://filmgraph.pro/ontology/Star_Wars:_Episode_IV_–_A_New_Hope> a cine:Film ;
     rdfs:label "Star Wars: Episode IV – A New Hope" ;
     cine:directedBy cine:George_Lucas ;
+    cine:hasActor cine:Alec_Guinness,
+        cine:Carrie_Fisher,
+        cine:David_Prowse,
+        cine:Harrison_Ford,
+        cine:James_Earl_Jones,
+        cine:Joe_Johnston,
+        cine:Mark_Hamill,
+        cine:Peter_Cushing,
+        cine:Phil_Brown,
+        cine:Richard_LeParmentier ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:coming-of-age_film,
+        cine:science_fiction_film,
+        cine:space_opera ;
     cine:imdbId "tt0076759" ;
-    cine:releaseYear 1977 .
+    cine:releaseYear 1977,
+        1978 .
 
 <http://filmgraph.pro/ontology/Star_Wars:_Episode_VI_–_Return_of_the_Jedi> a cine:Film ;
     rdfs:label "Star Wars: Episode VI – Return of the Jedi" ;
     cine:directedBy cine:Richard_Marquand ;
+    cine:hasActor cine:Alec_Guinness,
+        cine:Carrie_Fisher,
+        cine:David_Prowse,
+        cine:Felix_Silla,
+        cine:Frank_Oz,
+        cine:Harrison_Ford,
+        cine:Hayden_Christensen,
+        cine:Ian_McDiarmid,
+        cine:Mark_Hamill,
+        cine:Warwick_Davis ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:fantasy_film,
+        cine:science_fiction_film ;
     cine:imdbId "tt0086190" ;
     cine:releaseYear 1983 .
 
 <http://filmgraph.pro/ontology/Star_Wars:_Episode_V_–_The_Empire_Strikes_Back> a cine:Film ;
     rdfs:label "Star Wars: Episode V – The Empire Strikes Back" ;
     cine:directedBy cine:Irvin_Kershner ;
+    cine:hasActor cine:Alec_Guinness,
+        cine:Billy_Dee_Williams,
+        cine:Carrie_Fisher,
+        cine:David_Prowse,
+        cine:Frank_Oz,
+        cine:Harrison_Ford,
+        cine:Ian_McDiarmid,
+        cine:Julian_Glover,
+        cine:Kenny_Baker,
+        cine:Mark_Hamill ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:epic_film,
+        cine:fantasy_film,
+        cine:science_fiction_film,
+        cine:space_opera ;
     cine:imdbId "tt0080684" ;
     cine:releaseYear 1980 .
 
 cine:Sunset_Boulevard a cine:Film ;
     rdfs:label "Sunset Boulevard" ;
     cine:directedBy cine:Billy_Wilder ;
+    cine:hasActor cine:Anna_Q._Nilsson,
+        cine:Buster_Keaton,
+        cine:Cecil_B._DeMille,
+        cine:Erich_von_Stroheim,
+        cine:Gloria_Swanson,
+        cine:H._B._Warner,
+        cine:Hedda_Hopper,
+        cine:Henry_Wilcoxon,
+        cine:Nancy_Olson,
+        cine:William_Holden ;
+    cine:hasGenre cine:drama_film,
+        cine:film_noir,
+        cine:flashback_film ;
     cine:imdbId "tt0043014" ;
     cine:releaseYear 1950 .
 
@@ -420,85 +1524,349 @@ cine:Taare_Zameen_Par a cine:Film ;
     cine:directedBy cine:Aamir_Khan,
         cine:Amole_Gupte,
         cine:Ram_Madhvani ;
+    cine:hasActor cine:Aamir_Khan,
+        cine:Abhishek_Bachchan,
+        cine:Darsheel_Safary,
+        cine:Girija_Oak,
+        cine:Gurkirtan,
+        cine:M._K._Raina,
+        cine:Meghna_Malik,
+        cine:Sachet_Engineer,
+        cine:Sonali_Sachdev,
+        cine:Tanay_Chheda,
+        cine:Tisca_Chopra ;
+    cine:hasGenre <http://filmgraph.pro/ontology/children's_film>,
+        cine:drama_film,
+        cine:musical_film ;
     cine:imdbId "tt0986264" ;
     cine:releaseYear 2007 .
 
 cine:Taxi_Driver a cine:Film ;
     rdfs:label "Taxi Driver" ;
     cine:directedBy cine:Martin_Scorsese ;
+    cine:hasActor cine:Albert_Brooks,
+        cine:Cybill_Shepherd,
+        cine:Diahnne_Abbott,
+        cine:Harvey_Keitel,
+        cine:Jodie_Foster,
+        cine:Joe_Spinell,
+        cine:Martin_Scorsese,
+        cine:Peter_Boyle,
+        cine:Robert_De_Niro,
+        cine:Victor_Argo ;
+    cine:hasGenre cine:action_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:film_noir,
+        cine:neo-noir,
+        cine:police_procedural_film,
+        cine:psychological_drama_film,
+        cine:psychological_thriller_film,
+        cine:suspense_film,
+        cine:thriller_film,
+        cine:vigilante_film ;
     cine:imdbId "tt0075314" ;
-    cine:releaseYear 1976 .
+    cine:releaseYear 1976,
+        1977 .
 
 <http://filmgraph.pro/ontology/Terminator_2:_Judgment_Day> a cine:Film ;
     rdfs:label "Terminator 2: Judgment Day" ;
     cine:directedBy cine:James_Cameron ;
+    cine:hasActor cine:Arnold_Schwarzenegger,
+        cine:Cástulo_Guerra,
+        cine:Earl_Boen,
+        cine:Edward_Furlong,
+        cine:Jenette_Goldstein,
+        cine:Joe_Morton,
+        cine:Linda_Hamilton,
+        cine:Michael_Biehn,
+        cine:Nikki_Cox,
+        cine:Robert_Patrick ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:black_comedy_film,
+        cine:chase_film,
+        cine:comedy_film,
+        cine:cyberpunk,
+        cine:drama_film,
+        cine:dystopian_film,
+        cine:girls_with_guns,
+        cine:post-apocalyptic_film,
+        cine:science_fiction_action_film,
+        cine:science_fiction_film,
+        cine:suspense_film,
+        cine:techno-thriller,
+        cine:thriller_film,
+        cine:time-travel_film ;
     cine:imdbId "tt0103064" ;
     cine:releaseYear 1991 .
 
 cine:The_Apartment a cine:Film ;
     rdfs:label "The Apartment" ;
     cine:directedBy cine:Billy_Wilder ;
+    cine:hasActor cine:David_Lewis,
+        cine:David_White,
+        cine:Edie_Adams,
+        cine:Fred_MacMurray,
+        cine:Jack_Lemmon,
+        cine:Joan_Shawlee,
+        cine:Joyce_Jameson,
+        cine:Naomi_Stevens,
+        cine:Paul_Picerni,
+        cine:Shirley_MacLaine ;
+    cine:hasGenre cine:Christmas_film,
+        cine:drama_film,
+        cine:romantic_comedy ;
     cine:imdbId "tt0053604" ;
-    cine:releaseYear 1960 .
+    cine:releaseYear 1960,
+        1961 .
 
 cine:The_Dark_Knight a cine:Film ;
     rdfs:label "The Dark Knight" ;
     cine:directedBy cine:Christopher_Nolan ;
+    cine:hasActor cine:Aaron_Eckhart,
+        cine:Christian_Bale,
+        cine:Cillian_Murphy,
+        cine:Eric_Roberts,
+        cine:Gary_Oldman,
+        cine:Heath_Ledger,
+        cine:Maggie_Gyllenhaal,
+        cine:Michael_Caine,
+        cine:Morgan_Freeman,
+        cine:William_Fichtner ;
+    cine:hasGenre cine:action_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:neo-noir,
+        cine:superhero_film,
+        cine:thriller_film ;
     cine:imdbId "tt0468569" ;
-    cine:releaseYear 2008 .
+    cine:releaseYear 2008,
+        2022 .
 
 cine:The_Dark_Knight_Rises a cine:Film ;
     rdfs:label "The Dark Knight Rises" ;
     cine:directedBy cine:Christopher_Nolan ;
+    cine:hasActor cine:Anne_Hathaway,
+        cine:Brett_Cullen,
+        cine:Christian_Bale,
+        cine:Gary_Oldman,
+        cine:Joey_King,
+        cine:Josh_Stewart,
+        cine:Liam_Neeson,
+        cine:Marion_Cotillard,
+        cine:Michael_Caine,
+        cine:Morgan_Freeman ;
+    cine:hasGenre cine:action_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:superhero_film,
+        cine:thriller_film ;
     cine:imdbId "tt1345836" ;
-    cine:releaseYear 2012 .
+    cine:releaseYear 2012,
+        2022 .
 
 cine:The_Departed a cine:Film ;
     rdfs:label "The Departed" ;
     cine:directedBy cine:Martin_Scorsese ;
+    cine:hasActor cine:Alec_Baldwin,
+        cine:Jack_Nicholson,
+        cine:James_Badge_Dale,
+        cine:John_Cenatiempo,
+        cine:Kristen_Dalton,
+        cine:Leonardo_DiCaprio,
+        cine:Mark_Wahlberg,
+        cine:Martin_Sheen,
+        cine:Matt_Damon,
+        cine:Vera_Farmiga ;
+    cine:hasGenre cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:gangster_film,
+        cine:mystery_film,
+        cine:neo-noir,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0407887" ;
     cine:releaseYear 2006 .
 
 cine:The_Godfather a cine:Film ;
     rdfs:label "The Godfather" ;
     cine:directedBy cine:Francis_Ford_Coppola ;
+    cine:hasActor cine:Al_Pacino,
+        cine:Angelo_Infanti,
+        cine:Diane_Keaton,
+        cine:James_Caan,
+        cine:Marlon_Brando,
+        cine:Robert_Duvall,
+        cine:Roman_Coppola,
+        cine:Sofia_Coppola,
+        cine:Sterling_Hayden,
+        cine:Talia_Shire ;
+    cine:hasGenre cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:film_based_on_a_novel,
+        cine:gangster_film,
+        cine:historical_drama_film,
+        cine:historical_film,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0068646" ;
     cine:releaseYear 1972 .
 
 cine:The_Godfather_Part_II a cine:Film ;
     rdfs:label "The Godfather Part II" ;
     cine:directedBy cine:Francis_Ford_Coppola ;
+    cine:hasActor cine:Al_Pacino,
+        cine:Amerigo_Tot,
+        cine:Carmen_Argenziano,
+        cine:Diane_Keaton,
+        cine:G._D._Spradlin,
+        cine:James_Caan,
+        cine:Robert_De_Niro,
+        cine:Robert_Duvall,
+        cine:Sofia_Coppola,
+        cine:Talia_Shire ;
+    cine:hasGenre cine:action_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:film_based_on_a_novel,
+        cine:flashback_film,
+        cine:gangster_film,
+        cine:historical_drama_film,
+        cine:historical_film,
+        cine:mystery_film,
+        cine:police_procedural_film,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0071562" ;
-    cine:releaseYear 1974 .
+    cine:releaseYear 1974,
+        1975 .
 
 <http://filmgraph.pro/ontology/The_Good,_the_Bad_and_the_Ugly> a cine:Film ;
     rdfs:label "The Good, the Bad and the Ugly" ;
     cine:directedBy cine:Sergio_Leone ;
+    cine:hasActor cine:Al_Mulock,
+        cine:Aldo_Giuffrè,
+        cine:Aldo_Sambrell,
+        cine:Antonio_Casas,
+        cine:Attilio_Dottesio,
+        cine:Benito_Stefanelli,
+        cine:Fortunato_Arena,
+        cine:Frank_Braña,
+        cine:Luigi_Pistilli,
+        cine:Romano_Puppo ;
+    cine:hasGenre cine:Spaghetti_Western,
+        cine:Western_film,
+        cine:action_film,
+        cine:drama_film,
+        cine:epic_film,
+        cine:treasure_hunt_film,
+        cine:war_film ;
     cine:imdbId "tt0060196" ;
-    cine:releaseYear 1966 .
+    cine:releaseYear 1966,
+        1967,
+        1968 .
 
 cine:The_Great_Dictator a cine:Film ;
     rdfs:label "The Great Dictator" ;
     cine:directedBy cine:Charlie_Chaplin ;
+    cine:hasActor cine:Billy_Gilbert,
+        cine:Charlie_Chaplin,
+        cine:Chester_Conklin,
+        cine:Cyril_Ring,
+        cine:Emma_Dunn,
+        cine:Jack_Oakie,
+        cine:Paul_Weigel,
+        cine:Paulette_Goddard,
+        cine:Sig_Arno,
+        cine:Tiny_Sandford ;
+    cine:hasGenre cine:anti-war_film,
+        cine:comedy_drama,
+        cine:comedy_film,
+        cine:comedy_of_error,
+        cine:drama_film,
+        cine:parody_film,
+        cine:political_satire,
+        cine:slapstick,
+        cine:war_film ;
     cine:imdbId "tt0032553" ;
-    cine:releaseYear 1940 .
+    cine:releaseYear 1940,
+        1945,
+        1958,
+        1960 .
 
 cine:The_Green_Mile a cine:Film ;
     rdfs:label "The Green Mile" ;
     cine:directedBy cine:Frank_Darabont ;
+    cine:hasActor cine:Bonnie_Hunt,
+        cine:David_Morse,
+        cine:Gary_Sinise,
+        cine:Graham_Greene,
+        cine:James_Cromwell,
+        cine:Michael_Jeter,
+        cine:Patricia_Clarkson,
+        cine:Sam_Rockwell,
+        cine:Tom_Hanks,
+        cine:William_Sadler ;
+    cine:hasGenre cine:drama_film,
+        cine:fantasy_film,
+        cine:flashback_film,
+        cine:magic_realist_film,
+        cine:prison_film ;
     cine:imdbId "tt0120689" ;
-    cine:releaseYear 1999 .
+    cine:releaseYear 1999,
+        2000 .
 
 cine:The_Intouchables a cine:Film ;
     rdfs:label "The Intouchables" ;
     cine:directedBy cine:Olivier_Nakache,
         cine:Éric_Toledano ;
+    cine:hasActor cine:Alba_Gaïa_Bellugi,
+        cine:Anne_Le_Ny,
+        cine:Audrey_Fleurot,
+        cine:Benjamin_Baroche,
+        cine:Caroline_Bourg,
+        cine:Christian_Ameri,
+        cine:François_Cluzet,
+        cine:Joséphine_de_Meaux,
+        cine:Omar_Sy,
+        cine:Émilie_Caen ;
+    cine:hasGenre cine:biographical_film,
+        cine:comedy_film,
+        cine:drama_film ;
     cine:imdbId "tt1675434" ;
-    cine:releaseYear 2011 .
+    cine:releaseYear 2011,
+        2012 .
 
 cine:The_Kid a cine:Film ;
     rdfs:label "The Kid" ;
     cine:directedBy cine:Charlie_Chaplin ;
+    cine:hasActor cine:Albert_Austin,
+        cine:Charles_Reisner,
+        cine:Charlie_Chaplin,
+        cine:Edna_Purviance,
+        cine:Esther_Ralston,
+        cine:Frank_Campeau,
+        cine:Granville_Redmond,
+        cine:Henry_Bergman,
+        cine:Jackie_Coogan,
+        cine:Lita_Grey ;
+    cine:hasGenre cine:comedy_drama,
+        cine:drama_film,
+        cine:silent_film,
+        cine:social_comedy_film ;
     cine:imdbId "tt0012349" ;
     cine:releaseYear 1921 .
 
@@ -506,115 +1874,386 @@ cine:The_Lion_King a cine:Film ;
     rdfs:label "The Lion King" ;
     cine:directedBy cine:Rob_Minkoff,
         cine:Roger_Allers ;
+    cine:hasGenre cine:adventure_film,
+        cine:drama_film,
+        cine:family_film,
+        cine:musical_film ;
     cine:imdbId "tt0110357" ;
     cine:releaseYear 1994 .
 
 cine:The_Lives_of_Others a cine:Film ;
     rdfs:label "The Lives of Others" ;
     cine:directedBy cine:Florian_Henckel_von_Donnersmarck ;
+    cine:hasActor cine:Bastian_Trost,
+        cine:Charly_Hübner,
+        cine:Ludwig_Blochberger,
+        cine:Marie_Gruber,
+        cine:Paul_Faßnacht,
+        cine:Paul_Maximilian_Schüller,
+        cine:Sebastian_Koch,
+        cine:Ulrich_Mühe,
+        cine:Ulrich_Tukur,
+        cine:Werner_Daehn ;
+    cine:hasGenre cine:drama_film,
+        cine:political_thriller_film,
+        cine:thriller_film ;
     cine:imdbId "tt0405094" ;
     cine:releaseYear 2006 .
 
 <http://filmgraph.pro/ontology/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring> a cine:Film ;
     rdfs:label "The Lord of the Rings: The Fellowship of the Ring" ;
     cine:directedBy cine:Peter_Jackson ;
+    cine:hasActor cine:Cate_Blanchett,
+        cine:Christopher_Lee,
+        cine:Dominic_Monaghan,
+        cine:Hugo_Weaving,
+        cine:Ian_McKellen,
+        cine:John_Rhys-Davies,
+        cine:Liv_Tyler,
+        cine:Orlando_Bloom,
+        cine:Peter_Jackson,
+        cine:Sean_Astin ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:fantasy_film ;
     cine:imdbId "tt0120737" ;
-    cine:releaseYear 2001 .
+    cine:releaseYear 2001,
+        2002 .
 
 <http://filmgraph.pro/ontology/The_Lord_of_the_Rings:_The_Return_of_the_King> a cine:Film ;
     rdfs:label "The Lord of the Rings: The Return of the King" ;
     cine:directedBy cine:Peter_Jackson ;
+    cine:hasActor cine:Cate_Blanchett,
+        cine:Christopher_Lee,
+        cine:Dominic_Monaghan,
+        cine:Hugo_Weaving,
+        cine:John_Rhys-Davies,
+        cine:Karl_Urban,
+        cine:Liv_Tyler,
+        cine:Orlando_Bloom,
+        cine:Peter_Jackson,
+        cine:Sean_Astin ;
+    cine:hasGenre cine:adventure_film,
+        cine:fantasy_film ;
     cine:imdbId "tt0167260" ;
-    cine:releaseYear 2003 .
+    cine:releaseYear 2003,
+        2004 .
 
 <http://filmgraph.pro/ontology/The_Lord_of_the_Rings:_The_Two_Towers> a cine:Film ;
     rdfs:label "The Lord of the Rings: The Two Towers" ;
     cine:directedBy cine:Peter_Jackson ;
+    cine:hasActor cine:Cate_Blanchett,
+        cine:Christopher_Lee,
+        cine:Dominic_Monaghan,
+        cine:Hugo_Weaving,
+        cine:Ian_McKellen,
+        cine:John_Rhys-Davies,
+        cine:Karl_Urban,
+        cine:Liv_Tyler,
+        cine:Orlando_Bloom,
+        cine:Peter_Jackson ;
+    cine:hasGenre cine:action_film,
+        cine:adventure_film,
+        cine:fantasy_film ;
     cine:imdbId "tt0167261" ;
-    cine:releaseYear 2002 .
+    cine:releaseYear 2002,
+        2003 .
 
 cine:The_Matrix a cine:Film ;
     rdfs:label "The Matrix" ;
     cine:directedBy cine:Lana_Wachowski,
         cine:Lilly_Wachowski ;
+    cine:hasActor cine:Ada_Nicodemou,
+        cine:Bill_Young,
+        cine:Carrie-Anne_Moss,
+        cine:David_Aston,
+        cine:Gloria_Foster,
+        cine:Hugo_Weaving,
+        cine:Joe_Pantoliano,
+        cine:Keanu_Reeves,
+        cine:Laurence_Fishburne,
+        cine:Robert_Taylor ;
+    cine:hasGenre cine:action_film,
+        cine:action_thriller,
+        cine:cyberpunk,
+        cine:dystopian_film,
+        cine:film_noir,
+        cine:post-apocalyptic_film,
+        cine:science_fiction_film,
+        cine:superhero_film,
+        cine:thriller_film ;
     cine:imdbId "tt0133093" ;
     cine:releaseYear 1999 .
 
 cine:The_Mountain_II a cine:Film ;
     rdfs:label "The Mountain II" ;
     cine:directedBy cine:Alper_Çağlar ;
+    cine:hasActor cine:Çağlar_Ertuğrul ;
+    cine:hasGenre cine:adventure_film ;
     cine:imdbId "tt5813916" ;
     cine:releaseYear 2016 .
 
 cine:The_Pianist a cine:Film ;
     rdfs:label "The Pianist" ;
     cine:directedBy cine:Roman_Polanski ;
+    cine:hasActor cine:Adrien_Brody,
+        cine:Axel_Prahl,
+        cine:Joachim_Paul_Assböck,
+        cine:Joanna_Brodzik,
+        cine:Katarzyna_Figura,
+        cine:Maja_Ostaszewska,
+        cine:Thomas_Kretschmann,
+        cine:Udo_Kroschwald,
+        cine:Wanja_Mues,
+        cine:Zbigniew_Zamachowski ;
+    cine:hasGenre cine:biographical_film,
+        cine:drama_film,
+        cine:historical_film,
+        cine:musical_film,
+        cine:war_film ;
     cine:imdbId "tt0253474" ;
     cine:releaseYear 2002 .
 
 cine:The_Prestige a cine:Film ;
     rdfs:label "The Prestige" ;
     cine:directedBy cine:Christopher_Nolan ;
+    cine:hasActor cine:Andy_Serkis,
+        cine:Christian_Bale,
+        cine:Christopher_Neame,
+        cine:David_Bowie,
+        cine:Dawn_Upshaw,
+        cine:Edward_Hibbert,
+        cine:Michael_Caine,
+        cine:Piper_Perabo,
+        cine:Rebecca_Hall,
+        cine:Scarlett_Johansson ;
+    cine:hasGenre cine:drama_film,
+        cine:fantasy_film,
+        cine:magic_realist_film,
+        cine:mystery_film,
+        cine:thriller_film ;
     cine:imdbId "tt0482571" ;
-    cine:releaseYear 2006 .
+    cine:releaseYear 2006,
+        2007 .
 
 cine:The_Shawshank_Redemption a cine:Film ;
     rdfs:label "The Shawshank Redemption" ;
     cine:directedBy cine:Frank_Darabont ;
+    cine:hasActor cine:Bob_Gunton,
+        cine:Clancy_Brown,
+        cine:Frank_Medrano,
+        cine:Gil_Bellows,
+        cine:James_Whitmore,
+        cine:Jeffrey_DeMunn,
+        cine:Mark_Rolston,
+        cine:Morgan_Freeman,
+        cine:Tim_Robbins,
+        cine:William_Sadler ;
+    cine:hasGenre cine:buddy_film,
+        cine:crime_film,
+        cine:drama_film,
+        cine:film_based_on_literature,
+        cine:prison_film ;
     cine:imdbId "tt0111161" ;
-    cine:releaseYear 1994 .
+    cine:releaseYear 1994,
+        1995 .
 
 cine:The_Shining a cine:Film ;
     rdfs:label "The Shining" ;
     cine:directedBy cine:Stanley_Kubrick ;
+    cine:hasActor cine:Anne_Jackson,
+        cine:Barry_Dennen,
+        cine:Barry_Nelson,
+        cine:Danny_Lloyd,
+        cine:Jack_Nicholson,
+        cine:Joe_Turkel,
+        cine:Scatman_Crothers,
+        cine:Shelley_Duvall,
+        cine:Tony_Burton,
+        cine:Vivian_Kubrick ;
+    cine:hasGenre cine:drama_film,
+        cine:film_based_on_a_novel,
+        cine:ghost_film,
+        cine:horror_film,
+        cine:mystery_film,
+        cine:psychological_drama_film,
+        cine:psychological_horror_film,
+        cine:psychological_thriller_film,
+        cine:supernatural_horror_film,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0081505" ;
     cine:releaseYear 1980 .
 
 cine:The_Silence_of_the_Lambs a cine:Film ;
     rdfs:label "The Silence of the Lambs" ;
     cine:directedBy cine:Jonathan_Demme ;
+    cine:hasActor cine:Anthony_Hopkins,
+        cine:Charles_Napier,
+        cine:Chris_Isaak,
+        cine:Diane_Baker,
+        cine:George_A._Romero,
+        cine:Jodie_Foster,
+        cine:Roger_Corman,
+        cine:Scott_Glenn,
+        cine:Ted_Levine,
+        cine:Tracey_Walter ;
+    cine:hasGenre cine:LGBT-related_film,
+        cine:crime_drama_film,
+        cine:crime_film,
+        cine:crime_thriller_film,
+        cine:drama_film,
+        cine:film_based_on_a_novel,
+        cine:horror_film,
+        cine:police_procedural_film,
+        cine:psychological_drama_film,
+        cine:psychological_horror_film,
+        cine:psychological_thriller_film,
+        cine:thriller_film ;
     cine:imdbId "tt0102926" ;
     cine:releaseYear 1991 .
 
 cine:The_Sting a cine:Film ;
     rdfs:label "The Sting" ;
     cine:directedBy cine:George_Roy_Hill ;
+    cine:hasActor cine:Charles_Durning,
+        cine:Dana_Elcar,
+        cine:Dimitra_Arliss,
+        cine:Eileen_Brennan,
+        cine:Kathleen_Freeman,
+        cine:Paul_Newman,
+        cine:Ray_Walston,
+        cine:Robert_Redford,
+        cine:Robert_Shaw,
+        cine:Sally_Kirkland ;
+    cine:hasGenre cine:buddy_film,
+        cine:comedy_film,
+        cine:drama_film,
+        cine:heist_film ;
     cine:imdbId "tt0070735" ;
-    cine:releaseYear 1973 .
+    cine:releaseYear 1973,
+        1974 .
 
 cine:The_Usual_Suspects a cine:Film ;
     rdfs:label "The Usual Suspects" ;
     cine:directedBy cine:Bryan_Singer ;
+    cine:hasActor cine:Benicio_del_Toro,
+        cine:Christopher_McQuarrie,
+        cine:Clark_Gregg,
+        cine:Gabriel_Byrne,
+        cine:Kevin_Spacey,
+        cine:Michelle_Clunie,
+        cine:Pete_Postlethwaite,
+        cine:Peter_Greene,
+        cine:Stephen_Baldwin,
+        cine:Suzy_Amis_Cameron ;
+    cine:hasGenre cine:action_film,
+        cine:crime_drama_film,
+        cine:crime_thriller_film,
+        cine:detective_film,
+        cine:drama_film,
+        cine:flashback_film,
+        cine:gangster_film,
+        cine:heist_film,
+        cine:mystery_film,
+        cine:neo-noir,
+        cine:suspense_film,
+        cine:thriller_film ;
     cine:imdbId "tt0114814" ;
-    cine:releaseYear 1995 .
+    cine:releaseYear 1995,
+        1996 .
 
 cine:Vertigo a cine:Film ;
     rdfs:label "Vertigo" ;
     cine:directedBy cine:Alfred_Hitchcock ;
+    cine:hasActor cine:Alfred_Hitchcock,
+        cine:Barbara_Bel_Geddes,
+        cine:Bess_Flowers,
+        cine:Ellen_Corby,
+        cine:Henry_Jones,
+        cine:James_Stewart,
+        cine:Kim_Novak,
+        cine:Lee_Patrick,
+        cine:Raymond_Bailey,
+        cine:Tom_Helmore ;
+    cine:hasGenre cine:drama_film,
+        cine:melodrama,
+        cine:mystery_film,
+        cine:psychological_drama_film,
+        cine:psychological_thriller_film,
+        cine:romance_film,
+        cine:thriller_film ;
     cine:imdbId "tt0052357" ;
-    cine:releaseYear 1958 .
+    cine:releaseYear 1958,
+        1959 .
 
 cine:WALL-E a cine:Film ;
     rdfs:label "WALL-E" ;
     cine:directedBy cine:Andrew_Stanton ;
+    cine:hasActor cine:Fred_Willard ;
+    cine:hasGenre cine:adventure,
+        cine:adventure_film,
+        cine:adventure_science_fiction,
+        <http://filmgraph.pro/ontology/children's_film>,
+        cine:comedy_film,
+        cine:dystopian_film,
+        cine:flashback_film,
+        cine:melodrama,
+        cine:post-apocalyptic_fiction,
+        cine:post-apocalyptic_film,
+        cine:romance_film,
+        cine:romantic_comedy,
+        cine:science_fiction_comedy,
+        cine:science_fiction_film,
+        cine:speculative_fiction_film ;
     cine:imdbId "tt0910970" ;
     cine:releaseYear 2008 .
 
 cine:Whiplash a cine:Film ;
     rdfs:label "Whiplash" ;
     cine:directedBy cine:Damien_Chazelle ;
+    cine:hasActor cine:April_Grace,
+        cine:Chris_Mulkey,
+        cine:J._K._Simmons,
+        cine:Melissa_Benoist,
+        cine:Michael_Cohen,
+        cine:Michelle_Ruff,
+        cine:Miles_Teller,
+        cine:Paul_Reiser,
+        cine:Suanne_Spoke,
+        cine:Wendee_Lee ;
+    cine:hasGenre cine:drama_film,
+        cine:musical_film ;
     cine:imdbId "tt2582802" ;
-    cine:releaseYear 2014 .
+    cine:releaseYear 2014,
+        2015 .
 
 cine:Witness_for_the_Prosecution a cine:Film ;
     rdfs:label "Witness for the Prosecution" ;
     cine:directedBy cine:Billy_Wilder ;
+    cine:hasActor cine:Charles_Laughton,
+        cine:Elsa_Lanchester,
+        cine:Francis_Compton,
+        cine:Ian_Wolfe,
+        cine:John_Williams,
+        cine:Marlene_Dietrich,
+        cine:Norma_Varden,
+        cine:Torin_Thatcher,
+        cine:Tyrone_Power,
+        cine:William_H._OBrien ;
+    cine:hasGenre cine:crime_film,
+        cine:trial_film ;
     cine:imdbId "tt0051201" ;
-    cine:releaseYear 1957 .
+    cine:releaseYear 1957,
+        1958 .
 
 cine:Your_Name a cine:Film ;
     rdfs:label "Your Name" ;
     cine:directedBy cine:Makoto_Shinkai ;
+    cine:hasGenre cine:coming-of-age_film,
+        cine:fantasy_film,
+        cine:romance_film,
+        cine:time-travel_film ;
     cine:imdbId "tt5311514" ;
     cine:releaseYear 2016 .
 
@@ -657,14 +2296,92 @@ cine:year a owl:DatatypeProperty ;
     rdfs:comment "The year a film released in." ;
     rdfs:domain cine:Film .
 
-cine:Aamir_Khan a cine:Person ;
-    rdfs:label "Aamir Khan" .
+cine:Aaron_Eckhart a cine:Person ;
+    rdfs:label "Aaron Eckhart" .
+
+cine:Abhishek_Bachchan a cine:Person ;
+    rdfs:label "Abhishek Bachchan" .
+
+cine:Ada_Nicodemou a cine:Person ;
+    rdfs:label "Ada Nicodemou" .
+
+cine:Adam_Goldberg a cine:Person ;
+    rdfs:label "Adam Goldberg" .
+
+cine:Adolphe_Menjou a cine:Person ;
+    rdfs:label "Adolphe Menjou" .
 
 cine:Adrian_Molina a cine:Person ;
     rdfs:label "Adrian Molina" .
 
+cine:Adriana_Caselotti a cine:Person ;
+    rdfs:label "Adriana Caselotti" .
+
+cine:Adrien_Brody a cine:Person ;
+    rdfs:label "Adrien Brody" .
+
+cine:Adrienne_Corri a cine:Person ;
+    rdfs:label "Adrienne Corri" .
+
+cine:Agnes_Moorehead a cine:Person ;
+    rdfs:label "Agnes Moorehead" .
+
+cine:Agnese_Nano a cine:Person ;
+    rdfs:label "Agnese Nano" .
+
+cine:Al_Mulock a cine:Person ;
+    rdfs:label "Al Mulock" .
+
+cine:Alan_Ladd a cine:Person ;
+    rdfs:label "Alan Ladd" .
+
+cine:Alba_Gaïa_Bellugi a cine:Person ;
+    rdfs:label "Alba Gaïa Bellugi" .
+
+cine:Albert_Austin a cine:Person ;
+    rdfs:label "Albert Austin" .
+
+cine:Albert_Brooks a cine:Person ;
+    rdfs:label "Albert Brooks" .
+
+cine:Aldo_Giuffrè a cine:Person ;
+    rdfs:label "Aldo Giuffrè" .
+
+cine:Aldo_Sambrell a cine:Person ;
+    rdfs:label "Aldo Sambrell" .
+
+cine:Alec_Baldwin a cine:Person ;
+    rdfs:label "Alec Baldwin" .
+
+cine:Alexander_Held a cine:Person ;
+    rdfs:label "Alexander Held" .
+
+cine:Alexandre_Rodrigues a cine:Person ;
+    rdfs:label "Alexandre Rodrigues" .
+
+cine:Alfred_Abel a cine:Person ;
+    rdfs:label "Alfred Abel" .
+
+cine:Alfred_Molina a cine:Person ;
+    rdfs:label "Alfred Molina" .
+
+cine:Alice_Braga a cine:Person ;
+    rdfs:label "Alice Braga" .
+
+cine:Aloysius_Gigl a cine:Person ;
+    rdfs:label "Aloysius Gigl" .
+
 cine:Alper_Çağlar a cine:Person ;
     rdfs:label "Alper Çağlar" .
+
+cine:Amber_Tamblyn a cine:Person ;
+    rdfs:label "Amber Tamblyn" .
+
+cine:American_football_film a cine:Genre ;
+    rdfs:label "American football film" .
+
+cine:Amerigo_Tot a cine:Person ;
+    rdfs:label "Amerigo Tot" .
 
 cine:Amole_Gupte a cine:Person ;
     rdfs:label "Amole Gupte" .
@@ -672,117 +2389,1568 @@ cine:Amole_Gupte a cine:Person ;
 cine:Andrew_Stanton a cine:Person ;
     rdfs:label "Andrew Stanton" .
 
+cine:Andy_Serkis a cine:Person ;
+    rdfs:label "Andy Serkis" .
+
+cine:Angelo_Infanti a cine:Person ;
+    rdfs:label "Angelo Infanti" .
+
+cine:Anjelica_Huston a cine:Person ;
+    rdfs:label "Anjelica Huston" .
+
+cine:Ann_Gillis a cine:Person ;
+    rdfs:label "Ann Gillis" .
+
+cine:Anna_Q._Nilsson a cine:Person ;
+    rdfs:label "Anna Q. Nilsson" .
+
+cine:Anne_Jackson a cine:Person ;
+    rdfs:label "Anne Jackson" .
+
+cine:Anne_Le_Ny a cine:Person ;
+    rdfs:label "Anne Le Ny" .
+
+cine:Anthony_Higgins a cine:Person ;
+    rdfs:label "Anthony Higgins" .
+
+cine:Anthony_Hopkins a cine:Person ;
+    rdfs:label "Anthony Hopkins" .
+
+cine:Anthony_Perkins a cine:Person ;
+    rdfs:label "Anthony Perkins" .
+
+cine:Anthony_Quinn a cine:Person ;
+    rdfs:label "Anthony Quinn" .
+
+cine:Anthony_Sharp a cine:Person ;
+    rdfs:label "Anthony Sharp" .
+
+cine:Antonella_Attili a cine:Person ;
+    rdfs:label "Antonella Attili" .
+
+cine:Antonio_Casas a cine:Person ;
+    rdfs:label "Antonio Casas" .
+
+cine:April_Grace a cine:Person ;
+    rdfs:label "April Grace" .
+
+cine:Arnold_Schwarzenegger a cine:Person ;
+    rdfs:label "Arnold Schwarzenegger" .
+
+cine:Arthur_C._Clarke a cine:Person ;
+    rdfs:label "Arthur C. Clarke" .
+
+cine:Attilio_Dottesio a cine:Person ;
+    rdfs:label "Attilio Dottesio" .
+
+cine:Audrey_Fleurot a cine:Person ;
+    rdfs:label "Audrey Fleurot" .
+
+cine:Audrey_Landers a cine:Person ;
+    rdfs:label "Audrey Landers" .
+
+cine:August_Schmölzer a cine:Person ;
+    rdfs:label "August Schmölzer" .
+
+cine:Avery_Brooks a cine:Person ;
+    rdfs:label "Avery Brooks" .
+
+cine:Axel_Prahl a cine:Person ;
+    rdfs:label "Axel Prahl" .
+
+cine:Barbara_Bel_Geddes a cine:Person ;
+    rdfs:label "Barbara Bel Geddes" .
+
+cine:Barbara_Stanwyck a cine:Person ;
+    rdfs:label "Barbara Stanwyck" .
+
+cine:Barry_Dennen a cine:Person ;
+    rdfs:label "Barry Dennen" .
+
+cine:Barry_Nelson a cine:Person ;
+    rdfs:label "Barry Nelson" .
+
+cine:Bastian_Trost a cine:Person ;
+    rdfs:label "Bastian Trost" .
+
+cine:Benicio_del_Toro a cine:Person ;
+    rdfs:label "Benicio del Toro" .
+
+cine:Benito_Stefanelli a cine:Person ;
+    rdfs:label "Benito Stefanelli" .
+
+cine:Benjamin_Baroche a cine:Person ;
+    rdfs:label "Benjamin Baroche" .
+
+cine:Bernd_Tauber a cine:Person ;
+    rdfs:label "Bernd Tauber" .
+
+cine:Bert_Freed a cine:Person ;
+    rdfs:label "Bert Freed" .
+
+cine:Beulah_Bondi a cine:Person ;
+    rdfs:label "Beulah Bondi" .
+
+cine:Beverly_DAngelo a cine:Person ;
+    rdfs:label "Beverly D'Angelo" .
+
+cine:Bill_Camp a cine:Person ;
+    rdfs:label "Bill Camp" .
+
+cine:Bill_Young a cine:Person ;
+    rdfs:label "Bill Young" .
+
+cine:Billy_Dee_Williams a cine:Person ;
+    rdfs:label "Billy Dee Williams" .
+
+cine:Billy_Gilbert a cine:Person ;
+    rdfs:label "Billy Gilbert" .
+
+cine:Billy_Nelson a cine:Person ;
+    rdfs:label "Billy Nelson" .
+
+cine:Billy_Zane a cine:Person ;
+    rdfs:label "Billy Zane" .
+
+cine:Bob_Gunton a cine:Person ;
+    rdfs:label "Bob Gunton" .
+
 cine:Bob_Persichetti a cine:Person ;
     rdfs:label "Bob Persichetti" .
+
+cine:Bob_Stephenson a cine:Person ;
+    rdfs:label "Bob Stephenson" .
+
+cine:Bokuzen_Hidari a cine:Person ;
+    rdfs:label "Bokuzen Hidari" .
+
+cine:Bolaji_Badejo a cine:Person ;
+    rdfs:label "Bolaji Badejo" .
+
+cine:Boman_Irani a cine:Person ;
+    rdfs:label "Boman Irani" .
 
 cine:Bong_Joon-ho a cine:Person ;
     rdfs:label "Bong Joon-ho" .
 
+cine:Bonnie_Hunt a cine:Person ;
+    rdfs:label "Bonnie Hunt" .
+
+cine:Brad_Dourif a cine:Person ;
+    rdfs:label "Brad Dourif" .
+
+cine:Brett_Ratner a cine:Person ;
+    rdfs:label "Brett Ratner" .
+
 cine:Brian_De_Palma a cine:Person ;
     rdfs:label "Brian De Palma" .
+
+cine:Brie_Larson a cine:Person ;
+    rdfs:label "Brie Larson" .
+
+cine:Brigitte_Fossey a cine:Person ;
+    rdfs:label "Brigitte Fossey" .
+
+cine:Brigitte_Helm a cine:Person ;
+    rdfs:label "Brigitte Helm" .
+
+cine:Bruce_Willis a cine:Person ;
+    rdfs:label "Bruce Willis" .
+
+cine:Bryan_Callen a cine:Person ;
+    rdfs:label "Bryan Callen" .
+
+cine:Bryan_Cranston a cine:Person ;
+    rdfs:label "Bryan Cranston" .
 
 cine:Bryan_Singer a cine:Person ;
     rdfs:label "Bryan Singer" .
 
+cine:Buster_Keaton a cine:Person ;
+    rdfs:label "Buster Keaton" .
+
+cine:Carl_Balhaus a cine:Person ;
+    rdfs:label "Carl Balhaus" .
+
+cine:Carlo_Jachino a cine:Person ;
+    rdfs:label "Carlo Jachino" .
+
+cine:Carlo_Simi a cine:Person ;
+    rdfs:label "Carlo Simi" .
+
+cine:Carmen_Argenziano a cine:Person ;
+    rdfs:label "Carmen Argenziano" .
+
+cine:Caroline_Bourg a cine:Person ;
+    rdfs:label "Caroline Bourg" .
+
+cine:Cary_Grant a cine:Person ;
+    rdfs:label "Cary Grant" .
+
+cine:Cecil_B._DeMille a cine:Person ;
+    rdfs:label "Cecil B. DeMille" .
+
+cine:Charles_Bronson a cine:Person ;
+    rdfs:label "Charles Bronson" .
+
+cine:Charles_Laughton a cine:Person ;
+    rdfs:label "Charles Laughton" .
+
+cine:Charles_Napier a cine:Person ;
+    rdfs:label "Charles Napier" .
+
+cine:Charles_Reisner a cine:Person ;
+    rdfs:label "Charles Reisner" .
+
+cine:Charlie_Sheen a cine:Person ;
+    rdfs:label "Charlie Sheen" .
+
+cine:Charly_Hübner a cine:Person ;
+    rdfs:label "Charly Hübner" .
+
+cine:Checco_Rissone a cine:Person ;
+    rdfs:label "Checco Rissone" .
+
+cine:Cho_Yeo-jeong a cine:Person ;
+    rdfs:label "Cho Yeo-jeong" .
+
+cine:Choi_Min-sik a cine:Person ;
+    rdfs:label "Choi Min-sik" .
+
+cine:Choi_Woo-shik a cine:Person ;
+    rdfs:label "Choi Woo-shik" .
+
+cine:Chris_Evans a cine:Person ;
+    rdfs:label "Chris Evans" .
+
+cine:Chris_Isaak a cine:Person ;
+    rdfs:label "Chris Isaak" .
+
+cine:Chris_Mulkey a cine:Person ;
+    rdfs:label "Chris Mulkey" .
+
+cine:Christian_Ameri a cine:Person ;
+    rdfs:label "Christian Ameri" .
+
+cine:Christiane_Kubrick a cine:Person ;
+    rdfs:label "Christiane Kubrick" .
+
+cine:Christine_Ebersole a cine:Person ;
+    rdfs:label "Christine Ebersole" .
+
+cine:Christoph_Waltz a cine:Person ;
+    rdfs:label "Christoph Waltz" .
+
+cine:Christopher_McQuarrie a cine:Person ;
+    rdfs:label "Christopher McQuarrie" .
+
+cine:Christopher_Neame a cine:Person ;
+    rdfs:label "Christopher Neame" .
+
+cine:Clancy_Brown a cine:Person ;
+    rdfs:label "Clancy Brown" .
+
+cine:Clark_Gregg a cine:Person ;
+    rdfs:label "Clark Gregg" .
+
+cine:Claude-Oliver_Rudolph a cine:Person ;
+    rdfs:label "Claude-Oliver Rudolph" .
+
+cine:Claudia_Cardinale a cine:Person ;
+    rdfs:label "Claudia Cardinale" .
+
+cine:Claudia_Wells a cine:Person ;
+    rdfs:label "Claudia Wells" .
+
+cine:Clint_Eastwood a cine:Person ;
+    rdfs:label "Clint Eastwood" .
+
+cine:Colleen_Camp a cine:Person ;
+    rdfs:label "Colleen Camp" .
+
+cine:Connie_Nielsen a cine:Person ;
+    rdfs:label "Connie Nielsen" .
+
+cine:Conrad_Veidt a cine:Person ;
+    rdfs:label "Conrad Veidt" .
+
+cine:Conrado_San_Martín a cine:Person ;
+    rdfs:label "Conrado San Martín" .
+
+cine:Crispin_Glover a cine:Person ;
+    rdfs:label "Crispin Glover" .
+
+cine:Curt_Bois a cine:Person ;
+    rdfs:label "Curt Bois" .
+
+cine:Curt_Siodmak a cine:Person ;
+    rdfs:label "Curt Siodmak" .
+
+cine:Cybill_Shepherd a cine:Person ;
+    rdfs:label "Cybill Shepherd" .
+
+cine:Cyd_Charisse a cine:Person ;
+    rdfs:label "Cyd Charisse" .
+
+cine:Cynthia_Nixon a cine:Person ;
+    rdfs:label "Cynthia Nixon" .
+
+cine:Cyril_Ring a cine:Person ;
+    rdfs:label "Cyril Ring" .
+
+cine:Cástulo_Guerra a cine:Person ;
+    rdfs:label "Cástulo Guerra" .
+
+cine:Daisuke_Katō a cine:Person ;
+    rdfs:label "Daisuke Katō" .
+
+cine:Dale_Dye a cine:Person ;
+    rdfs:label "Dale Dye" .
+
 cine:Damien_Chazelle a cine:Person ;
     rdfs:label "Damien Chazelle" .
 
-cine:David_Lean a cine:Person ;
-    rdfs:label "David Lean" .
+cine:Dana_Elcar a cine:Person ;
+    rdfs:label "Dana Elcar" .
+
+cine:Dana_Vávrová a cine:Person ;
+    rdfs:label "Dana Vávrová" .
+
+cine:Danny_DeVito a cine:Person ;
+    rdfs:label "Danny DeVito" .
+
+cine:Danny_Lloyd a cine:Person ;
+    rdfs:label "Danny Lloyd" .
+
+cine:Darlan_Cunha a cine:Person ;
+    rdfs:label "Darlan Cunha" .
+
+cine:Darsheel_Safary a cine:Person ;
+    rdfs:label "Darsheel Safary" .
+
+cine:David_Andrews a cine:Person ;
+    rdfs:label "David Andrews" .
+
+cine:David_Aston a cine:Person ;
+    rdfs:label "David Aston" .
+
+cine:David_Bowie a cine:Person ;
+    rdfs:label "David Bowie" .
+
+cine:David_Hemmings a cine:Person ;
+    rdfs:label "David Hemmings" .
+
+cine:David_Lee_Smith a cine:Person ;
+    rdfs:label "David Lee Smith" .
+
+cine:David_Lewis a cine:Person ;
+    rdfs:label "David Lewis" .
+
+cine:David_Morse a cine:Person ;
+    rdfs:label "David Morse" .
+
+cine:David_Oyelowo a cine:Person ;
+    rdfs:label "David Oyelowo" .
+
+cine:David_White a cine:Person ;
+    rdfs:label "David White" .
+
+cine:Dawn_Addams a cine:Person ;
+    rdfs:label "Dawn Addams" .
+
+cine:Dawn_Upshaw a cine:Person ;
+    rdfs:label "Dawn Upshaw" .
+
+cine:Debbie_Reynolds a cine:Person ;
+    rdfs:label "Debbie Reynolds" .
+
+cine:Debi_Mazar a cine:Person ;
+    rdfs:label "Debi Mazar" .
+
+cine:Denholm_Elliott a cine:Person ;
+    rdfs:label "Denholm Elliott" .
+
+cine:Dennis_Franz a cine:Person ;
+    rdfs:label "Dennis Franz" .
+
+cine:Derek_Jacobi a cine:Person ;
+    rdfs:label "Derek Jacobi" .
+
+cine:Diahnne_Abbott a cine:Person ;
+    rdfs:label "Diahnne Abbott" .
+
+cine:Diane_Baker a cine:Person ;
+    rdfs:label "Diane Baker" .
+
+cine:Dimitra_Arliss a cine:Person ;
+    rdfs:label "Dimitra Arliss" .
+
+cine:Djimon_Hounsou a cine:Person ;
+    rdfs:label "Djimon Hounsou" .
+
+cine:Don_Johnson a cine:Person ;
+    rdfs:label "Don Johnson" .
+
+cine:Donald_OConnor a cine:Person ;
+    rdfs:label "Donald O'Connor" .
+
+cine:Donna_Reed a cine:Person ;
+    rdfs:label "Donna Reed" .
+
+cine:Dorothy_Comingore a cine:Person ;
+    rdfs:label "Dorothy Comingore" .
+
+cine:Douglas_Rain a cine:Person ;
+    rdfs:label "Douglas Rain" .
+
+cine:Douglas_Silva a cine:Person ;
+    rdfs:label "Douglas Silva" .
+
+cine:Douglas_Spencer a cine:Person ;
+    rdfs:label "Douglas Spencer" .
+
+cine:Earl_Boen a cine:Person ;
+    rdfs:label "Earl Boen" .
+
+cine:Ed_Begley a cine:Person ;
+    rdfs:label "Ed Begley" .
+
+cine:Ed_Bishop a cine:Person ;
+    rdfs:label "Ed Bishop" .
+
+cine:Eddie_Baker a cine:Person ;
+    rdfs:label "Eddie Baker" .
+
+cine:Eddie_Powell a cine:Person ;
+    rdfs:label "Eddie Powell" .
+
+cine:Edie_Adams a cine:Person ;
+    rdfs:label "Edie Adams" .
+
+cine:Edna_Purviance a cine:Person ;
+    rdfs:label "Edna Purviance" .
+
+cine:Edward_Binns a cine:Person ;
+    rdfs:label "Edward Binns" .
+
+cine:Edward_G._Robinson a cine:Person ;
+    rdfs:label "Edward G. Robinson" .
+
+cine:Edward_Hibbert a cine:Person ;
+    rdfs:label "Edward Hibbert" .
+
+cine:Edward_LeSaint a cine:Person ;
+    rdfs:label "Edward LeSaint" .
+
+cine:Eileen_Brennan a cine:Person ;
+    rdfs:label "Eileen Brennan" .
+
+cine:Elaine_Stewart a cine:Person ;
+    rdfs:label "Elaine Stewart" .
+
+cine:Elena_Altieri a cine:Person ;
+    rdfs:label "Elena Altieri" .
+
+cine:Elisabeth_Neumann-Viertel a cine:Person ;
+    rdfs:label "Elisabeth Neumann-Viertel" .
+
+cine:Elizabeth_Berridge a cine:Person ;
+    rdfs:label "Elizabeth Berridge" .
+
+cine:Elizabeth_McGovern a cine:Person ;
+    rdfs:label "Elizabeth McGovern" .
+
+cine:Ellen_Greene a cine:Person ;
+    rdfs:label "Ellen Greene" .
+
+cine:Elliot_Page a cine:Person ;
+    rdfs:label "Elliot Page" .
+
+cine:Elliott_Gould a cine:Person ;
+    rdfs:label "Elliott Gould" .
+
+cine:Elsa_Lanchester a cine:Person ;
+    rdfs:label "Elsa Lanchester" .
+
+cine:Elyes_Gabel a cine:Person ;
+    rdfs:label "Elyes Gabel" .
+
+cine:Emma_Dunn a cine:Person ;
+    rdfs:label "Emma Dunn" .
+
+cine:Endre_Hules a cine:Person ;
+    rdfs:label "Endre Hules" .
+
+cine:Enzo_Cannavale a cine:Person ;
+    rdfs:label "Enzo Cannavale" .
+
+cine:Enzo_Staiola a cine:Person ;
+    rdfs:label "Enzo Staiola" .
+
+cine:Eolo_Capritti a cine:Person ;
+    rdfs:label "Eolo Capritti" .
+
+cine:Eric_Roberts a cine:Person ;
+    rdfs:label "Eric Roberts" .
+
+cine:Erich_von_Stroheim a cine:Person ;
+    rdfs:label "Erich von Stroheim" .
+
+cine:Erwin_Faber a cine:Person ;
+    rdfs:label "Erwin Faber" .
+
+cine:Esther_Ralston a cine:Person ;
+    rdfs:label "Esther Ralston" .
+
+cine:Ethan_Suplee a cine:Person ;
+    rdfs:label "Ethan Suplee" .
+
+cine:Eva_Marie_Saint a cine:Person ;
+    rdfs:label "Eva Marie Saint" .
+
+cine:Everett_Sloane a cine:Person ;
+    rdfs:label "Everett Sloane" .
+
+cine:Fairuza_Balk a cine:Person ;
+    rdfs:label "Fairuza Balk" .
+
+cine:Fatima_Sana_Shaikh a cine:Person ;
+    rdfs:label "Fatima Sana Shaikh" .
+
+cine:Fausto_Guerzoni a cine:Person ;
+    rdfs:label "Fausto Guerzoni" .
+
+cine:Felix_Silla a cine:Person ;
+    rdfs:label "Felix Silla" .
 
 cine:Fernando_Meirelles a cine:Person ;
     rdfs:label "Fernando Meirelles" .
 
+cine:Florence_Lee a cine:Person ;
+    rdfs:label "Florence Lee" .
+
 cine:Florian_Henckel_von_Donnersmarck a cine:Person ;
     rdfs:label "Florian Henckel von Donnersmarck" .
+
+cine:Fortunato_Arena a cine:Person ;
+    rdfs:label "Fortunato Arena" .
+
+cine:Frances_Conroy a cine:Person ;
+    rdfs:label "Frances Conroy" .
+
+cine:Frances_Lee_McCain a cine:Person ;
+    rdfs:label "Frances Lee McCain" .
+
+cine:Francis_Compton a cine:Person ;
+    rdfs:label "Francis Compton" .
+
+cine:Francis_X._McCarthy a cine:Person ;
+    rdfs:label "Francis X. McCarthy" .
+
+cine:Frank_Albertson a cine:Person ;
+    rdfs:label "Frank Albertson" .
+
+cine:Frank_Braña a cine:Person ;
+    rdfs:label "Frank Braña" .
+
+cine:Frank_Cady a cine:Person ;
+    rdfs:label "Frank Cady" .
+
+cine:Frank_Campeau a cine:Person ;
+    rdfs:label "Frank Campeau" .
 
 cine:Frank_Capra a cine:Person ;
     rdfs:label "Frank Capra" .
 
-cine:Gene_Kelly a cine:Person ;
-    rdfs:label "Gene Kelly" .
+cine:Frank_Faylen a cine:Person ;
+    rdfs:label "Frank Faylen" .
 
-cine:Genre a owl:Class ;
-    rdfs:label "Genre" ;
-    rdfs:comment "A descriptor that signifies the type of story a film might have. Films can have multiple genres." .
+cine:Frank_Marshall a cine:Person ;
+    rdfs:label "Frank Marshall" .
+
+cine:Frank_Medrano a cine:Person ;
+    rdfs:label "Frank Medrano" .
+
+cine:Frank_Whaley a cine:Person ;
+    rdfs:label "Frank Whaley" .
+
+cine:François_Cluzet a cine:Person ;
+    rdfs:label "François Cluzet" .
+
+cine:Fred_Willard a cine:Person ;
+    rdfs:label "Fred Willard" .
+
+cine:Fritz_Rasp a cine:Person ;
+    rdfs:label "Fritz Rasp" .
+
+cine:G._D._Spradlin a cine:Person ;
+    rdfs:label "G. D. Spradlin" .
+
+cine:Gabriel_Byrne a cine:Person ;
+    rdfs:label "Gabriel Byrne" .
+
+cine:Gabriele_Ferzetti a cine:Person ;
+    rdfs:label "Gabriele Ferzetti" .
+
+cine:Gary_Lockwood a cine:Person ;
+    rdfs:label "Gary Lockwood" .
+
+cine:Gary_Sinise a cine:Person ;
+    rdfs:label "Gary Sinise" .
+
+cine:Georg_John a cine:Person ;
+    rdfs:label "Georg John" .
+
+cine:George_A._Romero a cine:Person ;
+    rdfs:label "George A. Romero" .
+
+cine:George_Buck_Flower a cine:Person ;
+    rdfs:label "George Buck Flower" .
+
+cine:George_C._Scott a cine:Person ;
+    rdfs:label "George C. Scott" .
+
+cine:George_DiCenzo a cine:Person ;
+    rdfs:label "George DiCenzo" .
 
 cine:George_Lucas a cine:Person ;
     rdfs:label "George Lucas" .
 
+cine:George_Macready a cine:Person ;
+    rdfs:label "George Macready" .
+
 cine:George_Roy_Hill a cine:Person ;
     rdfs:label "George Roy Hill" .
+
+cine:Gian-Carlo_Coppola a cine:Person ;
+    rdfs:label "Gian-Carlo Coppola" .
+
+cine:Gian_Maria_Volonté a cine:Person ;
+    rdfs:label "Gian Maria Volonté" .
+
+cine:Gil_Bellows a cine:Person ;
+    rdfs:label "Gil Bellows" .
+
+cine:Giorgio_Cantarini a cine:Person ;
+    rdfs:label "Giorgio Cantarini" .
+
+cine:Giovanni_Ribisi a cine:Person ;
+    rdfs:label "Giovanni Ribisi" .
+
+cine:Girija_Oak a cine:Person ;
+    rdfs:label "Girija Oak" .
+
+cine:Girish_Kulkarni a cine:Person ;
+    rdfs:label "Girish Kulkarni" .
+
+cine:Giuliana_Lojodice a cine:Person ;
+    rdfs:label "Giuliana Lojodice" .
 
 cine:Giuseppe_Tornatore a cine:Person ;
     rdfs:label "Giuseppe Tornatore" .
 
+cine:Giustino_Durano a cine:Person ;
+    rdfs:label "Giustino Durano" .
+
+cine:Gloria_DeHaven a cine:Person ;
+    rdfs:label "Gloria DeHaven" .
+
+cine:Gloria_Foster a cine:Person ;
+    rdfs:label "Gloria Foster" .
+
+cine:Gloria_Grahame a cine:Person ;
+    rdfs:label "Gloria Grahame" .
+
+cine:Gloria_Swanson a cine:Person ;
+    rdfs:label "Gloria Swanson" .
+
+cine:Grace_Kelly a cine:Person ;
+    rdfs:label "Grace Kelly" .
+
+cine:Graham_Greene a cine:Person ;
+    rdfs:label "Graham Greene" .
+
+cine:Graziella_Moretto a cine:Person ;
+    rdfs:label "Graziella Moretto" .
+
+cine:Gregg_Toland a cine:Person ;
+    rdfs:label "Gregg Toland" .
+
+cine:Grete_Berger a cine:Person ;
+    rdfs:label "Grete Berger" .
+
+cine:Gurkirtan a cine:Person ;
+    rdfs:label "Gurkirtan" .
+
+cine:Gus_Schilling a cine:Person ;
+    rdfs:label "Gus Schilling" .
+
+cine:Guy_Pearce a cine:Person ;
+    rdfs:label "Guy Pearce" .
+
+cine:Götz_Otto a cine:Person ;
+    rdfs:label "Götz Otto" .
+
+cine:Günter_Lamprecht a cine:Person ;
+    rdfs:label "Günter Lamprecht" .
+
+cine:H._B._Warner a cine:Person ;
+    rdfs:label "H. B. Warner" .
+
+cine:Hanna_Maron a cine:Person ;
+    rdfs:label "Hanna Maron" .
+
+cine:Hanna_R._Hall a cine:Person ;
+    rdfs:label "Hanna R. Hall" .
+
+cine:Hans_Heinrich_von_Twardowski a cine:Person ;
+    rdfs:label "Hans Heinrich von Twardowski" .
+
+cine:Haris_Savides a cine:Person ;
+    rdfs:label "Haris Savides" .
+
+cine:Harriet_Sansom_Harris a cine:Person ;
+    rdfs:label "Harriet Sansom Harris" .
+
+cine:Harry_Dean_Stanton a cine:Person ;
+    rdfs:label "Harry Dean Stanton" .
+
+cine:Harry_Fowler a cine:Person ;
+    rdfs:label "Harry Fowler" .
+
+cine:Haruo_Nakajima a cine:Person ;
+    rdfs:label "Haruo Nakajima" .
+
+cine:Hayden_Christensen a cine:Person ;
+    rdfs:label "Hayden Christensen" .
+
+cine:Heath_Ledger a cine:Person ;
+    rdfs:label "Heath Ledger" .
+
+cine:Hedda_Hopper a cine:Person ;
+    rdfs:label "Hedda Hopper" .
+
+cine:Heinrich_George a cine:Person ;
+    rdfs:label "Heinrich George" .
+
+cine:Helena_Bonham_Carter a cine:Person ;
+    rdfs:label "Helena Bonham Carter" .
+
+cine:Helene_Weigel a cine:Person ;
+    rdfs:label "Helene Weigel" .
+
+cine:Henry_Jones a cine:Person ;
+    rdfs:label "Henry Jones" .
+
+cine:Henry_Wilcoxon a cine:Person ;
+    rdfs:label "Henry Wilcoxon" .
+
+cine:Hertha_von_Walther a cine:Person ;
+    rdfs:label "Hertha von Walther" .
+
+cine:Horst_Buchholz a cine:Person ;
+    rdfs:label "Horst Buchholz" .
+
+cine:Humphrey_Bogart a cine:Person ;
+    rdfs:label "Humphrey Bogart" .
+
+cine:Ian_Holm a cine:Person ;
+    rdfs:label "Ian Holm" .
+
+cine:Ian_Wolfe a cine:Person ;
+    rdfs:label "Ian Wolfe" .
+
+cine:Ilka_Grüning a cine:Person ;
+    rdfs:label "Ilka Grüning" .
+
+cine:Illeana_Douglas a cine:Person ;
+    rdfs:label "Illeana Douglas" .
+
+cine:Ingrid_Bergman a cine:Person ;
+    rdfs:label "Ingrid Bergman" .
+
 cine:Irvin_Kershner a cine:Person ;
     rdfs:label "Irvin Kershner" .
+
+cine:Isa_Danieli a cine:Person ;
+    rdfs:label "Isa Danieli" .
+
+cine:Isao_Kimura a cine:Person ;
+    rdfs:label "Isao Kimura" .
 
 cine:Isao_Takahata a cine:Person ;
     rdfs:label "Isao Takahata" .
 
+cine:J._K._Simmons a cine:Person ;
+    rdfs:label "J. K. Simmons" .
+
+cine:Jack_Bowden a cine:Person ;
+    rdfs:label "Jack Bowden" .
+
+cine:Jack_Creley a cine:Person ;
+    rdfs:label "Jack Creley" .
+
+cine:Jack_Hawkins a cine:Person ;
+    rdfs:label "Jack Hawkins" .
+
+cine:Jack_Klugman a cine:Person ;
+    rdfs:label "Jack Klugman" .
+
+cine:Jack_Lemmon a cine:Person ;
+    rdfs:label "Jack Lemmon" .
+
+cine:Jack_Oakie a cine:Person ;
+    rdfs:label "Jack Oakie" .
+
+cine:Jackie_Coogan a cine:Person ;
+    rdfs:label "Jackie Coogan" .
+
+cine:James_Badge_Dale a cine:Person ;
+    rdfs:label "James Badge Dale" .
+
 cine:James_Cameron a cine:Person ;
     rdfs:label "James Cameron" .
+
+cine:James_Cromwell a cine:Person ;
+    rdfs:label "James Cromwell" .
+
+cine:James_Mason a cine:Person ;
+    rdfs:label "James Mason" .
+
+cine:James_Whitmore a cine:Person ;
+    rdfs:label "James Whitmore" .
+
+cine:James_Woods a cine:Person ;
+    rdfs:label "James Woods" .
+
+cine:Jamie_Foxx a cine:Person ;
+    rdfs:label "Jamie Foxx" .
+
+cine:Jan_Fedder a cine:Person ;
+    rdfs:label "Jan Fedder" .
+
+cine:Janet_Leigh a cine:Person ;
+    rdfs:label "Janet Leigh" .
+
+cine:Jang_Hye-jin a cine:Person ;
+    rdfs:label "Jang Hye-jin" .
+
+cine:Jared_Leto a cine:Person ;
+    rdfs:label "Jared Leto" .
+
+cine:Jason_Robards a cine:Person ;
+    rdfs:label "Jason Robards" .
+
+cine:Javed_Jaffrey a cine:Person ;
+    rdfs:label "Javed Jaffrey" .
+
+cine:Jean-Hugues_Anglade a cine:Person ;
+    rdfs:label "Jean-Hugues Anglade" .
+
+cine:Jean_Acker a cine:Person ;
+    rdfs:label "Jean Acker" .
+
+cine:Jean_Hagen a cine:Person ;
+    rdfs:label "Jean Hagen" .
+
+cine:Jean_Harlow a cine:Person ;
+    rdfs:label "Jean Harlow" .
+
+cine:Jean_Heather a cine:Person ;
+    rdfs:label "Jean Heather" .
+
+cine:Jean_Reno a cine:Person ;
+    rdfs:label "Jean Reno" .
+
+cine:Jeffrey_DeMunn a cine:Person ;
+    rdfs:label "Jeffrey DeMunn" .
+
+cine:Jeffrey_Jones a cine:Person ;
+    rdfs:label "Jeffrey Jones" .
+
+cine:Jenette_Goldstein a cine:Person ;
+    rdfs:label "Jenette Goldstein" .
+
+cine:Jennifer_Connelly a cine:Person ;
+    rdfs:label "Jennifer Connelly" .
+
+cine:Jennifer_Lien a cine:Person ;
+    rdfs:label "Jennifer Lien" .
+
+cine:Jeremy_Davies a cine:Person ;
+    rdfs:label "Jeremy Davies" .
+
+cine:Jeremy_Renner a cine:Person ;
+    rdfs:label "Jeremy Renner" .
+
+cine:Jerry_Hausner a cine:Person ;
+    rdfs:label "Jerry Hausner" .
+
+cine:Jessie_Royce_Landis a cine:Person ;
+    rdfs:label "Jessie Royce Landis" .
+
+cine:Joachim_Paul_Assböck a cine:Person ;
+    rdfs:label "Joachim Paul Assböck" .
+
+cine:Joan_Shawlee a cine:Person ;
+    rdfs:label "Joan Shawlee" .
+
+cine:Joanna_Brodzik a cine:Person ;
+    rdfs:label "Joanna Brodzik" .
+
+cine:Jock_Stein a cine:Person ;
+    rdfs:label "Jock Stein" .
+
+cine:Joe_Johnston a cine:Person ;
+    rdfs:label "Joe Johnston" .
+
+cine:Joe_Morton a cine:Person ;
+    rdfs:label "Joe Morton" .
+
+cine:Joe_Spinell a cine:Person ;
+    rdfs:label "Joe Spinell" .
+
+cine:Joe_Turkel a cine:Person ;
+    rdfs:label "Joe Turkel" .
+
+cine:Joerg_Stadler a cine:Person ;
+    rdfs:label "Joerg Stadler" .
+
+cine:Joey_King a cine:Person ;
+    rdfs:label "Joey King" .
+
+cine:John_Berry a cine:Person ;
+    rdfs:label "John Berry" .
+
+cine:John_C._McGinley a cine:Person ;
+    rdfs:label "John C. McGinley" .
+
+cine:John_Cenatiempo a cine:Person ;
+    rdfs:label "John Cenatiempo" .
+
+cine:John_Fiedler a cine:Person ;
+    rdfs:label "John Fiedler" .
+
+cine:John_Gavin a cine:Person ;
+    rdfs:label "John Gavin" .
+
+cine:John_Hurt a cine:Person ;
+    rdfs:label "John Hurt" .
+
+cine:John_Lennon a cine:Person ;
+    rdfs:label "John Lennon" .
+
+cine:John_McIntire a cine:Person ;
+    rdfs:label "John McIntire" .
+
+cine:John_Travolta a cine:Person ;
+    rdfs:label "John Travolta" .
+
+cine:John_Williams a cine:Person ;
+    rdfs:label "John Williams" .
 
 cine:Jonathan_Demme a cine:Person ;
     rdfs:label "Jonathan Demme" .
 
+cine:Jorja_Fox a cine:Person ;
+    rdfs:label "Jorja Fox" .
+
+cine:Joseph_Cotten a cine:Person ;
+    rdfs:label "Joseph Cotten" .
+
+cine:Joseph_Gordon-Levitt a cine:Person ;
+    rdfs:label "Joseph Gordon-Levitt" .
+
+cine:Joseph_Sweeney a cine:Person ;
+    rdfs:label "Joseph Sweeney" .
+
+cine:Josh_Pais a cine:Person ;
+    rdfs:label "Josh Pais" .
+
+cine:José_Ferrer a cine:Person ;
+    rdfs:label "José Ferrer" .
+
+cine:Joséphine_de_Meaux a cine:Person ;
+    rdfs:label "Joséphine de Meaux" .
+
+cine:Joyce_Jameson a cine:Person ;
+    rdfs:label "Joyce Jameson" .
+
+cine:Julian_Glover a cine:Person ;
+    rdfs:label "Julian Glover" .
+
+cine:Jung_Ziso a cine:Person ;
+    rdfs:label "Jung Ziso" .
+
+cine:Justin_Theroux a cine:Person ;
+    rdfs:label "Justin Theroux" .
+
+cine:Jürgen_Prochnow a cine:Person ;
+    rdfs:label "Jürgen Prochnow" .
+
+cine:Kamatari_Fujiwara a cine:Person ;
+    rdfs:label "Kamatari Fujiwara" .
+
+cine:Kang_Hye-jung a cine:Person ;
+    rdfs:label "Kang Hye-jung" .
+
+cine:Kareena_Kapoor_Khan a cine:Person ;
+    rdfs:label "Kareena Kapoor Khan" .
+
+cine:Karen_Allen a cine:Person ;
+    rdfs:label "Karen Allen" .
+
+cine:Katarzyna_Figura a cine:Person ;
+    rdfs:label "Katarzyna Figura" .
+
+cine:Kathryn_Crosby a cine:Person ;
+    rdfs:label "Kathryn Crosby" .
+
+cine:Katya_Wyeth a cine:Person ;
+    rdfs:label "Katya Wyeth" .
+
+cine:Keanu_Reeves a cine:Person ;
+    rdfs:label "Keanu Reeves" .
+
+cine:Keenan_Wynn a cine:Person ;
+    rdfs:label "Keenan Wynn" .
+
+cine:Keiko_Tsushima a cine:Person ;
+    rdfs:label "Keiko Tsushima" .
+
+cine:Ken_Watanabe a cine:Person ;
+    rdfs:label "Ken Watanabe" .
+
+cine:Kenneth_McMillan a cine:Person ;
+    rdfs:label "Kenneth McMillan" .
+
+cine:Kenny_Baker a cine:Person ;
+    rdfs:label "Kenny Baker" .
+
+cine:Kent_Broadhurst a cine:Person ;
+    rdfs:label "Kent Broadhurst" .
+
+cine:Keram_Malicki-Sánchez a cine:Person ;
+    rdfs:label "Keram Malicki-Sánchez" .
+
+cine:Kerry_Washington a cine:Person ;
+    rdfs:label "Kerry Washington" .
+
+cine:Kim_Novak a cine:Person ;
+    rdfs:label "Kim Novak" .
+
+cine:Kin_Sugai a cine:Person ;
+    rdfs:label "Kin Sugai" .
+
+cine:Kirk_Douglas a cine:Person ;
+    rdfs:label "Kirk Douglas" .
+
+cine:Klaus_Kinski a cine:Person ;
+    rdfs:label "Klaus Kinski" .
+
+cine:Klaus_Pohl a cine:Person ;
+    rdfs:label "Klaus Pohl" .
+
+cine:Klaus_Wennemann a cine:Person ;
+    rdfs:label "Klaus Wennemann" .
+
+cine:Kristen_Dalton a cine:Person ;
+    rdfs:label "Kristen Dalton" .
+
+cine:Kurt_Russell a cine:Person ;
+    rdfs:label "Kurt Russell" .
+
 cine:Kátia_Lund a cine:Person ;
     rdfs:label "Kátia Lund" .
+
+cine:Lamberto_Maggiorani a cine:Person ;
+    rdfs:label "Lamberto Maggiorani" .
+
+cine:Lana_Clarkson a cine:Person ;
+    rdfs:label "Lana Clarkson" .
 
 cine:Lana_Wachowski a cine:Person ;
     rdfs:label "Lana Wachowski" .
 
+cine:Larry_Holden a cine:Person ;
+    rdfs:label "Larry Holden" .
+
+cine:Lawrence_Dobkin a cine:Person ;
+    rdfs:label "Lawrence Dobkin" .
+
+cine:Lazarus_Jackson a cine:Person ;
+    rdfs:label "Lazarus Jackson" .
+
+cine:Lea_Thompson a cine:Person ;
+    rdfs:label "Lea Thompson" .
+
+cine:Leandro_Firmino a cine:Person ;
+    rdfs:label "Leandro Firmino" .
+
+cine:Lee_Dae-yeon a cine:Person ;
+    rdfs:label "Lee Dae-yeon" .
+
+cine:Lee_J._Cobb a cine:Person ;
+    rdfs:label "Lee J. Cobb" .
+
+cine:Lee_Jung-eun a cine:Person ;
+    rdfs:label "Lee Jung-eun" .
+
+cine:Lee_Mi-mi a cine:Person ;
+    rdfs:label "Lee Mi-mi" .
+
+cine:Lee_Patrick a cine:Person ;
+    rdfs:label "Lee Patrick" .
+
+cine:Lee_Sun-kyun a cine:Person ;
+    rdfs:label "Lee Sun-kyun" .
+
 cine:Lee_Unkrich a cine:Person ;
     rdfs:label "Lee Unkrich" .
+
+cine:Lee_Van_Cleef a cine:Person ;
+    rdfs:label "Lee Van Cleef" .
+
+cine:Leonard_Rossiter a cine:Person ;
+    rdfs:label "Leonard Rossiter" .
+
+cine:Leonard_Steckel a cine:Person ;
+    rdfs:label "Leonard Steckel" .
+
+cine:Leopoldo_Trieste a cine:Person ;
+    rdfs:label "Leopoldo Trieste" .
 
 cine:Lilly_Wachowski a cine:Person ;
     rdfs:label "Lilly Wachowski" .
 
+cine:Linda_Hamilton a cine:Person ;
+    rdfs:label "Linda Hamilton" .
+
+cine:Lionel_Barrymore a cine:Person ;
+    rdfs:label "Lionel Barrymore" .
+
+cine:Lionel_Stander a cine:Person ;
+    rdfs:label "Lionel Stander" .
+
+cine:Lita_Grey a cine:Person ;
+    rdfs:label "Lita Grey" .
+
+cine:Lorenzo_Robledo a cine:Person ;
+    rdfs:label "Lorenzo Robledo" .
+
+cine:Lorraine_Bracco a cine:Person ;
+    rdfs:label "Lorraine Bracco" .
+
 cine:Luc_Besson a cine:Person ;
     rdfs:label "Luc Besson" .
+
+cine:Ludger_Pistor a cine:Person ;
+    rdfs:label "Ludger Pistor" .
+
+cine:Ludwig_Blochberger a cine:Person ;
+    rdfs:label "Ludwig Blochberger" .
+
+cine:Ludwig_Stössel a cine:Person ;
+    rdfs:label "Ludwig Stössel" .
+
+cine:Luigi_Pistilli a cine:Person ;
+    rdfs:label "Luigi Pistilli" .
+
+cine:Lurene_Tuttle a cine:Person ;
+    rdfs:label "Lurene Tuttle" .
+
+cine:Lydia_Alfonsi a cine:Person ;
+    rdfs:label "Lydia Alfonsi" .
+
+cine:M._K._Raina a cine:Person ;
+    rdfs:label "M. K. Raina" .
+
+cine:Maciej_Kozłowski a cine:Person ;
+    rdfs:label "Maciej Kozłowski" .
+
+cine:Mackenzie_Foy a cine:Person ;
+    rdfs:label "Mackenzie Foy" .
+
+cine:Mae_Clarke a cine:Person ;
+    rdfs:label "Mae Clarke" .
+
+cine:Maggie_Gyllenhaal a cine:Person ;
+    rdfs:label "Maggie Gyllenhaal" .
+
+cine:Maja_Ostaszewska a cine:Person ;
+    rdfs:label "Maja Ostaszewska" .
+
+cine:Makoto_Kobori a cine:Person ;
+    rdfs:label "Makoto Kobori" .
 
 cine:Makoto_Shinkai a cine:Person ;
     rdfs:label "Makoto Shinkai" .
 
+cine:Malcolm_McDowell a cine:Person ;
+    rdfs:label "Malcolm McDowell" .
+
+cine:Marc_Maron a cine:Person ;
+    rdfs:label "Marc Maron" .
+
+cine:Marianne_Muellerleile a cine:Person ;
+    rdfs:label "Marianne Muellerleile" .
+
+cine:Marie_Gruber a cine:Person ;
+    rdfs:label "Marie Gruber" .
+
+cine:Marisa_Paredes a cine:Person ;
+    rdfs:label "Marisa Paredes" .
+
+cine:Mark_Rolston a cine:Person ;
+    rdfs:label "Mark Rolston" .
+
+cine:Mark_Wahlberg a cine:Person ;
+    rdfs:label "Mark Wahlberg" .
+
+cine:Marla_Sucharetza a cine:Person ;
+    rdfs:label "Marla Sucharetza" .
+
+cine:Marlene_Dietrich a cine:Person ;
+    rdfs:label "Marlene Dietrich" .
+
+cine:Martin_Balsam a cine:Person ;
+    rdfs:label "Martin Balsam" .
+
+cine:Martin_Landau a cine:Person ;
+    rdfs:label "Martin Landau" .
+
+cine:Martin_Semmelrogge a cine:Person ;
+    rdfs:label "Martin Semmelrogge" .
+
+cine:Mary_Elizabeth_Mastrantonio a cine:Person ;
+    rdfs:label "Mary Elizabeth Mastrantonio" .
+
+cine:Matheus_Nachtergaele a cine:Person ;
+    rdfs:label "Matheus Nachtergaele" .
+
+cine:Matt_Winston a cine:Person ;
+    rdfs:label "Matt Winston" .
+
+cine:Matthew_McConaughey a cine:Person ;
+    rdfs:label "Matthew McConaughey" .
+
+cine:Meat_Loaf a cine:Person ;
+    rdfs:label "Meat Loaf" .
+
+cine:Meghna_Malik a cine:Person ;
+    rdfs:label "Meghna Malik" .
+
+cine:Melissa_Benoist a cine:Person ;
+    rdfs:label "Melissa Benoist" .
+
+cine:Memmo_Carotenuto a cine:Person ;
+    rdfs:label "Memmo Carotenuto" .
+
+cine:Michael_Badalucco a cine:Person ;
+    rdfs:label "Michael Badalucco" .
+
+cine:Michael_Biehn a cine:Person ;
+    rdfs:label "Michael Biehn" .
+
+cine:Michael_Cohen a cine:Person ;
+    rdfs:label "Michael Cohen" .
+
 cine:Michael_Curtiz a cine:Person ;
     rdfs:label "Michael Curtiz" .
+
+cine:Michael_Imperioli a cine:Person ;
+    rdfs:label "Michael Imperioli" .
+
+cine:Michael_J._Fox a cine:Person ;
+    rdfs:label "Michael J. Fox" .
+
+cine:Michael_Jeter a cine:Person ;
+    rdfs:label "Michael Jeter" .
+
+cine:Michel_de_Carvalho a cine:Person ;
+    rdfs:label "Michel de Carvalho" .
+
+cine:Michelle_Clunie a cine:Person ;
+    rdfs:label "Michelle Clunie" .
+
+cine:Michelle_Pfeiffer a cine:Person ;
+    rdfs:label "Michelle Pfeiffer" .
+
+cine:Michelle_Ruff a cine:Person ;
+    rdfs:label "Michelle Ruff" .
+
+cine:Miles_Teller a cine:Person ;
+    rdfs:label "Miles Teller" .
+
+cine:Mimmo_Mignemi a cine:Person ;
+    rdfs:label "Mimmo Mignemi" .
+
+cine:Miriam_Karlin a cine:Person ;
+    rdfs:label "Miriam Karlin" .
+
+cine:Mona_Singh a cine:Person ;
+    rdfs:label "Mona Singh" .
 
 cine:Mukesh_Chhabra a cine:Person ;
     rdfs:label "Mukesh Chhabra" .
 
-cine:Nadine_Labaki a cine:Person ;
-    rdfs:label "Nadine Labaki" .
+cine:Míriam_Colón a cine:Person ;
+    rdfs:label "Míriam Colón" .
+
+cine:Nancy_Olson a cine:Person ;
+    rdfs:label "Nancy Olson" .
+
+cine:Naomi_Stevens a cine:Person ;
+    rdfs:label "Naomi Stevens" .
+
+cine:Ned_Glass a cine:Person ;
+    rdfs:label "Ned Glass" .
+
+cine:Nicoletta_Braschi a cine:Person ;
+    rdfs:label "Nicoletta Braschi" .
+
+cine:Nikki_Cox a cine:Person ;
+    rdfs:label "Nikki Cox" .
 
 cine:Nitesh_Tiwari a cine:Person ;
     rdfs:label "Nitesh Tiwari" .
 
+cine:Nobuo_Kaneko a cine:Person ;
+    rdfs:label "Nobuo Kaneko" .
+
+cine:Nobuo_Nakamura a cine:Person ;
+    rdfs:label "Nobuo Nakamura" .
+
+cine:Noriko_Sengoku a cine:Person ;
+    rdfs:label "Noriko Sengoku" .
+
+cine:Norma_Varden a cine:Person ;
+    rdfs:label "Norma Varden" .
+
+cine:Oh_Kwang-rok a cine:Person ;
+    rdfs:label "Oh Kwang-rok" .
+
+cine:Oh_Tae-kyung a cine:Person ;
+    rdfs:label "Oh Tae-kyung" .
+
+cine:Oliver_Reed a cine:Person ;
+    rdfs:label "Oliver Reed" .
+
 cine:Olivier_Nakache a cine:Person ;
     rdfs:label "Olivier Nakache" .
 
-cine:Orson_Welles a cine:Person ;
-    rdfs:label "Orson Welles" .
+cine:Omar_Sharif a cine:Person ;
+    rdfs:label "Omar Sharif" .
+
+cine:Omar_Sy a cine:Person ;
+    rdfs:label "Omar Sy" .
+
+cine:Omero_Antonutti a cine:Person ;
+    rdfs:label "Omero Antonutti" .
+
+cine:Omi_Vaidya a cine:Person ;
+    rdfs:label "Omi Vaidya" .
+
+cine:Otto_Sander a cine:Person ;
+    rdfs:label "Otto Sander" .
+
+cine:Parikshit_Sahni a cine:Person ;
+    rdfs:label "Parikshit Sahni" .
 
 cine:Park_Chan-wook a cine:Person ;
     rdfs:label "Park Chan-wook" .
 
+cine:Park_Jae-woong a cine:Person ;
+    rdfs:label "Park Jae-woong" .
+
+cine:Park_Myung-hoon a cine:Person ;
+    rdfs:label "Park Myung-hoon" .
+
+cine:Park_Seo-joon a cine:Person ;
+    rdfs:label "Park Seo-joon" .
+
+cine:Park_So-dam a cine:Person ;
+    rdfs:label "Park So-dam" .
+
+cine:Pat_Hitchcock a cine:Person ;
+    rdfs:label "Pat Hitchcock" .
+
+cine:Patricia_Clarkson a cine:Person ;
+    rdfs:label "Patricia Clarkson" .
+
+cine:Paul_Faßnacht a cine:Person ;
+    rdfs:label "Paul Faßnacht" .
+
+cine:Paul_Giamatti a cine:Person ;
+    rdfs:label "Paul Giamatti" .
+
+cine:Paul_Henreid a cine:Person ;
+    rdfs:label "Paul Henreid" .
+
+cine:Paul_Kemp a cine:Person ;
+    rdfs:label "Paul Kemp" .
+
+cine:Paul_Maximilian_Schüller a cine:Person ;
+    rdfs:label "Paul Maximilian Schüller" .
+
+cine:Paul_Newman a cine:Person ;
+    rdfs:label "Paul Newman" .
+
+cine:Paul_Panzer a cine:Person ;
+    rdfs:label "Paul Panzer" .
+
+cine:Paul_Picerni a cine:Person ;
+    rdfs:label "Paul Picerni" .
+
+cine:Paul_Raczkowski a cine:Person ;
+    rdfs:label "Paul Raczkowski" .
+
+cine:Paul_Reiser a cine:Person ;
+    rdfs:label "Paul Reiser" .
+
+cine:Paul_Stewart a cine:Person ;
+    rdfs:label "Paul Stewart" .
+
+cine:Paul_Weigel a cine:Person ;
+    rdfs:label "Paul Weigel" .
+
+cine:Paulo_Lins a cine:Person ;
+    rdfs:label "Paulo Lins" .
+
+cine:Peter_Boyle a cine:Person ;
+    rdfs:label "Peter Boyle" .
+
+cine:Peter_Bull a cine:Person ;
+    rdfs:label "Peter Bull" .
+
+cine:Peter_Capell a cine:Person ;
+    rdfs:label "Peter Capell" .
+
+cine:Peter_Cushing a cine:Person ;
+    rdfs:label "Peter Cushing" .
+
+cine:Peter_Lee_Lawrence a cine:Person ;
+    rdfs:label "Peter Lee Lawrence" .
+
+cine:Peter_OToole a cine:Person ;
+    rdfs:label "Peter O'Toole" .
+
+cine:Peter_Onorati a cine:Person ;
+    rdfs:label "Peter Onorati" .
+
 cine:Peter_Ramsey a cine:Person ;
     rdfs:label "Peter Ramsey" .
+
+cine:Peter_Sellers a cine:Person ;
+    rdfs:label "Peter Sellers" .
+
+cine:Phil_Brown a cine:Person ;
+    rdfs:label "Phil Brown" .
+
+cine:Philippe_Noiret a cine:Person ;
+    rdfs:label "Philippe Noiret" .
+
+cine:Piper_Perabo a cine:Person ;
+    rdfs:label "Piper Perabo" .
+
+cine:Pupella_Maggio a cine:Person ;
+    rdfs:label "Pupella Maggio" .
+
+cine:R._Lee_Ermey a cine:Person ;
+    rdfs:label "R. Lee Ermey" .
+
+cine:R._Madhavan a cine:Person ;
+    rdfs:label "R. Madhavan" .
 
 cine:Rajkumar_Hirani a cine:Person ;
     rdfs:label "Rajkumar Hirani" .
 
+cine:Ralf_Moeller a cine:Person ;
+    rdfs:label "Ralf Moeller" .
+
+cine:Ralf_Richter a cine:Person ;
+    rdfs:label "Ralf Richter" .
+
+cine:Ralph_Fiennes a cine:Person ;
+    rdfs:label "Ralph Fiennes" .
+
 cine:Ram_Madhvani a cine:Person ;
     rdfs:label "Ram Madhvani" .
+
+cine:Ray_Liotta a cine:Person ;
+    rdfs:label "Ray Liotta" .
+
+cine:Ray_Walston a cine:Person ;
+    rdfs:label "Ray Walston" .
+
+cine:Raymond_Bailey a cine:Person ;
+    rdfs:label "Raymond Bailey" .
+
+cine:Raymond_Burr a cine:Person ;
+    rdfs:label "Raymond Burr" .
+
+cine:Raymond_Chandler a cine:Person ;
+    rdfs:label "Raymond Chandler" .
+
+cine:Rebecca_Hall a cine:Person ;
+    rdfs:label "Rebecca Hall" .
+
+cine:Revisionist_Western a cine:Genre ;
+    rdfs:label "Revisionist Western" .
+
+cine:Richard_Harris a cine:Person ;
+    rdfs:label "Richard Harris" .
+
+cine:Richard_LeParmentier a cine:Person ;
+    rdfs:label "Richard LeParmentier" .
 
 cine:Richard_Marquand a cine:Person ;
     rdfs:label "Richard Marquand" .
 
+cine:Richard_Roundtree a cine:Person ;
+    rdfs:label "Richard Roundtree" .
+
+cine:Richard_Sammel a cine:Person ;
+    rdfs:label "Richard Sammel" .
+
+cine:Rita_Moreno a cine:Person ;
+    rdfs:label "Rita Moreno" .
+
 cine:Rob_Minkoff a cine:Person ;
     rdfs:label "Rob Minkoff" .
 
-cine:Roberto_Benigni a cine:Person ;
-    rdfs:label "Roberto Benigni" .
+cine:Robert_Beatty a cine:Person ;
+    rdfs:label "Robert Beatty" .
+
+cine:Robert_Bolt a cine:Person ;
+    rdfs:label "Robert Bolt" .
+
+<http://filmgraph.pro/ontology/Robert_Downey_Jr.> a cine:Person ;
+    rdfs:label "Robert Downey Jr." .
+
+cine:Robert_LaSardo a cine:Person ;
+    rdfs:label "Robert LaSardo" .
+
+cine:Robert_Loggia a cine:Person ;
+    rdfs:label "Robert Loggia" .
+
+cine:Robert_Parrish a cine:Person ;
+    rdfs:label "Robert Parrish" .
+
+cine:Robert_Patrick a cine:Person ;
+    rdfs:label "Robert Patrick" .
+
+cine:Robert_Redford a cine:Person ;
+    rdfs:label "Robert Redford" .
+
+cine:Robert_Shaw a cine:Person ;
+    rdfs:label "Robert Shaw" .
+
+cine:Robert_Taylor a cine:Person ;
+    rdfs:label "Robert Taylor" .
+
+cine:Robert_Webber a cine:Person ;
+    rdfs:label "Robert Webber" .
 
 cine:Rodney_Rothman a cine:Person ;
     rdfs:label "Rodney Rothman" .
@@ -790,26 +3958,380 @@ cine:Rodney_Rothman a cine:Person ;
 cine:Roger_Allers a cine:Person ;
     rdfs:label "Roger Allers" .
 
+cine:Roger_Corman a cine:Person ;
+    rdfs:label "Roger Corman" .
+
+cine:Rolf_Kralovitz a cine:Person ;
+    rdfs:label "Rolf Kralovitz" .
+
+cine:Rolf_Wanka a cine:Person ;
+    rdfs:label "Rolf Wanka" .
+
+cine:Rolf_von_Goth a cine:Person ;
+    rdfs:label "Rolf von Goth" .
+
+cine:Roman_Coppola a cine:Person ;
+    rdfs:label "Roman Coppola" .
+
 cine:Roman_Polanski a cine:Person ;
     rdfs:label "Roman Polanski" .
+
+cine:Romano_Puppo a cine:Person ;
+    rdfs:label "Romano Puppo" .
+
+cine:Rosanna_Arquette a cine:Person ;
+    rdfs:label "Rosanna Arquette" .
+
+cine:Roy_Dotrice a cine:Person ;
+    rdfs:label "Roy Dotrice" .
+
+cine:Russell_Crowe a cine:Person ;
+    rdfs:label "Russell Crowe" .
+
+cine:Ruth_Warrick a cine:Person ;
+    rdfs:label "Ruth Warrick" .
+
+cine:Sachet_Engineer a cine:Person ;
+    rdfs:label "Sachet Engineer" .
+
+cine:Sakshi_Tanwar a cine:Person ;
+    rdfs:label "Sakshi Tanwar" .
+
+cine:Sally_Kirkland a cine:Person ;
+    rdfs:label "Sally Kirkland" .
+
+cine:Salvatore_Cascio a cine:Person ;
+    rdfs:label "Salvatore Cascio" .
+
+cine:Sam_Rockwell a cine:Person ;
+    rdfs:label "Sam Rockwell" .
+
+cine:Samy_Naceri a cine:Person ;
+    rdfs:label "Samy Naceri" .
+
+cine:Sanjana_Sanghi a cine:Person ;
+    rdfs:label "Sanjana Sanghi" .
+
+cine:Sanya_Malhotra a cine:Person ;
+    rdfs:label "Sanya Malhotra" .
+
+cine:Saswata_Chatterjee a cine:Person ;
+    rdfs:label "Saswata Chatterjee" .
+
+cine:Sebastian_Koch a cine:Person ;
+    rdfs:label "Sebastian Koch" .
+
+cine:Seu_Jorge a cine:Person ;
+    rdfs:label "Seu Jorge" .
+
+cine:Shane_Rimmer a cine:Person ;
+    rdfs:label "Shane Rimmer" .
+
+cine:Sharman_Joshi a cine:Person ;
+    rdfs:label "Sharman Joshi" .
+
+cine:Shea_Whigham a cine:Person ;
+    rdfs:label "Shea Whigham" .
+
+cine:Shelley_Duvall a cine:Person ;
+    rdfs:label "Shelley Duvall" .
+
+cine:Shinichi_Himori a cine:Person ;
+    rdfs:label "Shinichi Himori" .
+
+cine:Shirley_MacLaine a cine:Person ;
+    rdfs:label "Shirley MacLaine" .
 
 cine:Sidney_Lumet a cine:Person ;
     rdfs:label "Sidney Lumet" .
 
+cine:Sig_Arno a cine:Person ;
+    rdfs:label "Sig Arno" .
+
+cine:Sigourney_Weaver a cine:Person ;
+    rdfs:label "Sigourney Weaver" .
+
+cine:Simon_Oakland a cine:Person ;
+    rdfs:label "Simon Oakland" .
+
+cine:Sky_du_Mont a cine:Person ;
+    rdfs:label "Sky du Mont" .
+
+cine:Slim_Pickens a cine:Person ;
+    rdfs:label "Slim Pickens" .
+
+cine:Sonali_Sachdev a cine:Person ;
+    rdfs:label "Sonali Sachdev" .
+
+cine:Song_Kang-ho a cine:Person ;
+    rdfs:label "Song Kang-ho" .
+
+cine:Song_Sokze a cine:Person ;
+    rdfs:label "Song Sokze" .
+
+cine:Stacy_Keach a cine:Person ;
+    rdfs:label "Stacy Keach" .
+
 cine:Stanley_Donen a cine:Person ;
     rdfs:label "Stanley Donen" .
+
+cine:Stephen_Baldwin a cine:Person ;
+    rdfs:label "Stephen Baldwin" .
+
+cine:Stephen_Tobolowsky a cine:Person ;
+    rdfs:label "Stephen Tobolowsky" .
+
+cine:Steve_Buscemi a cine:Person ;
+    rdfs:label "Steve Buscemi" .
+
+cine:Steven_Berkoff a cine:Person ;
+    rdfs:label "Steven Berkoff" .
+
+cine:Suanne_Spoke a cine:Person ;
+    rdfs:label "Suanne Spoke" .
+
+cine:Suhani_Bhatnagar a cine:Person ;
+    rdfs:label "Suhani Bhatnagar" .
+
+cine:Sushant_Singh_Rajput a cine:Person ;
+    rdfs:label "Sushant Singh Rajput" .
+
+cine:Suzy_Amis_Cameron a cine:Person ;
+    rdfs:label "Suzy Amis Cameron" .
+
+cine:Swastika_Mukherjee a cine:Person ;
+    rdfs:label "Swastika Mukherjee" .
+
+cine:Sérgio_Chapelin a cine:Person ;
+    rdfs:label "Sérgio Chapelin" .
+
+cine:Talulah_Riley a cine:Person ;
+    rdfs:label "Talulah Riley" .
+
+cine:Tanay_Chheda a cine:Person ;
+    rdfs:label "Tanay Chheda" .
+
+cine:Tatsuya_Nakadai a cine:Person ;
+    rdfs:label "Tatsuya Nakadai" .
+
+cine:Ted_Levine a cine:Person ;
+    rdfs:label "Ted Levine" .
+
+cine:Thelma_Ritter a cine:Person ;
+    rdfs:label "Thelma Ritter" .
+
+cine:Theodor_Loos a cine:Person ;
+    rdfs:label "Theodor Loos" .
+
+cine:Thomas_F._Wilson a cine:Person ;
+    rdfs:label "Thomas F. Wilson" .
+
+cine:Thomas_Kretschmann a cine:Person ;
+    rdfs:label "Thomas Kretschmann" .
+
+cine:Thomas_Lennon a cine:Person ;
+    rdfs:label "Thomas Lennon" .
+
+cine:Thomas_Mitchell a cine:Person ;
+    rdfs:label "Thomas Mitchell" .
+
+cine:Thomas_Morris a cine:Person ;
+    rdfs:label "Thomas Morris" .
+
+cine:Tiffany_Salerno a cine:Person ;
+    rdfs:label "Tiffany Salerno" .
+
+cine:Tim_Robbins a cine:Person ;
+    rdfs:label "Tim Robbins" .
+
+cine:Timothy_Carey a cine:Person ;
+    rdfs:label "Timothy Carey" .
+
+cine:Timothée_Chalamet a cine:Person ;
+    rdfs:label "Timothée Chalamet" .
+
+cine:Tisca_Chopra a cine:Person ;
+    rdfs:label "Tisca Chopra" .
+
+cine:Tobin_Bell a cine:Person ;
+    rdfs:label "Tobin Bell" .
 
 cine:Todd_Phillips a cine:Person ;
     rdfs:label "Todd Phillips" .
 
+cine:Tom_Hardy a cine:Person ;
+    rdfs:label "Tom Hardy" .
+
+cine:Tom_Helmore a cine:Person ;
+    rdfs:label "Tom Helmore" .
+
+cine:Tom_Hulce a cine:Person ;
+    rdfs:label "Tom Hulce" .
+
+cine:Tom_Powers a cine:Person ;
+    rdfs:label "Tom Powers" .
+
+cine:Tom_Savini a cine:Person ;
+    rdfs:label "Tom Savini" .
+
+cine:Tom_Skerritt a cine:Person ;
+    rdfs:label "Tom Skerritt" .
+
+cine:Tommy_Flanagan a cine:Person ;
+    rdfs:label "Tommy Flanagan" .
+
+cine:Tomás_Blanco a cine:Person ;
+    rdfs:label "Tomás Blanco" .
+
+cine:Tony_Burton a cine:Person ;
+    rdfs:label "Tony Burton" .
+
 cine:Tony_Kaye a cine:Person ;
     rdfs:label "Tony Kaye" .
+
+cine:Torin_Thatcher a cine:Person ;
+    rdfs:label "Torin Thatcher" .
+
+cine:Tracey_Walter a cine:Person ;
+    rdfs:label "Tracey Walter" .
+
+cine:Tracy_Reed a cine:Person ;
+    rdfs:label "Tracy Reed" .
+
+cine:Treat_Williams a cine:Person ;
+    rdfs:label "Treat Williams" .
+
+cine:Tutte_Lemkow a cine:Person ;
+    rdfs:label "Tutte Lemkow" .
+
+cine:Tyrone_Power a cine:Person ;
+    rdfs:label "Tyrone Power" .
+
+cine:Udo_Kroschwald a cine:Person ;
+    rdfs:label "Udo Kroschwald" .
+
+cine:Ulrich_Mühe a cine:Person ;
+    rdfs:label "Ulrich Mühe" .
+
+cine:Ulrich_Tukur a cine:Person ;
+    rdfs:label "Ulrich Tukur" .
+
+cine:Uma_Thurman a cine:Person ;
+    rdfs:label "Uma Thurman" .
+
+cine:Umberto_Spadaro a cine:Person ;
+    rdfs:label "Umberto Spadaro" .
+
+cine:Valentine a cine:Person ;
+    rdfs:label "Valentine" .
+
+cine:Vera_Farmiga a cine:Person ;
+    rdfs:label "Vera Farmiga" .
+
+cine:Vera_Miles a cine:Person ;
+    rdfs:label "Vera Miles" .
+
+cine:Veronica_Cartwright a cine:Person ;
+    rdfs:label "Veronica Cartwright" .
+
+cine:Victor_Argo a cine:Person ;
+    rdfs:label "Victor Argo" .
+
+cine:Vin_Diesel a cine:Person ;
+    rdfs:label "Vin Diesel" .
+
+cine:Virginia_Cherrill a cine:Person ;
+    rdfs:label "Virginia Cherrill" .
 
 cine:Vittorio_De_Sica a cine:Person ;
     rdfs:label "Vittorio De Sica" .
 
+cine:Vivan_Bhatena a cine:Person ;
+    rdfs:label "Vivan Bhatena" .
+
+cine:Walter_Stocker a cine:Person ;
+    rdfs:label "Walter Stocker" .
+
+cine:Wanja_Mues a cine:Person ;
+    rdfs:label "Wanja Mues" .
+
+cine:Warren_Clarke a cine:Person ;
+    rdfs:label "Warren Clarke" .
+
+cine:Warwick_Davis a cine:Person ;
+    rdfs:label "Warwick Davis" .
+
+cine:Wayne_Morris a cine:Person ;
+    rdfs:label "Wayne Morris" .
+
+cine:Wendee_Lee a cine:Person ;
+    rdfs:label "Wendee Lee" .
+
+cine:Wendell_Corey a cine:Person ;
+    rdfs:label "Wendell Corey" .
+
+cine:Werner_Abrolat a cine:Person ;
+    rdfs:label "Werner Abrolat" .
+
+cine:Werner_Daehn a cine:Person ;
+    rdfs:label "Werner Daehn" .
+
+cine:Wilfred_Lucas a cine:Person ;
+    rdfs:label "Wilfred Lucas" .
+
+cine:Will_Sampson a cine:Person ;
+    rdfs:label "Will Sampson" .
+
+cine:William_Fichtner a cine:Person ;
+    rdfs:label "William Fichtner" .
+
+cine:William_Forsythe a cine:Person ;
+    rdfs:label "William Forsythe" .
+
+cine:William_H._OBrien a cine:Person ;
+    rdfs:label "William H. O'Brien" .
+
+cine:William_Holden a cine:Person ;
+    rdfs:label "William Holden" .
+
+cine:William_Sylvester a cine:Person ;
+    rdfs:label "William Sylvester" .
+
+cine:Wolf_Kahler a cine:Person ;
+    rdfs:label "Wolf Kahler" .
+
 cine:Wolfgang_Petersen a cine:Person ;
     rdfs:label "Wolfgang Petersen" .
+
+cine:Yaphet_Kotto a cine:Person ;
+    rdfs:label "Yaphet Kotto" .
+
+cine:Yoon_Jin-seo a cine:Person ;
+    rdfs:label "Yoon Jin-seo" .
+
+cine:Yordanos_Shiferaw a cine:Person ;
+    rdfs:label "Yordanos Shiferaw" .
+
+cine:Yoshio_Tsuchiya a cine:Person ;
+    rdfs:label "Yoshio Tsuchiya" .
+
+cine:Yu_Ji-tae a cine:Person ;
+    rdfs:label "Yu Ji-tae" .
+
+cine:Zach_Grenier a cine:Person ;
+    rdfs:label "Zach Grenier" .
+
+cine:Zain_Al_Rafeea a cine:Person ;
+    rdfs:label "Zain Al Rafeea" .
+
+cine:Zaira_Wasim a cine:Person ;
+    rdfs:label "Zaira Wasim" .
+
+cine:Zbigniew_Zamachowski a cine:Person ;
+    rdfs:label "Zbigniew Zamachowski" .
+
+cine:Zoë_Bell a cine:Person ;
+    rdfs:label "Zoë Bell" .
 
 cine:actedIn a owl:ObjectProperty ;
     rdfs:label "Acted In" ;
@@ -818,41 +4340,410 @@ cine:actedIn a owl:ObjectProperty ;
     rdfs:range cine:Film ;
     owl:inverseOf cine:hasActor .
 
+cine:adventure a cine:Genre ;
+    rdfs:label "adventure" .
+
+cine:adventure_science_fiction a cine:Genre ;
+    rdfs:label "adventure science fiction" .
+
+cine:anime_film a cine:Genre ;
+    rdfs:label "anime film" .
+
+cine:art_film a cine:Genre ;
+    rdfs:label "art film" .
+
+cine:black_comedy a cine:Genre ;
+    rdfs:label "black comedy" .
+
+cine:blaxploitation_film a cine:Genre ;
+    rdfs:label "blaxploitation film" .
+
+cine:body_horror_film a cine:Genre ;
+    rdfs:label "body horror film" .
+
+cine:buddy_cop_film a cine:Genre ;
+    rdfs:label "buddy cop film" .
+
+cine:comedy_of_error a cine:Genre ;
+    rdfs:label "comedy of error" .
+
+cine:documentary_film a cine:Genre ;
+    rdfs:label "documentary film" .
+
+cine:drama_anime_and_manga a cine:Genre ;
+    rdfs:label "drama anime and manga" .
+
+cine:exploitation_film a cine:Genre ;
+    rdfs:label "exploitation film" .
+
+cine:fantasy_anime a cine:Genre ;
+    rdfs:label "fantasy anime" .
+
+cine:fantasy_anime_and_manga a cine:Genre ;
+    rdfs:label "fantasy anime and manga" .
+
+cine:fiction_film a cine:Genre ;
+    rdfs:label "fiction film" .
+
+cine:hard_science_fiction a cine:Genre ;
+    rdfs:label "hard science fiction" .
+
+cine:hood_film a cine:Genre ;
+    rdfs:label "hood film" .
+
+cine:huis-clos_film a cine:Genre ;
+    rdfs:label "huis-clos film" .
+
+cine:isekai a cine:Genre ;
+    rdfs:label "isekai" .
+
+cine:medical_drama a cine:Genre ;
+    rdfs:label "medical drama" .
+
+cine:monster_film a cine:Genre ;
+    rdfs:label "monster film" .
+
+cine:parody_film a cine:Genre ;
+    rdfs:label "parody film" .
+
+cine:political_satire a cine:Genre ;
+    rdfs:label "political satire" .
+
+cine:political_thriller_film a cine:Genre ;
+    rdfs:label "political thriller film" .
+
+cine:post-apocalyptic_fiction a cine:Genre ;
+    rdfs:label "post-apocalyptic fiction" .
+
+cine:psychological_thriller a cine:Genre ;
+    rdfs:label "psychological thriller" .
+
+cine:romantic_drama a cine:Genre ;
+    rdfs:label "romantic drama" .
+
+cine:samurai_cinema a cine:Genre ;
+    rdfs:label "samurai cinema" .
+
+cine:science_fiction_comedy a cine:Genre ;
+    rdfs:label "science fiction comedy" .
+
+cine:science_fiction_horror_film a cine:Genre ;
+    rdfs:label "science fiction horror film" .
+
+cine:slapstick a cine:Genre ;
+    rdfs:label "slapstick" .
+
+cine:slasher_film a cine:Genre ;
+    rdfs:label "slasher film" .
+
+cine:social_comedy_film a cine:Genre ;
+    rdfs:label "social comedy film" .
+
+cine:space_adventure_film a cine:Genre ;
+    rdfs:label "space adventure film" .
+
+cine:sport_film a cine:Genre ;
+    rdfs:label "sport film" .
+
+cine:spy_film a cine:Genre ;
+    rdfs:label "spy film" .
+
+cine:submarine_film a cine:Genre ;
+    rdfs:label "submarine film" .
+
+cine:supernatural_anime a cine:Genre ;
+    rdfs:label "supernatural anime" .
+
+cine:supernatural_horror_film a cine:Genre ;
+    rdfs:label "supernatural horror film" .
+
+cine:sword-and-sandal_film a cine:Genre ;
+    rdfs:label "sword-and-sandal film" .
+
+cine:techno-thriller a cine:Genre ;
+    rdfs:label "techno-thriller" .
+
+cine:teen_film a cine:Genre ;
+    rdfs:label "teen film" .
+
+cine:vigilante_film a cine:Genre ;
+    rdfs:label "vigilante film" .
+
+cine:Çağlar_Ertuğrul a cine:Person ;
+    rdfs:label "Çağlar Ertuğrul" .
+
+cine:Émilie_Caen a cine:Person ;
+    rdfs:label "Émilie Caen" .
+
 cine:Éric_Toledano a cine:Person ;
     rdfs:label "Éric Toledano" .
 
 cine:Akira_Kurosawa a cine:Person ;
     rdfs:label "Akira Kurosawa" .
 
+cine:Al_Ernest_Garcia a cine:Person ;
+    rdfs:label "Al Ernest Garcia" .
+
+cine:Anne_Hathaway a cine:Person ;
+    rdfs:label "Anne Hathaway" .
+
 cine:Anthony_Russo a cine:Person ;
     rdfs:label "Anthony Russo" .
+
+cine:Antonio_Molino_Rojo a cine:Person ;
+    rdfs:label "Antonio Molino Rojo" .
+
+cine:Aurore_Clément a cine:Person ;
+    rdfs:label "Aurore Clément" .
+
+cine:Brad_Pitt a cine:Person ;
+    rdfs:label "Brad Pitt" .
+
+cine:Brett_Cullen a cine:Person ;
+    rdfs:label "Brett Cullen" .
+
+cine:Carrie-Anne_Moss a cine:Person ;
+    rdfs:label "Carrie-Anne Moss" .
+
+cine:Charles_Durning a cine:Person ;
+    rdfs:label "Charles Durning" .
+
+cine:Chester_Conklin a cine:Person ;
+    rdfs:label "Chester Conklin" .
+
+cine:Chris_Hemsworth a cine:Person ;
+    rdfs:label "Chris Hemsworth" .
+
+cine:Christmas_film a cine:Genre ;
+    rdfs:label "Christmas film" .
+
+cine:Christopher_Lloyd a cine:Person ;
+    rdfs:label "Christopher Lloyd" .
+
+cine:Cillian_Murphy a cine:Person ;
+    rdfs:label "Cillian Murphy" .
+
+cine:Danny_Aiello a cine:Person ;
+    rdfs:label "Danny Aiello" .
+
+cine:Dave_Bautista a cine:Person ;
+    rdfs:label "Dave Bautista" .
 
 cine:David_Fincher a cine:Person ;
     rdfs:label "David Fincher" .
 
+cine:David_Lean a cine:Person ;
+    rdfs:label "David Lean" .
+
+cine:Dennis_Hopper a cine:Person ;
+    rdfs:label "Dennis Hopper" .
+
+cine:Diane_Keaton a cine:Person ;
+    rdfs:label "Diane Keaton" .
+
+cine:Edward_Furlong a cine:Person ;
+    rdfs:label "Edward Furlong" .
+
+cine:Edward_Norton a cine:Person ;
+    rdfs:label "Edward Norton" .
+
+cine:Ellen_Corby a cine:Person ;
+    rdfs:label "Ellen Corby" .
+
+cine:Erwin_Leder a cine:Person ;
+    rdfs:label "Erwin Leder" .
+
+cine:F._Murray_Abraham a cine:Person ;
+    rdfs:label "F. Murray Abraham" .
+
 cine:Frank_Darabont a cine:Person ;
     rdfs:label "Frank Darabont" .
+
+cine:Frank_Oz a cine:Person ;
+    rdfs:label "Frank Oz" .
+
+cine:Fred_MacMurray a cine:Person ;
+    rdfs:label "Fred MacMurray" .
 
 cine:Fritz_Lang a cine:Person ;
     rdfs:label "Fritz Lang" .
 
+cine:Gene_Kelly a cine:Person ;
+    rdfs:label "Gene Kelly" .
+
+cine:Gig_Young a cine:Person ;
+    rdfs:label "Gig Young" .
+
+cine:Granville_Redmond a cine:Person ;
+    rdfs:label "Granville Redmond" .
+
+cine:Hank_Mann a cine:Person ;
+    rdfs:label "Hank Mann" .
+
+cine:Harvey_Keitel a cine:Person ;
+    rdfs:label "Harvey Keitel" .
+
 cine:Hayao_Miyazaki a cine:Person ;
     rdfs:label "Hayao Miyazaki" .
+
+cine:Henry_Fonda a cine:Person ;
+    rdfs:label "Henry Fonda" .
+
+cine:Ian_McDiarmid a cine:Person ;
+    rdfs:label "Ian McDiarmid" .
+
+cine:Ian_McKellen a cine:Person ;
+    rdfs:label "Ian McKellen" .
+
+cine:James_Caan a cine:Person ;
+    rdfs:label "James Caan" .
+
+cine:James_Earl_Jones a cine:Person ;
+    rdfs:label "James Earl Jones" .
+
+cine:Joaquin_Phoenix a cine:Person ;
+    rdfs:label "Joaquin Phoenix" .
+
+cine:Jodie_Foster a cine:Person ;
+    rdfs:label "Jodie Foster" .
+
+cine:Joe_Pantoliano a cine:Person ;
+    rdfs:label "Joe Pantoliano" .
+
+cine:Joe_Pesci a cine:Person ;
+    rdfs:label "Joe Pesci" .
 
 cine:Joe_Russo a cine:Person ;
     rdfs:label "Joe Russo" .
 
+cine:Josh_Brolin a cine:Person ;
+    rdfs:label "Josh Brolin" .
+
+cine:Josh_Stewart a cine:Person ;
+    rdfs:label "Josh Stewart" .
+
+cine:Karl_Urban a cine:Person ;
+    rdfs:label "Karl Urban" .
+
+cine:Kathleen_Freeman a cine:Person ;
+    rdfs:label "Kathleen Freeman" .
+
+cine:Kevin_Spacey a cine:Person ;
+    rdfs:label "Kevin Spacey" .
+
+cine:LGBT-related_film a cine:Genre ;
+    rdfs:label "LGBT-related film" .
+
+cine:Laurence_Fishburne a cine:Person ;
+    rdfs:label "Laurence Fishburne" .
+
+cine:Liam_Neeson a cine:Person ;
+    rdfs:label "Liam Neeson" .
+
+cine:Louise_Fletcher a cine:Person ;
+    rdfs:label "Louise Fletcher" .
+
+cine:Margaret_Tyzack a cine:Person ;
+    rdfs:label "Margaret Tyzack" .
+
+cine:Marion_Cotillard a cine:Person ;
+    rdfs:label "Marion Cotillard" .
+
+cine:Mark_Boone_Junior a cine:Person ;
+    rdfs:label "Mark Boone Junior" .
+
+cine:Mark_Ruffalo a cine:Person ;
+    rdfs:label "Mark Ruffalo" .
+
 cine:Miloš_Forman a cine:Person ;
     rdfs:label "Miloš Forman" .
 
-cine:Quentin_Tarantino a cine:Person ;
-    rdfs:label "Quentin Tarantino" .
+cine:Minoru_Chiaki a cine:Person ;
+    rdfs:label "Minoru Chiaki" .
+
+cine:Nadine_Labaki a cine:Person ;
+    rdfs:label "Nadine Labaki" .
+
+cine:Natalie_Portman a cine:Person ;
+    rdfs:label "Natalie Portman" .
+
+cine:Orson_Welles a cine:Person ;
+    rdfs:label "Orson Welles" .
+
+cine:Pat_Roach a cine:Person ;
+    rdfs:label "Pat Roach" .
+
+cine:Paulette_Goddard a cine:Person ;
+    rdfs:label "Paulette Goddard" .
+
+cine:Pete_Postlethwaite a cine:Person ;
+    rdfs:label "Pete Postlethwaite" .
+
+cine:Peter_Greene a cine:Person ;
+    rdfs:label "Peter Greene" .
+
+cine:Peter_Lorre a cine:Person ;
+    rdfs:label "Peter Lorre" .
 
 cine:Ridley_Scott a cine:Person ;
     rdfs:label "Ridley Scott" .
 
 cine:Robert_Zemeckis a cine:Person ;
     rdfs:label "Robert Zemeckis" .
+
+cine:Roberto_Benigni a cine:Person ;
+    rdfs:label "Roberto Benigni" .
+
+cine:Scatman_Crothers a cine:Person ;
+    rdfs:label "Scatman Crothers" .
+
+cine:Sean_Astin a cine:Person ;
+    rdfs:label "Sean Astin" .
+
+cine:Seiji_Miyaguchi a cine:Person ;
+    rdfs:label "Seiji Miyaguchi" .
+
+cine:Sofia_Coppola a cine:Person ;
+    rdfs:label "Sofia Coppola" .
+
+cine:Sterling_Hayden a cine:Person ;
+    rdfs:label "Sterling Hayden" .
+
+cine:Takashi_Shimura a cine:Person ;
+    rdfs:label "Takashi Shimura" .
+
+cine:Talia_Shire a cine:Person ;
+    rdfs:label "Talia Shire" .
+
+cine:Tiny_Sandford a cine:Person ;
+    rdfs:label "Tiny Sandford" .
+
+cine:Tom_Hanks a cine:Person ;
+    rdfs:label "Tom Hanks" .
+
+cine:Vincent_Schiavelli a cine:Person ;
+    rdfs:label "Vincent Schiavelli" .
+
+cine:Vivian_Kubrick a cine:Person ;
+    rdfs:label "Vivian Kubrick" .
+
+cine:William_Hurt a cine:Person ;
+    rdfs:label "William Hurt" .
+
+cine:William_Sadler a cine:Person ;
+    rdfs:label "William Sadler" .
+
+cine:action_thriller a cine:Genre ;
+    rdfs:label "action thriller" .
+
+cine:chase_film a cine:Genre ;
+    rdfs:label "chase film" .
+
+cine:crime_comedy_film a cine:Genre ;
+    rdfs:label "crime comedy film" .
+
+cine:cyberpunk a cine:Genre ;
+    rdfs:label "cyberpunk" .
 
 cine:directed a owl:ObjectProperty ;
     rdfs:label "Directed" ;
@@ -868,11 +4759,29 @@ cine:directedBy a owl:ObjectProperty ;
     rdfs:range cine:Director ;
     rdfs:subPropertyOf cine:hasPerson .
 
+cine:family_film a cine:Genre ;
+    rdfs:label "family film" .
+
+cine:girls_with_guns a cine:Genre ;
+    rdfs:label "girls with guns" .
+
 cine:hasPerson a owl:ObjectProperty ;
     rdfs:label "Has Person" ;
     rdfs:comment "Joins films to people." ;
     rdfs:domain cine:Film ;
     rdfs:range cine:Person .
+
+cine:historical_drama a cine:Genre ;
+    rdfs:label "historical drama" .
+
+cine:magic_realist_film a cine:Genre ;
+    rdfs:label "magic realist film" .
+
+cine:space_opera a cine:Genre ;
+    rdfs:label "space opera" .
+
+cine:treasure_hunt_film a cine:Genre ;
+    rdfs:label "treasure hunt film" .
 
 cine:workedWith a owl:ObjectProperty,
         owl:SymmetricProperty ;
@@ -882,17 +4791,83 @@ cine:workedWith a owl:ObjectProperty,
     rdfs:range cine:Person ;
     owl:propertyChainAxiom ( cine:directed cine:hasActor ) .
 
-cine:Francis_Ford_Coppola a cine:Person ;
-    rdfs:label "Francis Ford Coppola" .
+cine:Al_Pacino a cine:Person ;
+    rdfs:label "Al Pacino" .
 
-cine:Martin_Scorsese a cine:Person ;
-    rdfs:label "Martin Scorsese" .
+cine:Carrie_Fisher a cine:Person ;
+    rdfs:label "Carrie Fisher" .
 
-cine:Peter_Jackson a cine:Person ;
-    rdfs:label "Peter Jackson" .
+cine:Cate_Blanchett a cine:Person ;
+    rdfs:label "Cate Blanchett" .
+
+cine:Christian_Bale a cine:Person ;
+    rdfs:label "Christian Bale" .
+
+cine:Christopher_Lee a cine:Person ;
+    rdfs:label "Christopher Lee" .
+
+cine:Dominic_Monaghan a cine:Person ;
+    rdfs:label "Dominic Monaghan" .
+
+cine:Gary_Oldman a cine:Person ;
+    rdfs:label "Gary Oldman" .
+
+cine:Gwyneth_Paltrow a cine:Person ;
+    rdfs:label "Gwyneth Paltrow" .
+
+cine:Henry_Bergman a cine:Person ;
+    rdfs:label "Henry Bergman" .
+
+cine:Jack_Nicholson a cine:Person ;
+    rdfs:label "Jack Nicholson" .
+
+cine:James_Stewart a cine:Person ;
+    rdfs:label "James Stewart" .
+
+cine:Leonardo_DiCaprio a cine:Person ;
+    rdfs:label "Leonardo DiCaprio" .
+
+cine:Liv_Tyler a cine:Person ;
+    rdfs:label "Liv Tyler" .
+
+cine:Mark_Hamill a cine:Person ;
+    rdfs:label "Mark Hamill" .
+
+cine:Marlon_Brando a cine:Person ;
+    rdfs:label "Marlon Brando" .
+
+cine:Martin_Sheen a cine:Person ;
+    rdfs:label "Martin Sheen" .
+
+cine:Matt_Damon a cine:Person ;
+    rdfs:label "Matt Damon" .
+
+cine:Orlando_Bloom a cine:Person ;
+    rdfs:label "Orlando Bloom" .
+
+cine:Scarlett_Johansson a cine:Person ;
+    rdfs:label "Scarlett Johansson" .
+
+cine:Scott_Glenn a cine:Person ;
+    rdfs:label "Scott Glenn" .
+
+cine:Spaghetti_Western a cine:Genre ;
+    rdfs:label "Spaghetti Western" .
 
 cine:Steven_Spielberg a cine:Person ;
     rdfs:label "Steven Spielberg" .
+
+cine:arthouse_science_fiction_film a cine:Genre ;
+    rdfs:label "arthouse science fiction film" .
+
+<http://filmgraph.pro/ontology/children's_film> a cine:Genre ;
+    rdfs:label "children's film" .
+
+cine:film_based_on_book a cine:Genre ;
+    rdfs:label "film based on book" .
+
+cine:ghost_film a cine:Genre ;
+    rdfs:label "ghost film" .
 
 cine:hasActor a owl:ObjectProperty ;
     rdfs:label "Has Actor" ;
@@ -901,39 +4876,253 @@ cine:hasActor a owl:ObjectProperty ;
     rdfs:range cine:Actor ;
     rdfs:subPropertyOf cine:hasPerson .
 
+cine:heist_film a cine:Genre ;
+    rdfs:label "heist film" .
+
+cine:period_drama_film a cine:Genre ;
+    rdfs:label "period drama film" .
+
+cine:post-apocalyptic_film a cine:Genre ;
+    rdfs:label "post-apocalyptic film" .
+
+cine:satirical_film_or_television_program a cine:Genre ;
+    rdfs:label "satirical film or television program" .
+
+cine:science_fiction_action_film a cine:Genre ;
+    rdfs:label "science fiction action film" .
+
+cine:silent_film a cine:Genre ;
+    rdfs:label "silent film" .
+
+cine:trial_film a cine:Genre ;
+    rdfs:label "trial film" .
+
+cine:war_drama a cine:Genre ;
+    rdfs:label "war drama" .
+
+cine:Aamir_Khan a cine:Person ;
+    rdfs:label "Aamir Khan" .
+
 cine:Actor a owl:Class ;
     rdfs:label "Actor" ;
     rdfs:comment "An individual who performs a role in a film." ;
     rdfs:subClassOf cine:Person .
 
-cine:Alfred_Hitchcock a cine:Person ;
-    rdfs:label "Alfred Hitchcock" .
+cine:Alec_Guinness a cine:Person ;
+    rdfs:label "Alec Guinness" .
+
+cine:Bess_Flowers a cine:Person ;
+    rdfs:label "Bess Flowers" .
 
 cine:Billy_Wilder a cine:Person ;
     rdfs:label "Billy Wilder" .
 
-cine:Charlie_Chaplin a cine:Person ;
-    rdfs:label "Charlie Chaplin" .
+cine:David_Prowse a cine:Person ;
+    rdfs:label "David Prowse" .
 
 cine:Director a owl:Class ;
     rdfs:label "Director" ;
     rdfs:comment "A person who directed a film." ;
     rdfs:subClassOf cine:Person .
 
-cine:Sergio_Leone a cine:Person ;
-    rdfs:label "Sergio Leone" .
+cine:Hugo_Weaving a cine:Person ;
+    rdfs:label "Hugo Weaving" .
+
+cine:John_Rhys-Davies a cine:Person ;
+    rdfs:label "John Rhys-Davies" .
+
+cine:Martin_Scorsese a cine:Person ;
+    rdfs:label "Martin Scorsese" .
+
+cine:Morgan_Freeman a cine:Person ;
+    rdfs:label "Morgan Freeman" .
+
+cine:Quentin_Tarantino a cine:Person ;
+    rdfs:label "Quentin Tarantino" .
+
+cine:Robert_Duvall a cine:Person ;
+    rdfs:label "Robert Duvall" .
+
+cine:Samuel_L._Jackson a cine:Person ;
+    rdfs:label "Samuel L. Jackson" .
+
+cine:black_comedy_film a cine:Genre ;
+    rdfs:label "black comedy film" .
+
+cine:buddy_film a cine:Genre ;
+    rdfs:label "buddy film" .
+
+cine:detective_film a cine:Genre ;
+    rdfs:label "detective film" .
+
+cine:independent_film a cine:Genre ;
+    rdfs:label "independent film" .
+
+cine:time-travel_film a cine:Genre ;
+    rdfs:label "time-travel film" .
+
+cine:tragicomedy a cine:Genre ;
+    rdfs:label "tragicomedy" .
+
+cine:Michael_Caine a cine:Person ;
+    rdfs:label "Michael Caine" .
+
+cine:Robert_De_Niro a cine:Person ;
+    rdfs:label "Robert De Niro" .
 
 cine:Stanley_Kubrick a cine:Person ;
     rdfs:label "Stanley Kubrick" .
 
+cine:Western_film a cine:Genre ;
+    rdfs:label "Western film" .
+
+cine:anti-war_film a cine:Genre ;
+    rdfs:label "anti-war film" .
+
+cine:prison_film a cine:Genre ;
+    rdfs:label "prison film" .
+
+cine:speculative_fiction_film a cine:Genre ;
+    rdfs:label "speculative fiction film" .
+
 cine:Christopher_Nolan a cine:Person ;
     rdfs:label "Christopher Nolan" .
 
-cine:Person a owl:Class ;
-    rdfs:label "Person" ;
-    rdfs:comment "A superclass for all actors and directors involved in a film." .
+cine:Francis_Ford_Coppola a cine:Person ;
+    rdfs:label "Francis Ford Coppola" .
+
+cine:Harrison_Ford a cine:Person ;
+    rdfs:label "Harrison Ford" .
+
+cine:Peter_Jackson a cine:Person ;
+    rdfs:label "Peter Jackson" .
+
+cine:dystopian_film a cine:Genre ;
+    rdfs:label "dystopian film" .
+
+cine:film_based_on_literature a cine:Genre ;
+    rdfs:label "film based on literature" .
+
+cine:melodrama a cine:Genre ;
+    rdfs:label "melodrama" .
+
+cine:police_procedural_film a cine:Genre ;
+    rdfs:label "police procedural film" .
+
+cine:psychological_horror_film a cine:Genre ;
+    rdfs:label "psychological horror film" .
+
+cine:romance_film a cine:Genre ;
+    rdfs:label "romance film" .
+
+cine:superhero_film a cine:Genre ;
+    rdfs:label "superhero film" .
+
+cine:biographical_film a cine:Genre ;
+    rdfs:label "biographical film" .
+
+cine:historical_drama_film a cine:Genre ;
+    rdfs:label "historical drama film" .
+
+cine:neo-noir a cine:Genre ;
+    rdfs:label "neo-noir" .
+
+cine:romantic_comedy a cine:Genre ;
+    rdfs:label "romantic comedy" .
+
+cine:Alfred_Hitchcock a cine:Person ;
+    rdfs:label "Alfred Hitchcock" .
+
+cine:Charlie_Chaplin a cine:Person ;
+    rdfs:label "Charlie Chaplin" .
+
+cine:Sergio_Leone a cine:Person ;
+    rdfs:label "Sergio Leone" .
+
+cine:film_noir a cine:Genre ;
+    rdfs:label "film noir" .
+
+cine:horror_film a cine:Genre ;
+    rdfs:label "horror film" .
+
+cine:musical_film a cine:Genre ;
+    rdfs:label "musical film" .
+
+cine:coming-of-age_film a cine:Genre ;
+    rdfs:label "coming-of-age film" .
+
+cine:gangster_film a cine:Genre ;
+    rdfs:label "gangster film" .
+
+cine:historical_film a cine:Genre ;
+    rdfs:label "historical film" .
+
+cine:comedy_drama a cine:Genre ;
+    rdfs:label "comedy drama" .
+
+cine:psychological_drama_film a cine:Genre ;
+    rdfs:label "psychological drama film" .
+
+cine:psychological_thriller_film a cine:Genre ;
+    rdfs:label "psychological thriller film" .
+
+cine:film_based_on_a_novel a cine:Genre ;
+    rdfs:label "film based on a novel" .
+
+cine:war_film a cine:Genre ;
+    rdfs:label "war film" .
+
+cine:fantasy_film a cine:Genre ;
+    rdfs:label "fantasy film" .
+
+cine:suspense_film a cine:Genre ;
+    rdfs:label "suspense film" .
+
+cine:epic_film a cine:Genre ;
+    rdfs:label "epic film" .
+
+cine:science_fiction_film a cine:Genre ;
+    rdfs:label "science fiction film" .
+
+cine:crime_drama_film a cine:Genre ;
+    rdfs:label "crime drama film" .
+
+cine:comedy_film a cine:Genre ;
+    rdfs:label "comedy film" .
+
+cine:flashback_film a cine:Genre ;
+    rdfs:label "flashback film" .
+
+cine:crime_thriller_film a cine:Genre ;
+    rdfs:label "crime thriller film" .
+
+cine:mystery_film a cine:Genre ;
+    rdfs:label "mystery film" .
+
+cine:crime_film a cine:Genre ;
+    rdfs:label "crime film" .
+
+cine:adventure_film a cine:Genre ;
+    rdfs:label "adventure film" .
+
+cine:thriller_film a cine:Genre ;
+    rdfs:label "thriller film" .
+
+cine:action_film a cine:Genre ;
+    rdfs:label "action film" .
+
+cine:drama_film a cine:Genre ;
+    rdfs:label "drama film" .
 
 cine:Film a owl:Class ;
     rdfs:label "Film" ;
     rdfs:comment "A film from the dataset which contains the top 100 films of all time, according to IMDb." .
+
+cine:Genre a owl:Class ;
+    rdfs:label "Genre" ;
+    rdfs:comment "A descriptor that signifies the type of story a film might have. Films can have multiple genres." .
+
+cine:Person a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A superclass for all actors and directors involved in a film." .
 
