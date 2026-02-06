@@ -2,6 +2,7 @@ import pandas as pd
 import time
 import random
 import requests
+import re
 from rdflib import Graph, Namespace, URIRef, Literal, RDF, RDFS, XSD
 
 # 1. Setup
@@ -14,16 +15,32 @@ def get_stealth_headers():
         'Accept': 'application/sparql-results+json'
     }
 
+def clean_uri_slug(text):
+    """Skeptic's Cleanse: Removes quotes and special chars that break RDF serializing."""
+    if not text: return "Unknown"
+    # Remove double quotes, single quotes, and dots
+    clean = re.sub(r'["\'.]', '', text)
+    # Replace spaces and slashes with underscores
+    return clean.replace(" ", "_").replace("/", "_")
+
 def fetch_wikidata(session, imdb_id):
     query = f"""
-    SELECT ?movie ?movieLabel ?directorLabel ?year WHERE {{
+    SELECT ?movie ?movieLabel ?directorLabel ?year 
+           (GROUP_CONCAT(DISTINCT ?actorLabel; separator="|") AS ?actors)
+           (GROUP_CONCAT(DISTINCT ?genreLabel; separator="|") AS ?genres)
+    WHERE {{
       ?movie wdt:P345 "{imdb_id}".
       ?movie wdt:P57 ?director.
       ?director rdfs:label ?directorLabel.
+      
+      OPTIONAL {{ ?movie wdt:P161 ?actor. ?actor rdfs:label ?actorLabel. FILTER(LANG(?actorLabel) = "en") }}
+      OPTIONAL {{ ?movie wdt:P136 ?genre. ?genre rdfs:label ?genreLabel. FILTER(LANG(?genreLabel) = "en") }}
+      
       OPTIONAL {{ ?movie wdt:P577 ?date. BIND(YEAR(?date) AS ?year) }}
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
       FILTER(LANG(?directorLabel) = "en")
     }}
+    GROUP BY ?movie ?movieLabel ?directorLabel ?year
     """
     try:
         response = session.get(WD_ENDPOINT, params={'query': query, 'format': 'json'}, headers=get_stealth_headers())
@@ -46,116 +63,137 @@ def build_graph(csv_path):
         if not raw_data or not raw_data['results']['bindings']:
             continue
 
-        # --- DATA AGGREGATION & CONFLICT RESOLUTION ---
-        years = set()
-        directors = {} # Map names to URIs to avoid duplicates
-        movie_label = None
+        # STAGING: Collect all data for this movie first
+        movie_data = {
+            'label': None,
+            'years': set(),
+            'directors': [], # List of (uri, name)
+            'actors': set(),
+            'genres': set()
+        }
 
         for item in raw_data['results']['bindings']:
-            if not movie_label: 
-                movie_label = item['movieLabel']['value']
-            
+            movie_data['label'] = item['movieLabel']['value']
             if 'year' in item:
-                years.add(int(item['year']['value']))
+                movie_data['years'].add(int(item['year']['value']))
             
             d_name = item['directorLabel']['value']
-            d_uri_slug = d_name.replace(" ", "_").replace("'", "")
-            directors[d_uri_slug] = d_name
+            d_uri = URIRef(CINE[clean_uri_slug(d_name)])
+            movie_data['directors'].append((d_uri, d_name))
 
-        # --- WRITING TO GRAPH ---
-        # Create a clean Movie URI
-        m_slug = movie_label.replace(" ", "_").replace("'", "").replace(".", "")
-        m_uri = URIRef(CINE[m_slug])
+            if 'actors' in item and item['actors']['value'].strip():
+                for a in item['actors']['value'].split('|')[:10]:
+                    movie_data['actors'].add(a)
 
-        g.add((m_uri, RDF.type, CINE.Film))
-        g.add((m_uri, RDFS.label, Literal(movie_label)))
-        g.add((m_uri, CINE.imdbId, Literal(imdb_id)))
+            if 'genres' in item and item['genres']['value'].strip():
+                for g_name in item['genres']['value'].split('|'):
+                    movie_data['genres'].add(g_name)
 
-        # Only the earliest year (The Original Release)
-        if years:
-            g.add((m_uri, CINE.releaseYear, Literal(min(years), datatype=XSD.integer)))
+        # Only commit if we have the essentials
+        if movie_data['label'] and movie_data['actors'] and movie_data['genres'] and movie_data['years']:
+            m_uri = URIRef(CINE[clean_uri_slug(movie_data['label'])])
+            
+            g.add((m_uri, RDF.type, CINE.Film))
+            g.add((m_uri, RDFS.label, Literal(movie_data['label'])))
+            g.add((m_uri, CINE.imdbId, Literal(imdb_id)))
+            g.add((m_uri, CINE.releaseYear, Literal(min(movie_data['years']), datatype=XSD.integer)))
 
-        # Add Directors
-        for slug, name in directors.items():
-            d_uri = URIRef(CINE[slug])
-            g.add((m_uri, CINE.directedBy, d_uri))
-            g.add((d_uri, RDF.type, CINE.Person))
-            g.add((d_uri, RDFS.label, Literal(name)))
+            for d_uri, d_name in movie_data['directors']:
+                g.add((m_uri, CINE.directedBy, d_uri))
+                g.add((d_uri, RDF.type, CINE.Person))
+                g.add((d_uri, RDFS.label, Literal(d_name)))
+
+            for a_name in movie_data['actors']:
+                a_uri = URIRef(CINE[clean_uri_slug(a_name)])
+                g.add((m_uri, CINE.hasActor, a_uri))
+                g.add((a_uri, RDF.type, CINE.Person))
+                g.add((a_uri, RDFS.label, Literal(a_name)))
+
+            for g_name in movie_data['genres']:
+                g_uri = URIRef(CINE[clean_uri_slug(g_name)])
+                g.add((m_uri, CINE.hasGenre, g_uri))
+                g.add((g_uri, RDF.type, CINE.Genre))
+                g.add((g_uri, RDFS.label, Literal(g_name)))
+            
+            print(f"  ✅ Committed: {movie_data['label']}")
+        else:
+            print(f"  ⚠️ Skipped: {movie_data.get('label', imdb_id)} (Insufficient data)")
 
         time.sleep(random.uniform(0.6, 1.2))
-    
     return g
 
 def expand_by_directors(session, g):
     print("\nStarting Phase 2: Semantic Expansion...")
-    directors = list(g.subjects(RDF.type, CINE.Person))
+    # Get directors from the graph we just built
+    directors = list(set(g.objects(None, CINE.directedBy)))
     
     for d_uri in directors:
         d_name = str(g.value(d_uri, RDFS.label))
         print(f"Expanding: {d_name}")
 
         query = f"""
-        SELECT ?movie ?movieLabel ?year ?imdbId WHERE {{
+        SELECT ?movie ?movieLabel ?year ?imdbId 
+               (GROUP_CONCAT(DISTINCT ?actorLabel; separator="|") AS ?actors)
+               (GROUP_CONCAT(DISTINCT ?genreLabel; separator="|") AS ?genres)
+        WHERE {{
           ?movie wdt:P57 ?dir .
           ?dir rdfs:label "{d_name}"@en .
           ?movie wdt:P345 ?imdbId .
-          ?movie wdt:P31 wd:Q11424 . # Filter for FILMS only
+          ?movie wdt:P31 wd:Q11424 . 
+          OPTIONAL {{ ?movie wdt:P161 ?actor. ?actor rdfs:label ?actorLabel. FILTER(LANG(?actorLabel) = "en") }}
+          OPTIONAL {{ ?movie wdt:P136 ?genre. ?genre rdfs:label ?genreLabel. FILTER(LANG(?genreLabel) = "en") }}
           OPTIONAL {{ ?movie wdt:P577 ?date. BIND(YEAR(?date) AS ?year) }}
           SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
         }}
+        GROUP BY ?movie ?movieLabel ?year ?imdbId
         """
         try:
             response = session.get(WD_ENDPOINT, params={'query': query, 'format': 'json'}, headers=get_stealth_headers())
             data = response.json()
             
-            # Temporary storage to deduplicate years for THIS director's movies
-            movie_cache = {} # movie_uri -> {label, imdb, years_set}
-
             for res in data['results']['bindings']:
                 m_label = res['movieLabel']['value']
-                m_uri = URIRef(CINE[m_label.replace(" ", "_").replace("'", "").replace(".", "")])
                 
-                if m_uri not in movie_cache:
-                    movie_cache[m_uri] = {
-                        'label': m_label,
-                        'imdb': res.get('imdbId', {}).get('value'),
-                        'years': set()
-                    }
-                
-                if 'year' in res:
-                    movie_cache[m_uri]['years'].add(int(res['year']['value']))
+                # Check for minimum requirements in the expansion too
+                raw_actors = res.get('actors', {}).get('value', '').strip()
+                raw_genres = res.get('genres', {}).get('value', '').strip()
+                has_year = 'year' in res
 
-            # Now add the "Cleaned" records to the actual graph
-            for m_uri, info in movie_cache.items():
-                g.add((m_uri, RDF.type, CINE.Film))
-                g.add((m_uri, RDFS.label, Literal(info['label'])))
-                g.add((m_uri, CINE.directedBy, d_uri))
-                
-                if info['imdb']:
-                    g.add((m_uri, CINE.imdbId, Literal(info['imdb'])))
-                
-                if info['years']:
-                    # SKEPTICISM: Take only the earliest year found
-                    earliest_year = min(info['years'])
-                    g.add((m_uri, CINE.releaseYear, Literal(earliest_year, datatype=XSD.integer)))
+                if raw_actors and raw_genres and has_year:
+                    m_uri = URIRef(CINE[clean_uri_slug(m_label)])
+                    g.add((m_uri, RDF.type, CINE.Film))
+                    g.add((m_uri, RDFS.label, Literal(m_label)))
+                    g.add((m_uri, CINE.directedBy, d_uri))
+                    
+                    if 'imdbId' in res:
+                        g.add((m_uri, CINE.imdbId, Literal(res['imdbId']['value'])))
+                    
+                    if 'year' in res:
+                        # Simple min() year check for expansion
+                        g.add((m_uri, CINE.releaseYear, Literal(int(res['year']['value']), datatype=XSD.integer)))
+
+                    for a_name in raw_actors.split('|')[:10]:
+                        a_uri = URIRef(CINE[clean_uri_slug(a_name)])
+                        g.add((m_uri, CINE.hasActor, a_uri))
+                        g.add((a_uri, RDF.type, CINE.Person))
+                        g.add((a_uri, RDFS.label, Literal(a_name)))
+
+                    for g_name in raw_genres.split('|'):
+                        g_uri = URIRef(CINE[clean_uri_slug(g_name)])
+                        g.add((m_uri, CINE.hasGenre, g_uri))
+                        g.add((g_uri, RDF.type, CINE.Genre))
+                        g.add((g_uri, RDFS.label, Literal(g_name)))
+                else:
+                    continue
 
             time.sleep(0.8) 
         except Exception as e:
             print(f" ❌ Failed to expand {d_name}: {e}")
-
     return g
 
 if __name__ == "__main__":
-    print("Phase 1: Ingesting 100 Seed Movies...")
     session = requests.Session()
     first_graph = build_graph("imdb_100.csv")
-    
-    # NEW: Phase 2 Expansion
-    print(f"\n✅ Phase 1 Complete. Graph has {len(first_graph)} triples.")
     final_graph = expand_by_directors(session, first_graph)
-    
-    print(f"\n✅ Phase 2 Complete. Final Graph has {len(final_graph)} triples.")
-    
-    # Save the giant graph
     final_graph.serialize(destination="ontology/output_graph.ttl", format="turtle")
-    print("Everything saved to ontology/output_graph.ttl")
+    print(f"✅ Final Graph Size: {len(final_graph)} triples.")
