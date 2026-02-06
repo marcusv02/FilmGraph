@@ -3,7 +3,6 @@ from pathlib import Path
 from rdflib import Graph, Namespace, URIRef, RDF
 from pyshacl import validate
 
-# 1. Path Setup
 BASE_DIR = Path(__file__).resolve().parent
 ONTOLOGY_DIR = (BASE_DIR / "../ontology").resolve()
 
@@ -13,7 +12,7 @@ SHAPES_FILE = ONTOLOGY_DIR / "shapes.ttl"
 OUTPUT_FILE = ONTOLOGY_DIR / "production_graph.ttl"
 
 def cleanup_duplicates(graph):
-    CINE = Namespace("http://filmgraph.pro/ontology/")
+    CINE = Namespace("http://filmgraph/ontology/")
     
     films = set(graph.subjects(predicate=CINE.releaseYear))
     
@@ -34,14 +33,12 @@ def run_pipeline():
         return
 
     data_graph = Graph()
-    # 1. Load raw data and schema
     data_graph.parse(str(DATA_FILE), format="turtle")
     if SCHEMA_FILE.exists():
         data_graph.parse(str(SCHEMA_FILE), format="turtle")
 
     cleanup_duplicates(data_graph)
 
-    # 2. Load SHACL Shapes
     shacl_graph = None
     if SHAPES_FILE.exists():
         print("Loading Validation Shapes...")
@@ -50,7 +47,6 @@ def run_pipeline():
     else:
         print(f"Warning: {SHAPES_FILE.name} not found. Skipping validation.")
 
-    # 3. Perform Validation & Inference
     print("Running Validation and OWL Inference...")
     conforms, results_graph, results_text = validate(
         data_graph,
@@ -63,17 +59,13 @@ def run_pipeline():
         print("✅ Validation Success: Data is clean and consistent.")
     else:
         print("❌ Validation Errors Found:")
-        # We don't stop execution, but we notify the developer
         print(results_text)
 
-    # 4. Save the Enriched Graph
-    # We use a set length check here to show the user how many new facts were inferred
     before_count = len(data_graph)
     data_graph.serialize(destination=str(OUTPUT_FILE), format="turtle")
     after_count = len(data_graph)
     
-    print(f"Success! Enriched graph saved to: {OUTPUT_FILE}")
-    print(f"Triples before inference: {before_count} | After: {after_count}")
+    print(f"✅ Success! Enriched graph saved to: {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     run_pipeline()
