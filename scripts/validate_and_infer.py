@@ -15,14 +15,14 @@ OUTPUT_FILE = ONTOLOGY_DIR / "production_graph.ttl"
 CINE = Namespace("http://filmgraph/ontology/")
 
 def cleanup_duplicates(graph):
-    films = set(graph.subjects(predicate=CINE.releaseYear))
+    films = set(graph.subjects(predicate=CINE.year))
     
     for film in films:
-        years = sorted(list(graph.objects(film, CINE.releaseYear)))
+        years = sorted(list(graph.objects(film, CINE.year)))
         if len(years) > 1:
             print(f"Squashing duplicate years for {film.split('/')[-1]}: kept {years[0]}")
-            graph.remove((film, CINE.releaseYear, None))
-            graph.add((film, CINE.releaseYear, years[0]))
+            graph.remove((film, CINE.year, None))
+            graph.add((film, CINE.year, years[0]))
 
 def run_pipeline():
     print(f"Checking paths in: {ONTOLOGY_DIR}")
