@@ -29,9 +29,6 @@ def load_ontology():
     current_dir = os.getcwd()
     abs_path = os.path.abspath(GRAPH_PATH)
     
-    print(f"Current Working Directory: {current_dir}")
-    print(f"Looking for graph at: {abs_path}")
-
     if os.path.exists(GRAPH_PATH):
         g.parse(GRAPH_PATH, format="turtle")
         print(f"✅ SUCCESS: Loaded {len(g)} triples.")
