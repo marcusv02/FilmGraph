@@ -6,11 +6,12 @@ from pyshacl import validate
 # 1. Path Setup
 BASE_DIR = Path(__file__).resolve().parent
 ONTOLOGY_DIR = (BASE_DIR / "../ontology").resolve()
+BACKEND_DIR = (BASE_DIR / "../backend").resolve()
 
 SCHEMA_FILE = ONTOLOGY_DIR / "schema.ttl"
 DATA_FILE = ONTOLOGY_DIR / "output_graph.ttl"
 SHAPES_FILE = ONTOLOGY_DIR / "shapes.ttl"
-OUTPUT_FILE = ONTOLOGY_DIR / "production_graph.ttl"
+OUTPUT_FILE = BACKEND_DIR / "production_graph.ttl"
 
 CINE = Namespace("http://filmgraph/ontology/")
 

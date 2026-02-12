@@ -22,7 +22,7 @@ CINE = Namespace("http://filmgraph/ontology/")
 g = Graph()
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-GRAPH_PATH = os.path.join(BASE_DIR, "../ontology/production_graph.ttl")
+GRAPH_PATH = os.path.join(BASE_DIR, "../backend/production_graph.ttl")
 
 @app.on_event("startup")
 def load_ontology():
