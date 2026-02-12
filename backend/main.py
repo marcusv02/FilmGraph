@@ -29,6 +29,7 @@ def load_ontology():
     print(f"⏳ Loading knowledge graph from {GRAPH_PATH}...")
     if os.path.exists(GRAPH_PATH):
         g.parse(GRAPH_PATH, format="turtle")
+        g.bind("", CINE)
         print(f"✅ Loaded {len(g)} triples.")
     else:
         print(f"❌ Error: {GRAPH_PATH} not found!")
@@ -41,8 +42,9 @@ class QuestionRequest(BaseModel):
 async def ask_ai(request: QuestionRequest):
     system_prompt = f"""
     You are a SPARQL expert for the FilmGraph.
-    Namespace: PREFIX : <http://filmgraph/ontology/>
-    Prefixes: PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    IMPORTANT: You MUST start your query with this EXACT line:
+    PREFIX : <http://filmgraph/ontology/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     
     Classes: :Film, :Actor, :Director, :Genre, :Person
     
