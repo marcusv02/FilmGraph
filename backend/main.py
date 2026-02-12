@@ -26,13 +26,17 @@ GRAPH_PATH = os.path.join(BASE_DIR, "../backend/production_graph.ttl")
 
 @app.on_event("startup")
 def load_ontology():
-    print(f"⏳ Loading knowledge graph from {GRAPH_PATH}...")
+    current_dir = os.getcwd()
+    abs_path = os.path.abspath(GRAPH_PATH)
+    
+    print(f"Current Working Directory: {current_dir}")
+    print(f"Looking for graph at: {abs_path}")
+
     if os.path.exists(GRAPH_PATH):
         g.parse(GRAPH_PATH, format="turtle")
-        g.bind("", CINE)
-        print(f"✅ Loaded {len(g)} triples.")
+        print(f"✅ SUCCESS: Loaded {len(g)} triples.")
     else:
-        print(f"❌ Error: {GRAPH_PATH} not found!")
+        print(f"❌ ERROR: File not found at {abs_path}!")
 
 class QuestionRequest(BaseModel):
     question: str
