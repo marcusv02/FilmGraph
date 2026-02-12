@@ -15,11 +15,19 @@
     ] ;
 
     sh:property [
-        sh:path :releaseYear ;
+        sh:path :year ;
         sh:datatype xsd:integer ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:message "Release year must be a valid integer." ;
+    ] ;
+
+    sh:property [
+        sh:path :duration ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Duration must be a valid integer." ;
     ] ;
 
     sh:property [

@@ -106,13 +106,6 @@
 #    Data properties
 #################################################################
 
-###  http://filmgraph/ontology/avg_vote
-:avg_vote rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Film ;
-          rdfs:comment "The average numerical value a film received on a scale from 1 - 10, according to IMDb users." ;
-          rdfs:label "Average Vote" .
-
-
 ###  http://filmgraph/ontology/duration
 :duration rdf:type owl:DatatypeProperty ;
           rdfs:domain :Film ;
