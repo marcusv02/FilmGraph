@@ -9,7 +9,7 @@ export default function Chat() {
   const handleAsk = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/ask', {
+      const res = await fetch('https://filmgraph-production.up.railway.app/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question }),
