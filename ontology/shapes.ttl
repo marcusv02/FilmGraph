@@ -1,4 +1,4 @@
-@prefix : <http://filmgraph.pro/ontology/> .
+@prefix : <http://filmgraph/ontology/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,7 +7,6 @@
 :FilmShape a sh:NodeShape ;
     sh:targetClass :Film ;
     
-    # Ensure every film has an IMDb ID (String)
     sh:property [
         sh:path :imdbId ;
         sh:minCount 1 ;
@@ -15,31 +14,60 @@
         sh:message "Every film must have an IMDb ID." ;
     ] ;
 
-    # Ensure Year is an Integer
     sh:property [
-        sh:path :releaseYear ;
+        sh:path :year ;
         sh:datatype xsd:integer ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:message "Release year must be a valid integer." ;
     ] ;
 
-    # Ensure it's connected to at least one Director
+    sh:property [
+        sh:path :duration ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Duration must be a valid integer." ;
+    ] ;
+
     sh:property [
         sh:path :directedBy ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:message "A film must have at least one director (as a URI)." ;
+    ] ;
+
+    sh:property [
+        sh:path :hasActor ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:message "Every film should have at least one actor listed." ;
+    ] ;
+
+    # NEW: Validate Genres
+    sh:property [
+        sh:path :hasGenre ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:message "Every film must be associated with a genre." ;
     ] .
 
 # 2. Rules for People (Directors/Actors)
 :PersonShape a sh:NodeShape ;
     sh:targetClass :Person ;
     
-    # Every person needs a readable label
     sh:property [
         sh:path rdfs:label ;
         sh:minCount 1 ;
         sh:datatype xsd:string ;
-        sh:message "Every person node must have an rdfs:label." ;
+    ] .
+
+# 3. Rules for Genres
+:GenreShape a sh:NodeShape ;
+    sh:targetClass :Genre ;
+    
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
     ] .

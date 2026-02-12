@@ -1,183 +1,236 @@
 import pandas as pd
-import requests
 import time
-import os
 import random
-from rdflib import Graph, Literal, RDF, URIRef, Namespace
-from rdflib.namespace import XSD, RDFS
+import requests
+import re
+from rdflib import Graph, Namespace, URIRef, Literal, RDF, RDFS, XSD
 
-# 1. Configuration
+CINE = Namespace("http://filmgraph/ontology/")
 WD_ENDPOINT = "https://query.wikidata.org/sparql"
-CINE = Namespace("http://filmgraph.pro/ontology/")
 
-def get_stealth_headers():
-    # These headers mimic a real Chrome browser on Windows perfectly
+def get_headers():
     return {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "application/sparql-results+json",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Referer": "https://query.wikidata.org/",
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "same-origin",
-        "Connection": "keep-alive"
+        'User-Agent': 'FilmGraphBot/1.0 Python-requests',
+        'Accept': 'application/sparql-results+json'
     }
 
-def fetch_wikidata_by_imdb(session, imdb_title_id):
-    query = f"""
-    SELECT ?movie ?movieLabel ?directorLabel ?year ?genreLabel WHERE {{
-      ?movie wdt:P345 "{imdb_title_id}".
-      OPTIONAL {{ ?movie wdt:P57 ?director. ?director rdfs:label ?directorLabel. FILTER(lang(?directorLabel) = "en") }}
-      OPTIONAL {{ ?movie wdt:P577 ?date. BIND(YEAR(?date) AS ?year) }}
-      OPTIONAL {{ ?movie wdt:P136 ?genre. ?genre rdfs:label ?genreLabel. FILTER(lang(?genreLabel) = "en") }}
-      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
-    }}
-    """
+def clean_uri_slug(text):
+    if not text: return "Unknown"
+    clean = re.sub(r'["\'.]', '', text)
+    return clean.replace(" ", "_").replace("/", "_")
 
-    params = {
-        "query": query,
-        "format": "json"
-    }
-
+def query_wikidata(session, sparql_query):
     try:
-        # Use the session to make the request (keeps the connection alive)
-        response = session.get(WD_ENDPOINT, params=params, headers=get_stealth_headers(), timeout=10)
-        
-        if response.status_code == 429:
-            print(f"⏳ Rate limited on {imdb_title_id}. Pausing for 10s...")
-            time.sleep(10)
-            return fetch_wikidata_by_imdb(session, imdb_title_id)
-
-        if response.status_code == 403:
-            print(f"🚫 403 Forbidden on {imdb_title_id}. (IP might still be blocked)")
-            return None
-
+        response = session.get(WD_ENDPOINT, params={'query': sparql_query, 'format': 'json'}, headers=get_headers())
         return response.json()
-
     except Exception as e:
-        print(f"❌ Error fetching {imdb_title_id}: {e}")
+        print(f"   ❌ Query error: {e}")
         return None
 
-def build_graph(csv_path):
-    try:
-        df = pd.read_csv(csv_path)
-    except FileNotFoundError:
-        print(f"❌ Error: Could not find CSV at {csv_path}")
-        return Graph()
+def add_film_to_graph(g, film_label, imdb_id, year, duration, director_name, actors, genres):
+    f_uri = URIRef(CINE[clean_uri_slug(film_label)])
+    
+    # Film properties
+    g.add((f_uri, RDF.type, CINE.Film))
+    g.add((f_uri, RDFS.label, Literal(film_label)))
+    g.add((f_uri, CINE.imdbId, Literal(imdb_id)))
+    g.add((f_uri, CINE.year, Literal(year, datatype=XSD.integer)))
+    g.add((f_uri, CINE.duration, Literal(duration, datatype=XSD.integer)))
+    
+    # Director
+    d_uri = URIRef(CINE[clean_uri_slug(director_name)])
+    g.add((f_uri, CINE.directedBy, d_uri))
+    g.add((d_uri, RDF.type, CINE.Person))
+    g.add((d_uri, RDFS.label, Literal(director_name)))
+    
+    # Actors
+    for a_name in actors:
+        a_uri = URIRef(CINE[clean_uri_slug(a_name)])
+        g.add((f_uri, CINE.hasActor, a_uri))
+        g.add((a_uri, RDF.type, CINE.Person))
+        g.add((a_uri, RDFS.label, Literal(a_name)))
+    
+    # Genres
+    for g_name in genres:
+        g_uri = URIRef(CINE[clean_uri_slug(g_name)])
+        g.add((f_uri, CINE.hasGenre, g_uri))
+        g.add((g_uri, RDF.type, CINE.Genre))
+        g.add((g_uri, RDFS.label, Literal(g_name)))
 
+def process_film_results(results):
+    films = {}
+    
+    for item in results:
+        film_label = item.get('filmLabel', {}).get('value')
+        if not film_label:
+            continue
+            
+        if film_label not in films:
+            films[film_label] = {
+                'label': film_label,
+                'imdb_id': item.get('imdbId', {}).get('value'),
+                'years': set(),
+                'duration': 0,
+                'directors': set(),
+                'actors': set(),
+                'genres': set()
+            }
+        
+        if 'year' in item:
+            try:
+                films[film_label]['years'].add(int(item['year']['value']))
+            except (ValueError, KeyError):
+                pass
+
+        if 'duration' in item:
+            try:
+                # Wikidata duration is in minutes
+                films[film_label]['duration'] = int(float(item['duration']['value']))
+            except (ValueError, KeyError):
+                pass
+        
+        if 'directorLabel' in item:
+            films[film_label]['directors'].add(item['directorLabel']['value'])
+        
+        if 'actors' in item and item['actors']['value'].strip():
+            for a in item['actors']['value'].split('|')[:10]:
+                if a.strip():
+                    films[film_label]['actors'].add(a.strip())
+        
+        if 'genres' in item and item['genres']['value'].strip():
+            for g in item['genres']['value'].split('|'):
+                if g.strip():
+                    films[film_label]['genres'].add(g.strip())
+    
+    return films
+
+def build_graph(csv_path):
     g = Graph()
     g.bind("cine", CINE)
-    
-    # Initialize a Session (re-uses TCP connection like a browser)
+    df = pd.read_csv(csv_path)
     session = requests.Session()
-
-    print(f"🚀 Starting ingestion of {len(df)} movies...")
-    
-    # for index, row in df.iterrows():
-    #     imdb_title_id = row['imdb_title_id']
-    #     print(f"Processing {index + 1}/{len(df)}: {imdb_title_id}...")
-        
-    #     data = fetch_wikidata_by_imdb(session, imdb_title_id)
-        
-    #     if not data or 'results' not in data or not data['results']['bindings']:
-    #         print(f"   ⚠️ No data found.")
-    #         continue
-        
-    #     for res in data['results']['bindings']:
-    #         if 'movieLabel' in res:
-    #             # Clean strings to make safe URIs
-    #             movie_label = res['movieLabel']['value']
-    #             movie_name = movie_label.replace(" ", "_").replace("'", "").replace(".", "")
-    #             movie_uri = URIRef(CINE[movie_name])
-                
-    #             g.add((movie_uri, RDF.type, CINE.Film))
-    #             g.add((movie_uri, CINE.imdbId, Literal(imdb_title_id)))
-    #             g.add((movie_uri, RDFS.label, Literal(movie_label))) # Add readable label
-            
-    #             if 'directorLabel' in res:
-    #                 director_label = res['directorLabel']['value']
-    #                 director_name = director_label.replace(" ", "_").replace("'", "")
-    #                 director_uri = URIRef(CINE[director_name])
-                    
-    #                 g.add((movie_uri, CINE.directedBy, director_uri))
-    #                 g.add((director_uri, RDF.type, CINE.Person))
-    #                 g.add((director_uri, RDFS.label, Literal(director_label)))
-
-    #             if 'year' in res:
-    #                 # Wikidata sometimes returns dates like 1994-01-01T00:00:00Z
-    #                 # We want just 1994
-    #                 year_val = res['year']['value']
-    #                 g.add((movie_uri, CINE.releaseYear, Literal(int(year_val), datatype=XSD.integer)))
-        
-    #     # Random sleep to look human (between 1 and 3 seconds)
-    #     time.sleep(random.uniform(1.0, 3.0))
-
-    # return g
+    processed_ids = set()
 
     for index, row in df.iterrows():
-        imdb_title_id = row['imdb_title_id']
-        print(f"Processing {index + 1}/{len(df)}: {imdb_title_id}...")
+        imdb_id = row['imdb_title_id']
+        if imdb_id in processed_ids:
+            continue
+            
+        print(f"[{index+1}/{len(df)}] Processing {imdb_id}...")
         
-        data = fetch_wikidata_by_imdb(session, imdb_title_id)
+        query = f"""
+        SELECT ?film ?filmLabel ?directorLabel ?year ?duration
+               (GROUP_CONCAT(DISTINCT ?actorLabel; separator="|") AS ?actors)
+               (GROUP_CONCAT(DISTINCT ?genreLabel; separator="|") AS ?genres)
+        WHERE {{
+          ?film wdt:P345 "{imdb_id}".
+          ?film wdt:P57 ?director.
+          ?director rdfs:label ?directorLabel.
+          OPTIONAL {{ ?film wdt:P161 ?actor. ?actor rdfs:label ?actorLabel. FILTER(LANG(?actorLabel) = "en") }}
+          OPTIONAL {{ ?film wdt:P136 ?genre. ?genre rdfs:label ?genreLabel. FILTER(LANG(?genreLabel) = "en") }}
+          OPTIONAL {{ ?film wdt:P577 ?date. BIND(YEAR(?date) AS ?year) }}
+          OPTIONAL {{ ?film wdt:P2047 ?duration. }}
+          SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+          FILTER(LANG(?directorLabel) = "en")
+        }}
+        GROUP BY ?film ?filmLabel ?directorLabel ?year ?duration
+        """
         
-        if not data or 'results' not in data or not data['results']['bindings']:
-            print(f"   ⚠️ No data found.")
+        raw_data = query_wikidata(session, query)
+        if not raw_data or not raw_data.get('results', {}).get('bindings'):
+            continue
+
+        # Process results
+        films = process_film_results(raw_data['results']['bindings'])
+        
+        for film_label, data in films.items():
+            # Validate minimum requirements
+            if data['years'] and data['duration'] and data['directors'] and data['actors'] and data['genres']:
+                add_film_to_graph(
+                    g, 
+                    film_label,
+                    imdb_id,
+                    min(data['years']),
+                    data['duration'],
+                    list(data['directors'])[0],
+                    data['actors'],
+                    data['genres']
+                )
+                print(f"✅ Added: {film_label}")
+                processed_ids.add(imdb_id)
+
+        time.sleep(random.uniform(0.6, 1.2))
+    
+    return g, processed_ids
+
+def expand_by_directors(session, g, processed_ids):
+    print("\nPhase 2: Expanding by directors...")
+    directors = list(set(g.objects(None, CINE.directedBy)))
+    
+    # Process directors in batches of 5
+    batch_size = 5
+    for i in range(0, len(directors), batch_size):
+        batch = directors[i:i+batch_size]
+        director_names = [str(g.value(d, RDFS.label)) for d in batch]
+        
+        print(f"Expanding batch: {', '.join(director_names)}")
+        
+        values = " ".join([f'("{name}"@en)' for name in director_names])
+        query = f"""
+        SELECT ?film ?filmLabel ?directorLabel ?year ?duration ?imdbId 
+               (GROUP_CONCAT(DISTINCT ?actorLabel; separator="|") AS ?actors)
+               (GROUP_CONCAT(DISTINCT ?genreLabel; separator="|") AS ?genres)
+        WHERE {{
+          VALUES (?dirLabel) {{ {values} }}
+          ?film wdt:P57 ?dir.
+          ?dir rdfs:label ?dirLabel.
+          ?film wdt:P345 ?imdbId.
+          ?film wdt:P31 wd:Q11424.
+          ?dir rdfs:label ?directorLabel.
+          OPTIONAL {{ ?film wdt:P161 ?actor. ?actor rdfs:label ?actorLabel. FILTER(LANG(?actorLabel) = "en") }}
+          OPTIONAL {{ ?film wdt:P136 ?genre. ?genre rdfs:label ?genreLabel. FILTER(LANG(?genreLabel) = "en") }}
+          OPTIONAL {{ ?film wdt:P577 ?date. BIND(YEAR(?date) AS ?year) }}
+          OPTIONAL {{ ?film wdt:P2047 ?duration. }}
+          SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
+          FILTER(LANG(?directorLabel) = "en")
+        }}
+        GROUP BY ?film ?filmLabel ?directorLabel ?year ?duration ?imdbId
+        """
+        
+        data = query_wikidata(session, query)
+        if not data or not data.get('results', {}).get('bindings'):
+            time.sleep(0.8)
             continue
         
-        # --- NEW: Aggregation Logic ---
-        # We use sets to avoid duplicates during the collection phase
-        movie_labels = set()
-        directors = {} # Map name -> label for URI consistency
-        years = set()
-
-        for res in data['results']['bindings']:
-            if 'movieLabel' in res:
-                movie_labels.add(res['movieLabel']['value'])
-            if 'directorLabel' in res:
-                d_label = res['directorLabel']['value']
-                d_uri_name = d_label.replace(" ", "_").replace("'", "")
-                directors[d_uri_name] = d_label
-            if 'year' in res:
-                years.add(int(res['year']['value']))
-
-        # --- NEW: Conflict Resolution & Graph Writing ---
-        if movie_labels:
-            # 1. Resolve Movie Identity
-            # We take the first label found as the primary
-            primary_label = list(movie_labels)[0]
-            movie_name = primary_label.replace(" ", "_").replace("'", "").replace(".", "")
-            movie_uri = URIRef(CINE[movie_name])
+        # Process batch results
+        films = process_film_results(data['results']['bindings'])
+        
+        for film_label, film_data in films.items():
+            if (film_data.get('imdb_id') in processed_ids or 
+                not (film_data['years'] and film_data['duration'] and film_data['directors'] and 
+                     film_data['actors'] and film_data['genres'])):
+                continue
             
-            g.add((movie_uri, RDF.type, CINE.Film))
-            g.add((movie_uri, CINE.imdbId, Literal(imdb_title_id)))
-            g.add((movie_uri, RDFS.label, Literal(primary_label)))
-
-            # 2. Resolve Year (The "Earliest Year" Rule)
-            if years:
-                earliest_year = min(years)
-                g.add((movie_uri, CINE.releaseYear, Literal(earliest_year, datatype=XSD.integer)))
-                if len(years) > 1:
-                    print(f"   📅 Resolved {len(years)} dates to earliest: {earliest_year}")
-
-            # 3. Add Directors
-            for d_uri_part, d_label in directors.items():
-                director_uri = URIRef(CINE[d_uri_part])
-                g.add((movie_uri, CINE.directedBy, director_uri))
-                g.add((director_uri, RDF.type, CINE.Person))
-                g.add((director_uri, RDFS.label, Literal(d_label)))
-
-        # Random sleep to look human
-        time.sleep(random.uniform(1.0, 2.5))
-
+            add_film_to_graph(
+                g,
+                film_label,
+                film_data['imdb_id'],
+                min(film_data['years']),
+                film_data['duration'],
+                list(film_data['directors'])[0],
+                film_data['actors'],
+                film_data['genres']
+            )
+            if film_data.get('imdb_id'):
+                processed_ids.add(film_data['imdb_id'])
+        
+        time.sleep(0.8)
+    
     return g
 
 if __name__ == "__main__":
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    csv_file = os.path.join(script_dir, "../imdb_100.csv")
-    output_file = os.path.join(script_dir, "../ontology/output_graph.ttl")
-
-    my_graph = build_graph(csv_file)
-    
-    print(f"💾 Saving to: {output_file}")
-    my_graph.serialize(destination=output_file, format="turtle")
-    print("✅ Success! Graph serialized.")
+    session = requests.Session()
+    graph, processed = build_graph("imdb_100.csv")
+    final_graph = expand_by_directors(session, graph, processed)
+    final_graph.serialize(destination="ontology/output_graph.ttl", format="turtle")
+    print(f"\n✅ Complete! Final graph: {len(final_graph)} triples")
