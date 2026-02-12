@@ -6,13 +6,11 @@ from rdflib import Graph, Namespace
 from openai import OpenAI
 from dotenv import load_dotenv
 
-# Load API Key from .env
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 app = FastAPI()
 
-# 1. Enable CORS for Next.js frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
@@ -20,11 +18,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 2. Setup RDF Graph
 CINE = Namespace("http://filmgraph/ontology/")
 g = Graph()
 
-# Ensure this path is correct relative to where you run the script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 GRAPH_PATH = os.path.join(BASE_DIR, "../ontology/production_graph.ttl")
 
@@ -43,7 +39,6 @@ class QuestionRequest(BaseModel):
 # 3. The AI Search Endpoint
 @app.post("/ask")
 async def ask_ai(request: QuestionRequest):
-    # This teaches the AI your EXACT property list for Text-to-SPARQL
     system_prompt = f"""
     You are a SPARQL expert for the FilmGraph.
     Namespace: PREFIX : <http://filmgraph/ontology/>

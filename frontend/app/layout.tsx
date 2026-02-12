@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "FilmGraph",
-  description: "Knowledge Graph system grounding AI agents in formal semantics",
+  description: "Knowledge Graph system grounding an AI agent in formal semantics",
 };
 
 export default function RootLayout({
