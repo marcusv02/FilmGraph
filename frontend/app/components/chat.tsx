@@ -27,8 +27,6 @@ export default function Chat() {
     setLoading(false);
   };
 
-  console.log(rawAnswer)
-
   return (
     <div className="p-8 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">FilmGraph</h1>
@@ -56,13 +54,14 @@ export default function Chat() {
     
     {showRaw && (
       <div className="">
-        <div className="mt-2 p-3 bg-black text-green-400 text-xs font-mono rounded overflow-x-auto text-left">
+        <div className="mt-2 p-3 bg-black text-green-400 text-xs font-mono rounded overflow-x-auto text-left whitespace-pre-wrap">
         <p className="mb-2 text-gray-500 border-b border-gray-800 pb-1">Generated SPARQL Query</p>
         {sparql}
       </div>
-      <div className="mt-2 p-3 bg-black text-green-400 text-xs font-mono rounded overflow-x-auto text-left">
-        <p className="mb-2 text-gray-500 border-b border-gray-800 pb-1">JSON Answer</p>
-        {JSON.stringify(rawAnswer, null, 2)}
+      <div className="mt-2 p-3 bg-black text-green-400 text-xs font-mono rounded overflow-x-auto text-left whitespace-pre-wrap">
+        <p className="mb-2 text-gray-500 border-b border-gray-800 pb-1">Raw Answer</p>
+        {/* {JSON.stringify(rawAnswer, null, 2)} */}
+        {rawAnswer}
       </div>
       </div>
     )}
