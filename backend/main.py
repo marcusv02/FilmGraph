@@ -63,6 +63,9 @@ async def ask_ai(request: QuestionRequest):
     - :year (integer)
     
     Rules:
+    - Use ONLY the 'Graph Data' provided. 
+    - NEVER mention any other name unless it appears in the 'Graph Data' list.
+    - Do not provide 'background info' or 'historical context.'
     - Return ONLY the SPARQL query code.
     - Always use rdfs:label for name searches.
     - For relationships, favour inferred properties like :coStarredWith.
@@ -82,20 +85,32 @@ async def ask_ai(request: QuestionRequest):
         # Step 2: Execute on Graph
         results = g.query(query)
         
-        # Step 3: Natural Language Answer
-        raw_data = [str(row) for row in results]
+        # Step 3: Raw and Natural Language Answer
+        actual_results = [list(row) for row in results]
+        raw_data_list = [[str(value) for value in item] for item in actual_results]
+        raw_data_string = "\n".join([", ".join([str(v).split('/')[-1].split('#')[-1] for v in row]) for row in actual_results])
+
+        print(f"DEBUG: Found {len(raw_data_list)} rows in graph.", flush=True)
+
+        if not raw_data_list:
+            return {
+                "answer": "The knowledge graph doesn't have any records that match that specific question.",
+                "sparql": query,
+                "raw_data": []
+            }
         
         summary = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
-                {"role": "system", "content": "You are a helpful film expert. Use the provided data to answer the user's question naturally."},
-                {"role": "user", "content": f"User Question: {request.question} \n Database Results: {raw_data}"}
+                {"role": "system", "content": "You are a helpful film expert. Use the provided Database Results to answer the question. If the data is not in the results, say you don't know."},
+                {"role": "user", "content": f"User Question: {request.question} \nDatabase Results:\n{raw_data_string}"}
             ]
         )
 
         return {
             "answer": summary.choices[0].message.content,
-            "sparql": query
+            "sparql": query,
+            "raw_data": raw_data_list
         }
 
     except Exception as e:
