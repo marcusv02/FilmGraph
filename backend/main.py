@@ -31,12 +31,14 @@ def load_ontology():
     
     if os.path.exists(GRAPH_PATH):
         g.parse(GRAPH_PATH, format="turtle")
+        # --------------
+        print("DEBUG: Checking predicates in graph...")
+        unique_preds = set(g.predicates())
+        for p in unique_preds:
+            if "workedWith" in str(p):
+                print(f"REAL PREDICATE DETECTED: {p}", flush=True)
 
-print("DEBUG: Checking predicates in graph...")
-unique_preds = set(g.predicates())
-for p in unique_preds:
-    if "workedWith" in str(p):
-        print(f"REAL PREDICATE DETECTED: {p}", flush=True)
+        # ---------------
 
         print(f"✅ SUCCESS: Loaded {len(g)} triples.")
     else:
