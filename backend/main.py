@@ -90,8 +90,6 @@ async def ask_ai(request: QuestionRequest):
         raw_data_list = [[str(value) for value in item] for item in actual_results]
         raw_data_string = "\n".join([", ".join([str(v).split('/')[-1].split('#')[-1] for v in row]) for row in actual_results])
 
-        print(f"DEBUG: Found {len(raw_data_list)} rows in graph.", flush=True)
-
         if not raw_data_list:
             return {
                 "answer": "The knowledge graph doesn't have any records that match that specific question.",
@@ -110,7 +108,7 @@ async def ask_ai(request: QuestionRequest):
         return {
             "answer": summary.choices[0].message.content,
             "sparql": query,
-            "raw_data": raw_data_list
+            "raw_data": raw_data_string
         }
 
     except Exception as e:
