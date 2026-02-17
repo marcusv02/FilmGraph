@@ -96,12 +96,13 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     * :year (Integer - release year)
 
 ### 3. QUERY LOGIC RULES
-1. **Label Matching**: User inputs are text. ALWAYS find entities by matching their `rdfs:label`. 
-   Example: ?s rdfs:label "Tom Hanks" .
-2. **Filtering**: Use `FILTER` for years or durations. For name searches that might be case-sensitive, favor `FILTER(CONTAINS(LCASE(?label), "search_term"))`.
-3. **Shortcut Priority**: If the user asks about people "working together," use the shortcut properties (:workedWith, :coStarredWith) to keep queries efficient.
-4. **Aggregations**: For "how many" use COUNT. For "the most," use GROUP BY, ORDER BY DESC, and LIMIT 1.
-5. **Inverse Properties**: Use the inverse (e.g., :directed vs :directedBy) to keep the ?subject at the start of the query for clarity.
+1. **Label Matching**: Find entities by matching `rdfs:label`. Use `FILTER(CONTAINS(LCASE(?label), "text"))` for robustness.
+2. **Path Connectivity (Critical)**: Ensure every variable in the WHERE clause is connected to another. Do NOT introduce "orphan" variables (like ?film) unless they are part of the join path between the subject and the result.
+3. **Property Selection**: 
+   - Use "Shortcuts" (:workedWith) for general collaboration questions.
+   - Use "Core Connections" (:directedBy, :hasActor) ONLY when the user asks about specific Films or counts based on Films.
+4. **Aggregation**: For "the most", use `SELECT ?label (COUNT(?target) AS ?count)`, GROUP BY ?label, ORDER BY DESC(?count), and LIMIT 1.
+5. **Deduplication**: Use `SELECT DISTINCT` to avoid redundant results from the graph.
 
 ### 4. OUTPUT CONSTRAINTS
 - Do NOT provide conversational text, background info, or historical context.
