@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 export default function Chat() {
   const [question, setQuestion] = useState("");
@@ -43,7 +44,10 @@ export default function Chat() {
       >
         {loading ? "Searching Graph..." : "Ask Question"}
       </button>
-      {answer && <div className="mt-6 p-4 bg-gray-100 rounded text-black">{answer}</div>}
+      {/* {answer && <div className="mt-6 p-4 bg-gray-100 rounded text-black">{answer}</div>} */}
+      {answer && <div className="prose prose-invert max-w-none mt-6 p-4 bg-gray-100 rounded text-black">
+  <ReactMarkdown>{answer}</ReactMarkdown>
+</div>}
       <div className="mt-4 text-right">
     <button 
       onClick={() => setShowRaw(!showRaw)}

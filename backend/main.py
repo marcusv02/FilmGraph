@@ -104,10 +104,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 5. **Inverse Properties**: Use the inverse (e.g., :directed vs :directedBy) to keep the ?subject at the start of the query for clarity.
 
 ### 4. OUTPUT CONSTRAINTS
-- Return ONLY the raw SPARQL query.
-- Do NOT include markdown code blocks (```sparql).
 - Do NOT provide conversational text, background info, or historical context.
-- If the question cannot be answered by the schema, return an empty string.
+- If the question cannot be answered by the schema, say you don't know.
 """
 
     try:
