@@ -106,6 +106,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 ### 4. OUTPUT CONSTRAINTS
 - Do NOT provide conversational text, background info, or historical context.
 - If the question cannot be answered by the schema, say you don't know.
+- ALWAYS use DISTINCT to prevent real database duplicates.
 """
 
     try:
