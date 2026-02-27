@@ -98,7 +98,7 @@ async def ask_ai(request: QuestionRequest):
             clean_values = [str(v).split('/')[-1].split('#')[-1].replace('_', ' ') for v in row]
             clean_rows.append(", ".join(clean_values))
         
-        # This is the string we show the AI and the user
+        # This is the string shown to the AI and the user
         formatted_data_string = "\n".join(clean_rows)
 
         # Step 4: Final Summary
@@ -115,7 +115,7 @@ async def ask_ai(request: QuestionRequest):
                 "1. If Database Results are present, use them as the absolute truth.\n"
                 "2. Do not add outside information or actors not listed in the data.\n"
                 "3. If the results look like a list, format them nicely.\n"
-                "4. If the results are empty, state that the database doesn't have that information."
+                "4. If no data is provided, check the question type. If the user asked for a count or a 'how many' question, report the answer as 0. For all other questions (e.g., names, dates), state that the database contains no matching records for that specific query."
                     )
                 },
                 {
