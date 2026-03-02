@@ -1,4 +1,12 @@
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,7 +15,92 @@ export default function Header() {
     <div className="relative">
       <header className="flex justify-between h-15 items-center p-6 bg-zinc-100/80 z-10 fixed top-0 right-0 left-0 border border-b-slate-200">
         <h1 className="text-3xl font-bold">FilmGraph</h1>
-        <div className="flex items-center justify-center space-x-2">
+
+        <div className="flex items-center justify-center space-x-2 h-full">
+          <Dialog defaultOpen>
+            <DialogTrigger asChild>
+              <Button
+                variant="outline"
+                size="icon-lg"
+                className="rounded-full text-lg hover:cursor-pointer"
+              >
+                ?
+              </Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>How It Works</DialogTitle>
+                <DialogDescription>
+                  This app uses an LLM to translate your natural language into
+                  SPARQL queries against a Turtle (.ttl) RDF database.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="no-scrollbar -mx-4 max-h-[60vh] overflow-y-auto px-4">
+                <div className="grid gap-6 py-4">
+                  <div className="space-y-2">
+                    <h4 className="font-medium leading-none">
+                      🔍 What you can ask
+                    </h4>
+                    <ul className="text-sm list-disc list-inside space-y-1">
+                      <li>Find filmographies for actors/directors</li>
+                      <li>Discover frequent collaborators (Shortcuts)</li>
+                      <li>Filter by year, genre, and duration</li>
+                    </ul>
+                  </div>
+
+                  <div className="rounded-md bg-muted p-3 border">
+                    <p className="text-xs leading-relaxed">
+                      <strong>Pro Tip:</strong> Use the &quot;Suggestions&quot;
+                      chips on the main screen to see how the graph handles
+                      complex relationship logic.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <h4 className="font-medium leading-none">
+                      🔗 Ontology Structure
+                    </h4>
+                    <div className="flex items-center justify-center">
+                      <Image
+                        src="/filmGraphSchema.png"
+                        width={400}
+                        height={60}
+                        alt="FilmGraph Schema"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <h4 className="font-medium leading-none">
+                      ⚙️ Technical Trace
+                    </h4>
+                    <p className="text-sm">
+                      Every answer includes the generated SPARQL code. If the
+                      answer looks wrong, check the code to see how the graph
+                      was navigated.
+                    </p>
+                  </div>
+
+                  <div className="rounded-md bg-muted p-3 border">
+                    <p className="text-xs leading-relaxed">
+                      <strong>Pro Tip:</strong> Click the{" "}
+                      <Button
+                        variant="outline"
+                        size="icon-sm"
+                        className="rounded-full text-lg inline"
+                      >
+                        ?
+                      </Button>{" "}
+                      button in the header to open this info modal again after closing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+
+          <div className="border border-slate-500 h-full" />
+
           <Link href="https://www.linkedin.com/in/marcus-valerio/">
             <Button
               className="hover:cursor-pointer"
@@ -22,6 +115,7 @@ export default function Header() {
               />
             </Button>
           </Link>
+
           <Button
             className="hover:cursor-pointer"
             variant="outline"
