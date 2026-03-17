@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen items-center justify-start font-sans">
       <Header/>
-      <main className="flex mt-15 w-full flex-col bg-whitek">
+      <main className="flex mt-15 w-full flex-col">
         <Chat/>
       </main>
     </div>
