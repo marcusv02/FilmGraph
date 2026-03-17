@@ -13,8 +13,8 @@ import Image from "next/image";
 export default function Header() {
   return (
     <div className="relative">
-      <header className="flex justify-between h-15 items-center p-6 bg-zinc-100/80 z-10 fixed top-0 right-0 left-0 border border-b-slate-200">
-        <h1 className="text-3xl font-bold">FilmGraph</h1>
+      <header className="flex justify-between space-x-3 h-15 items-center p-6 bg-zinc-100/80 z-10 fixed top-0 right-0 left-0 border border-b-slate-200">
+        <h1 className="text-lg sm:text-3xl font-bold">FilmGraph</h1>
 
         <div className="flex items-center justify-center space-x-2 h-full">
           <Dialog defaultOpen>

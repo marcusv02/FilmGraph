@@ -83,9 +83,10 @@ export default function Chat() {
   }
 
   return (
-    <div className="py-8 px-30 w-full max-w-[60rem] mx-auto">
+    <div className="py-8 px-5 md:px-30 w-full max-w-[60rem] mx-auto">
       <Field orientation="horizontal">
         <Input
+        className="text-xs md:text-base"
           type="search"
           placeholder="Ask the graph a question..."
           value={question}
@@ -133,7 +134,7 @@ export default function Chat() {
       >
         <AccordionItem value="suggestions">
           <AccordionTrigger>Suggestions</AccordionTrigger>
-          <AccordionContent className="mt-4 flex flex-wrap gap-2">
+          <AccordionContent className="mt-4 flex flex-wrap gap-2 overflow-y-scroll">
             {currentSuggestions.map((text) => (
               <Button
                 key={text}
