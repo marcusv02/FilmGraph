@@ -134,7 +134,7 @@ export default function Chat() {
       >
         <AccordionItem value="suggestions">
           <AccordionTrigger>Suggestions</AccordionTrigger>
-          <AccordionContent className="mt-4 flex flex-wrap gap-2 overflow-y-scroll">
+          <AccordionContent className="mt-4 flex flex-wrap gap-2 overflow-x-scroll sm:no-scrollbar">
             {currentSuggestions.map((text) => (
               <Button
                 key={text}
@@ -143,7 +143,7 @@ export default function Chat() {
                   handleAsk(text);
                 }}
                 size="xs"
-                className="rounded-full hover:cursor-pointer hover:bg-blue-500 transition-all"
+                className="rounded-full hover:cursor-pointer hover:bg-blue-400 dark:hover:bg-blue-600 transition-all"
               >
                 {text}
               </Button>
@@ -153,7 +153,7 @@ export default function Chat() {
       </Accordion>
 
       {answer && (
-        <div className="prose prose-invert max-w-none mt-4 p-4 bg-gray-50 shadow rounded-md border">
+        <div className="prose prose-invert max-w-none mt-4 p-4 bg-gray-50 dark:bg-gray-900 shadow rounded-md border">
           <ReactMarkdown>{answer}</ReactMarkdown>
         </div>
       )}
